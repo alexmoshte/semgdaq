@@ -1,0 +1,6 @@
+../Core/Src/_DMA_Sort.c:11:6:ADC1_DMA_sort_uhb	24	static
+../Core/Src/_DMA_Sort.c:33:6:ADC1_DMA_sort_lhb	24	static
+../Core/Src/_DMA_Sort.c:56:6:ADC2_DMA_sort_uhb	24	static
+../Core/Src/_DMA_Sort.c:79:6:ADC2_DMA_sort_lhb	24	static
+../Core/Src/_DMA_Sort.c:102:6:ADC3_DMA_sort_uhb	24	static
+../Core/Src/_DMA_Sort.c:124:6:ADC3_DMA_sort_lhb	24	static
