@@ -1,0 +1,1 @@
+The firmware, applications code and manufactering files for an semgdaq board used for collecting, digitizing, processing and transmitting sEMG signals in form of data for AI applicatons. The link to the PCB design in flux.ai can be found on this repo's profile
