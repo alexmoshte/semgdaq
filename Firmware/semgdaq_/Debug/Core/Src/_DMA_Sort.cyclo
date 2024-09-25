@@ -1,6 +1,0 @@
-../Core/Src/_DMA_Sort.c:12:6:ADC1_DMA_sort_uhb	6
-../Core/Src/_DMA_Sort.c:34:6:ADC1_DMA_sort_lhb	6
-../Core/Src/_DMA_Sort.c:57:6:ADC2_DMA_sort_uhb	6
-../Core/Src/_DMA_Sort.c:80:6:ADC2_DMA_sort_lhb	6
-../Core/Src/_DMA_Sort.c:103:6:ADC3_DMA_sort_uhb	6
-../Core/Src/_DMA_Sort.c:125:6:ADC3_DMA_sort_lhb	6
