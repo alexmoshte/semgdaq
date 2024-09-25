@@ -101,8 +101,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  init_ADC1_IN1_struct();
-  init_ADC1_IN1_FO_biquad_filter();
+  init_ADC1_IN1_struct(); // Pointer to the source buffer is initiaized at runtime
+  init_ADC1_IN1_FO_biquad_filter();  // Initializes the filter coefficients and variables
 
   init_ADC1_IN2_struct();
   init_ADC1_IN2_FO_biquad_filter();
@@ -138,7 +138,8 @@ int main(void)
   MX_TIM7_Init();
   MX_TIM20_Init();
   /* USER CODE BEGIN 2 */
-
+	
+  //ADC1 is started using timer 6 tiggered conversions
   HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim6);
     ADC_status=HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr,ADC_DMA_BUFFERSIZE);
 
@@ -154,7 +155,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  update_ADC1_IN1_FO_biquad_filter();
+	  update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
 	  update_ADC1_IN2_FO_biquad_filter();
 
 	  update_ADC2_IN3_FO_biquad_filter();
@@ -622,22 +623,22 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void                    HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
+void                    HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)   // Fires when the upper half of the DMA buffer is filled
 {
 	 if (hadc->Instance == ADC1)
 	   {
 	        ADC1_DMA_sort_uhb(); // Handles the upper half of the DMA buffer
 
-	        ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
-	        ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
-	        ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+	        ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];  // Monitors one of the DMA buffer registers in the upper half of the buffer
+	        ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the upper half of the buffer
+	        ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the upper half of the buffer
 	   }
 
 
 	 if (hadc->Instance == ADC2)
 
 	   {
-		    ADC2_DMA_sort_uhb(); // Handles the upper half of the DMA buffer
+		    ADC2_DMA_sort_uhb(); 
 
 		    ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
 		    ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
@@ -647,7 +648,7 @@ void                    HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
 	 if (hadc->Instance == ADC3)
 
 	   {
-		    ADC3_DMA_sort_uhb(); // Handles the upper half of the DMA buffer
+		    ADC3_DMA_sort_uhb(); 
 
 		    ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
 		    ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
@@ -655,22 +656,22 @@ void                    HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
 	   }
 };
 
-void                    HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+void                    HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)  // Fires when the lower half of the DMA buffer is filled
 {
 	  if (hadc->Instance == ADC1)
 		{
 			ADC1_DMA_sort_lhb(); // Handles the lower half of the DMA buffer
 
-			ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
-			ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
-			ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+			ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE]; // Monitors one of the DMA buffer registers in the lower half of the buffer
+			ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the lower half of the buffer
+			ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the lower half of the buffer
 		}
 
 
 	  if (hadc->Instance == ADC2)
 
 		{
-		     ADC2_DMA_sort_lhb(); // Handles the lower half of the DMA buffer
+		     ADC2_DMA_sort_lhb();
 
 		     ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
 		     ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
@@ -680,7 +681,7 @@ void                    HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 	   if (hadc->Instance == ADC3)
 
 		{
-		     ADC3_DMA_sort_lhb(); // Handles the lower half of the DMA buffer
+		     ADC3_DMA_sort_lhb();
 
 			 ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
 			 ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
