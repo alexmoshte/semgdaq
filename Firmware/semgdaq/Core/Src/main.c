@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <_ADCn_INx_NF.h>
+#include <_ADCn_INx_MA.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +57,8 @@ TIM_HandleTypeDef htim20;
 ADC1_DMA_sort*ADC1_DMA_sort_ptr;
 ADC2_DMA_sort*ADC2_DMA_sort_ptr;
 ADC3_DMA_sort*ADC3_DMA_sort_ptr;
+
+//ADC1_IN1_MA MovingAverage_ADC1_IN1;
 
 HAL_StatusTypeDef ADC_status;
 

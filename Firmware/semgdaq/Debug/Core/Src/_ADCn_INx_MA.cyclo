@@ -1,0 +1,12 @@
+../Core/Src/_ADCn_INx_MA.c:19:6:MA_ADC1_IN1_Init	3
+../Core/Src/_ADCn_INx_MA.c:38:6:MA_ADC1_IN1_Update	5
+../Core/Src/_ADCn_INx_MA.c:84:6:MA_ADC1_IN2_Init	3
+../Core/Src/_ADCn_INx_MA.c:103:6:MA_ADC1_IN2_Update	5
+../Core/Src/_ADCn_INx_MA.c:148:6:MA_ADC2_IN3_Init	3
+../Core/Src/_ADCn_INx_MA.c:167:6:MA_ADC2_IN3_Update	5
+../Core/Src/_ADCn_INx_MA.c:211:6:MA_ADC2_IN4_Init	3
+../Core/Src/_ADCn_INx_MA.c:230:6:MA_ADC2_IN4_Update	5
+../Core/Src/_ADCn_INx_MA.c:275:6:MA_ADC3_IN1_Init	3
+../Core/Src/_ADCn_INx_MA.c:294:6:MA_ADC3_IN1_Update	5
+../Core/Src/_ADCn_INx_MA.c:339:6:MA_ADC3_IN2_Init	3
+../Core/Src/_ADCn_INx_MA.c:358:6:MA_ADC3_IN2_Update	5

@@ -1,0 +1,33 @@
+/*
+ * _ADCn_INx_MA.c
+ *
+ *  Created on: Sep 25, 2024
+ *  Author: Mwangi Alex. W
+ *
+ *
+ *
+ */
+#include "_ADCn_INx_MA.h"
+
+//static float MA_IMPULSERESPONSE[MA_FILTER_LENGTH]={};
+
+void MA_ADC1_IN1_Init (ADC1_IN1_MA *ADC1_IN1_MA_ptr)
+{
+	for(uint32_t j=0; j< MA_FILTER_LENGTH; j++)
+	{
+
+		ADC1_IN1_MA_ptr->_MA_ADC1_IN1_bfr[j]=0.0f;
+
+	}
+
+	ADC1_IN1_MA_ptr->MA_ADC1_IN1_bfr_indx=0;
+
+	ADC1_IN1_MA_ptr->MA_ADC1_IN1[]=0.0f;
+
+}
+
+
+float32_t MA_ADC1_IN1_Update (ADC1_IN1_MA *ADC1_IN1_MA_ptr, float32_t* InpBfr, float32_t* OutBfr, uint32_t ADC_DMA_HALFBUFFERSIZE)
+{
+
+}
