@@ -54,16 +54,11 @@ TIM_HandleTypeDef htim7;
 TIM_HandleTypeDef htim20;
 
 /* USER CODE BEGIN PV */
-ADC1_DMA_sort*ADC1_DMA_sort_ptr; // Declaring a pointer to the sorting structure at runtime
+ADC1_DMA_sort*ADC1_DMA_sort_ptr;
 ADC2_DMA_sort*ADC2_DMA_sort_ptr;
 ADC3_DMA_sort*ADC3_DMA_sort_ptr;
 
-ADC1_IN1_MA MovingAverage_ADC1_IN1; // Declaring an instance of the moving average structure
-ADC1_IN2_MA MovingAverage_ADC1_IN2;
-ADC2_IN3_MA MovingAverage_ADC2_IN3;
-ADC2_IN4_MA MovingAverage_ADC2_IN4;
-ADC3_IN1_MA MovingAverage_ADC3_IN1;
-ADC3_IN2_MA MovingAverage_ADC3_IN2;
+//ADC1_IN1_MA MovingAverage_ADC1_IN1;
 
 HAL_StatusTypeDef ADC_status;
 
@@ -108,29 +103,23 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  init_ADC1_IN1_struct(); // Pointer to the source buffer is initialized at runtime
+  init_ADC1_IN1_struct(); // Pointer to the source buffer is initiaized at runtime
   init_ADC1_IN1_FO_biquad_filter();  // Initializes the filter coefficients and variables
-  MA_ADC1_IN1_Init(&MovingAverage_ADC1_IN1); // Initializes all the output and moving average buffers to zero and the index to zero
 
   init_ADC1_IN2_struct();
   init_ADC1_IN2_FO_biquad_filter();
-  MA_ADC1_IN2_Init(&MovingAverage_ADC1_IN2);
 
   init_ADC2_IN3_struct();
   init_ADC2_IN3_FO_biquad_filter();
-  MA_ADC2_IN3_Init(&MovingAverage_ADC2_IN3);
 
   init_ADC2_IN4_struct();
   init_ADC2_IN4_FO_biquad_filter();
-  MA_ADC2_IN4_Init(&MovingAverage_ADC2_IN4);
 
   init_ADC3_IN1_struct();
   init_ADC3_IN1_FO_biquad_filter();
-  MA_ADC3_IN1_Init(&MovingAverage_ADC3_IN1);
 
   init_ADC3_IN2_struct();
   init_ADC3_IN2_FO_biquad_filter();
-  MA_ADC3_IN2_Init(&MovingAverage_ADC3_IN2);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -169,23 +158,13 @@ int main(void)
   while (1)
   {
 	  update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
-	  MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);
-
 	  update_ADC1_IN2_FO_biquad_filter();
-	  MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);
 
 	  update_ADC2_IN3_FO_biquad_filter();
-	  MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);
-
 	  update_ADC2_IN4_FO_biquad_filter();
-	  MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);
 
 	  update_ADC3_IN1_FO_biquad_filter();
-	  MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);
-
 	  update_ADC3_IN2_FO_biquad_filter();
-	  MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);
-
 
     /* USER CODE END WHILE */
 

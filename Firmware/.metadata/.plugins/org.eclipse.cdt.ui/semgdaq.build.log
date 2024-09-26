@@ -1,18 +1,10 @@
-14:21:04 **** Incremental Build of configuration Debug for project semgdaq ****
+19:30:12 **** Incremental Build of configuration Debug for project semgdaq ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: semgdaq.elf
- 
 arm-none-eabi-size  semgdaq.elf 
-arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
    text	   data	    bss	    dec	    hex	filename
-  21388	  30812	   2580	  54780	   d5fc	semgdaq.elf
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
 Finished building: default.size.stdout
  
-Finished building: semgdaq.list
- 
 
-14:21:05 Build Finished. 0 errors, 0 warnings. (took 1s.432ms)
+19:30:12 Build Finished. 0 errors, 0 warnings. (took 360ms)
 
