@@ -73,6 +73,7 @@ void MA_ADC1_IN1_Update(ADC1_IN1_MA *ADC1_IN1_MA_ptr)
             // Multiply impulse response with buffer sample and accumulate into output
             ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] += MA_IMPULSERESPONSE[r] * ADC1_IN1_MA_ptr->MA_ADC1_IN1_bfr[SumIndex_1];
         }
+
     }
 }
 
@@ -98,7 +99,7 @@ void MA_ADC1_IN2_Init (ADC1_IN2_MA *ADC1_IN2_MA_ptr)
 	}
 }
 
-void MA_ADC1_IN2_Update(ADC1_IN2_MA *ADC1_IN2_MA_ptr)
+void MA_ADC1_IN2_Update (ADC1_IN2_MA *ADC1_IN2_MA_ptr)
 {
     for (uint32_t u = 0; u < ADC_DMA_HALFBUFFERSIZE; u++)
     {
@@ -137,6 +138,7 @@ void MA_ADC1_IN2_Update(ADC1_IN2_MA *ADC1_IN2_MA_ptr)
             // Multiply impulse response with buffer sample and accumulate into output
             ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] += MA_IMPULSERESPONSE[r] * ADC1_IN2_MA_ptr->MA_ADC1_IN2_bfr[SumIndex_2];
         }
+
     }
 }
 
@@ -161,7 +163,7 @@ void MA_ADC2_IN3_Init (ADC2_IN3_MA *ADC2_IN3_MA_ptr)
 	}
 }
 
-void MA_ADC2_IN3_Update(ADC2_IN3_MA *ADC2_IN3_MA_ptr)
+void MA_ADC2_IN3_Update (ADC2_IN3_MA *ADC2_IN3_MA_ptr)
 {
     for (uint32_t u = 0; u < ADC_DMA_HALFBUFFERSIZE; u++)
     {
@@ -200,7 +202,9 @@ void MA_ADC2_IN3_Update(ADC2_IN3_MA *ADC2_IN3_MA_ptr)
             // Multiply impulse response with buffer sample and accumulate into output
             ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] += MA_IMPULSERESPONSE[r] * ADC2_IN3_MA_ptr->MA_ADC2_IN3_bfr[SumIndex_3];
         }
+
     }
+
 }
 
 
@@ -223,7 +227,7 @@ void MA_ADC2_IN4_Init (ADC2_IN4_MA *ADC2_IN4_MA_ptr)
 	}
 }
 
-void MA_ADC2_IN4_Update(ADC2_IN4_MA *ADC2_IN4_MA_ptr)
+void MA_ADC2_IN4_Update (ADC2_IN4_MA *ADC2_IN4_MA_ptr)
 {
     for (uint32_t u = 0; u < ADC_DMA_HALFBUFFERSIZE; u++)
     {
@@ -262,6 +266,7 @@ void MA_ADC2_IN4_Update(ADC2_IN4_MA *ADC2_IN4_MA_ptr)
             // Multiply impulse response with buffer sample and accumulate into output
             ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] += MA_IMPULSERESPONSE[r] * ADC2_IN4_MA_ptr->MA_ADC2_IN4_bfr[SumIndex_4];
         }
+
     }
 }
 
@@ -286,7 +291,7 @@ void MA_ADC3_IN1_Init (ADC3_IN1_MA *ADC3_IN1_MA_ptr)
 	}
 }
 
-void MA_ADC3_IN1_Update(ADC3_IN1_MA *ADC3_IN1_MA_ptr)
+void MA_ADC3_IN1_Update (ADC3_IN1_MA *ADC3_IN1_MA_ptr)
 {
     for (uint32_t u = 0; u < ADC_DMA_HALFBUFFERSIZE; u++)
     {
@@ -349,7 +354,7 @@ void MA_ADC3_IN2_Init (ADC3_IN2_MA *ADC3_IN2_MA_ptr)
 	}
 }
 
-void MA_ADC3_IN2_Update(ADC3_IN2_MA *ADC3_IN2_MA_ptr)
+void MA_ADC3_IN2_Update (ADC3_IN2_MA *ADC3_IN2_MA_ptr)
 {
     for (uint32_t u = 0; u < ADC_DMA_HALFBUFFERSIZE; u++)
     {
@@ -388,5 +393,7 @@ void MA_ADC3_IN2_Update(ADC3_IN2_MA *ADC3_IN2_MA_ptr)
             // Multiply impulse response with buffer sample and accumulate into output
             ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] += MA_IMPULSERESPONSE[r] * ADC3_IN2_MA_ptr->MA_ADC3_IN2_bfr[SumIndex_6];
         }
+
     }
+
 }

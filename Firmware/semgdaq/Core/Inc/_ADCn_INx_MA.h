@@ -90,7 +90,8 @@ typedef struct
 
 //FUNCTION DECLARATIONS
 void MA_ADC1_IN1_Init (ADC1_IN1_MA *ADC1_IN1_MA_ptr);
-void MA_ADC1_IN1_Update (ADC1_IN1_MA *ADC1_IN1_MA_ptr);
+void MA_ADC1_IN1_Update(ADC1_IN1_MA *ADC1_IN1_MA_ptr);
+
 
 
 void MA_ADC1_IN2_Init (ADC1_IN2_MA *ADC1_IN2_MA_ptr);

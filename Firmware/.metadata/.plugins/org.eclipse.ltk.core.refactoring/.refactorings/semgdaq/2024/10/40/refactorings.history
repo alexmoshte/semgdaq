@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;semgdaq/Core/Inc/_ADCn_INx_SD.h&apos; to &apos;_ADCn_INx_SD_BL.h&apos;" description="Rename resource &apos;_ADCn_INx_SD.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/_ADCn_INx_SD.h" name="_ADCn_INx_SD_BL.h" stamp="1727782598174" updateReferences="true"/>
+</session>

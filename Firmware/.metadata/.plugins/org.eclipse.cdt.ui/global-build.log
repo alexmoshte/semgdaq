@@ -1,7 +1,1394 @@
-19:30:12 **** Incremental Build of configuration Debug for project semgdaq ****
+11:44:06 **** Incremental Build of configuration Debug for project semgdaq ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+../Core/Src/_ADCn_INx_Offset.c: In function 'ADC1_IN1_OffsetCalc':
+../Core/Src/_ADCn_INx_Offset.c:20:26: error: 'ADC1_IN2_MA_ptr' undeclared (first use in this function); did you mean 'ADC1_IN2_MA'?
+   20 |                 Sum_1 += ADC1_IN2_MA_ptr->
+      |                          ^~~~~~~~~~~~~~~
+      |                          ADC1_IN2_MA
+../Core/Src/_ADCn_INx_Offset.c:20:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_Offset.c:21:9: error: expected identifier before '}' token
+   21 |         }
+      |         ^
+../Core/Src/_ADCn_INx_Offset.c:16:19: warning: variable 'Sum_1' set but not used [-Wunused-but-set-variable]
+   16 |         float32_t Sum_1 = 0.0f;
+      |                   ^~~~~
+../Core/Src/_ADCn_INx_Offset.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+   22 | }
+      | ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_Offset.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:45:06 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+../Core/Src/_ADCn_INx_Offset.c: In function 'ADC1_IN1_OffsetCalc':
+../Core/Src/_ADCn_INx_Offset.c:20:26: error: 'ADC1_IN2_MA_ptr' undeclared (first use in this function); did you mean 'ADC1_IN2_MA'?
+   20 |                 Sum_1 += ADC1_IN2_MA_ptr->
+      |                          ^~~~~~~~~~~~~~~
+      |                          ADC1_IN2_MA
+../Core/Src/_ADCn_INx_Offset.c:20:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_Offset.c:21:9: error: expected identifier before '}' token
+   21 |         }
+      |         ^
+../Core/Src/_ADCn_INx_Offset.c:16:19: warning: variable 'Sum_1' set but not used [-Wunused-but-set-variable]
+   16 |         float32_t Sum_1 = 0.0f;
+      |                   ^~~~~
+../Core/Src/_ADCn_INx_Offset.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+   22 | }
+      | ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_Offset.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:49:15 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+../Core/Src/_ADCn_INx_Offset.c: In function 'ADC1_IN1_OffsetCalc':
+../Core/Src/_ADCn_INx_Offset.c:16:19: warning: unused variable 'Sum_1' [-Wunused-variable]
+   16 |         float32_t Sum_1 = 0.0f;
+      |                   ^~~~~
+../Core/Src/_ADCn_INx_Offset.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+   22 | }
+      | ^
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
 arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
    text	   data	    bss	    dec	    hex	filename
   23452	  30844	   6564	  60860	   edbc	semgdaq.elf
 Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:51:18 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+../Core/Src/_ADCn_INx_Offset.c: In function 'ADC1_IN1_OffsetCalc':
+../Core/Src/_ADCn_INx_Offset.c:20:68: error: expected ';' before '}' token
+   20 |                 Sum_1 += ADC1_IN1_Offset_ptr->MA_ADC1_IN1_OutBfr[h]
+      |                                                                    ^
+      |                                                                    ;
+   21 |         }
+      |         ~                                                           
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_Offset.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:51:44 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:54:09 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:55:55 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:57:25 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:58:13 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+12:05:21 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:08:50 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:09:22 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:14:58 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:172:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  172 |   floa32_t Offset_1 = float32_t  ADC1_IN1_OffsetCalc(OffsetCalc_ADC1_IN1); // Collect baseline data
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:172:23: error: expected expression before 'float32_t'
+  172 |   floa32_t Offset_1 = float32_t  ADC1_IN1_OffsetCalc(OffsetCalc_ADC1_IN1); // Collect baseline data
+      |                       ^~~~~~~~~
+../Core/Src/main.c:173:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  173 |   floa32_t Offset_2 = float32_t  ADC1_IN2_OffsetCalc(OffsetCalc_ADC1_IN2);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:173:23: error: expected expression before 'float32_t'
+  173 |   floa32_t Offset_2 = float32_t  ADC1_IN2_OffsetCalc(OffsetCalc_ADC1_IN2);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:175:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  175 |   floa32_t Offset_3 = float32_t  ADC2_IN3_OffsetCalc(OffsetCalc_ADC2_IN3);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:175:23: error: expected expression before 'float32_t'
+  175 |   floa32_t Offset_3 = float32_t  ADC2_IN3_OffsetCalc(OffsetCalc_ADC2_IN3);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:176:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  176 |   floa32_t Offset_4 = float32_t  ADC2_IN4_OffsetCalc(OffsetCalc_ADC2_IN4);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:176:23: error: expected expression before 'float32_t'
+  176 |   floa32_t Offset_4 = float32_t  ADC2_IN4_OffsetCalc(OffsetCalc_ADC2_IN4);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:178:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  178 |   floa32_t Offset_5 = float32_t  ADC3_IN1_OffsetCalc(OffsetCalc_ADC3_IN1);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:178:23: error: expected expression before 'float32_t'
+  178 |   floa32_t Offset_5 = float32_t  ADC3_IN1_OffsetCalc(OffsetCalc_ADC3_IN1);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:179:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  179 |   floa32_t Offset_6 = float32_t  ADC3_IN2_OffsetCalc(OffsetCalc_ADC3_IN2);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:179:23: error: expected expression before 'float32_t'
+  179 |   floa32_t Offset_6 = float32_t  ADC3_IN2_OffsetCalc(OffsetCalc_ADC3_IN2);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:179:12: warning: unused variable 'Offset_6' [-Wunused-variable]
+  179 |   floa32_t Offset_6 = float32_t  ADC3_IN2_OffsetCalc(OffsetCalc_ADC3_IN2);
+      |            ^~~~~~~~
+../Core/Src/main.c:178:12: warning: unused variable 'Offset_5' [-Wunused-variable]
+  178 |   floa32_t Offset_5 = float32_t  ADC3_IN1_OffsetCalc(OffsetCalc_ADC3_IN1);
+      |            ^~~~~~~~
+../Core/Src/main.c:176:12: warning: unused variable 'Offset_4' [-Wunused-variable]
+  176 |   floa32_t Offset_4 = float32_t  ADC2_IN4_OffsetCalc(OffsetCalc_ADC2_IN4);
+      |            ^~~~~~~~
+../Core/Src/main.c:175:12: warning: unused variable 'Offset_3' [-Wunused-variable]
+  175 |   floa32_t Offset_3 = float32_t  ADC2_IN3_OffsetCalc(OffsetCalc_ADC2_IN3);
+      |            ^~~~~~~~
+../Core/Src/main.c:173:12: warning: unused variable 'Offset_2' [-Wunused-variable]
+  173 |   floa32_t Offset_2 = float32_t  ADC1_IN2_OffsetCalc(OffsetCalc_ADC1_IN2);
+      |            ^~~~~~~~
+../Core/Src/main.c:172:12: warning: unused variable 'Offset_1' [-Wunused-variable]
+  172 |   floa32_t Offset_1 = float32_t  ADC1_IN1_OffsetCalc(OffsetCalc_ADC1_IN1); // Collect baseline data
+      |            ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:20:26 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:172:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  172 |   floa32_t Offset_1 = float32_t  ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:172:23: error: expected expression before 'float32_t'
+  172 |   floa32_t Offset_1 = float32_t  ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |                       ^~~~~~~~~
+../Core/Src/main.c:173:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  173 |   floa32_t Offset_2 = float32_t  ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:173:23: error: expected expression before 'float32_t'
+  173 |   floa32_t Offset_2 = float32_t  ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:175:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  175 |   floa32_t Offset_3 = float32_t  ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:175:23: error: expected expression before 'float32_t'
+  175 |   floa32_t Offset_3 = float32_t  ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:176:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  176 |   floa32_t Offset_4 = float32_t  ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:176:23: error: expected expression before 'float32_t'
+  176 |   floa32_t Offset_4 = float32_t  ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:178:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  178 |   floa32_t Offset_5 = float32_t  ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:178:23: error: expected expression before 'float32_t'
+  178 |   floa32_t Offset_5 = float32_t  ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:179:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  179 |   floa32_t Offset_6 = float32_t  ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:179:23: error: expected expression before 'float32_t'
+  179 |   floa32_t Offset_6 = float32_t  ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |                       ^~~~~~~~~
+../Core/Src/main.c:179:12: warning: unused variable 'Offset_6' [-Wunused-variable]
+  179 |   floa32_t Offset_6 = float32_t  ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |            ^~~~~~~~
+../Core/Src/main.c:178:12: warning: unused variable 'Offset_5' [-Wunused-variable]
+  178 |   floa32_t Offset_5 = float32_t  ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |            ^~~~~~~~
+../Core/Src/main.c:176:12: warning: unused variable 'Offset_4' [-Wunused-variable]
+  176 |   floa32_t Offset_4 = float32_t  ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |            ^~~~~~~~
+../Core/Src/main.c:175:12: warning: unused variable 'Offset_3' [-Wunused-variable]
+  175 |   floa32_t Offset_3 = float32_t  ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |            ^~~~~~~~
+../Core/Src/main.c:173:12: warning: unused variable 'Offset_2' [-Wunused-variable]
+  173 |   floa32_t Offset_2 = float32_t  ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |            ^~~~~~~~
+../Core/Src/main.c:172:12: warning: unused variable 'Offset_1' [-Wunused-variable]
+  172 |   floa32_t Offset_1 = float32_t  ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |            ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:23:53 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:172:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  172 |   floa32_t Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:172:23: warning: implicit declaration of function 'ADC1_IN1_OffsetCalc' [-Wimplicit-function-declaration]
+  172 |   floa32_t Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:173:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  173 |   floa32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:173:23: warning: implicit declaration of function 'ADC1_IN2_OffsetCalc' [-Wimplicit-function-declaration]
+  173 |   floa32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:175:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  175 |   floa32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:175:23: warning: implicit declaration of function 'ADC2_IN3_OffsetCalc' [-Wimplicit-function-declaration]
+  175 |   floa32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:176:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  176 |   floa32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:176:23: warning: implicit declaration of function 'ADC2_IN4_OffsetCalc' [-Wimplicit-function-declaration]
+  176 |   floa32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:178:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  178 |   floa32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:178:23: warning: implicit declaration of function 'ADC3_IN1_OffsetCalc' [-Wimplicit-function-declaration]
+  178 |   floa32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:179:3: error: unknown type name 'floa32_t'; did you mean 'float32_t'?
+  179 |   floa32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |   ^~~~~~~~
+      |   float32_t
+../Core/Src/main.c:179:23: warning: implicit declaration of function 'ADC3_IN2_OffsetCalc' [-Wimplicit-function-declaration]
+  179 |   floa32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:179:12: warning: unused variable 'Offset_6' [-Wunused-variable]
+  179 |   floa32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |            ^~~~~~~~
+../Core/Src/main.c:178:12: warning: unused variable 'Offset_5' [-Wunused-variable]
+  178 |   floa32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |            ^~~~~~~~
+../Core/Src/main.c:176:12: warning: unused variable 'Offset_4' [-Wunused-variable]
+  176 |   floa32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |            ^~~~~~~~
+../Core/Src/main.c:175:12: warning: unused variable 'Offset_3' [-Wunused-variable]
+  175 |   floa32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |            ^~~~~~~~
+../Core/Src/main.c:173:12: warning: unused variable 'Offset_2' [-Wunused-variable]
+  173 |   floa32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |            ^~~~~~~~
+../Core/Src/main.c:172:12: warning: unused variable 'Offset_1' [-Wunused-variable]
+  172 |   floa32_t Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |            ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:24:24 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:172:24: warning: implicit declaration of function 'ADC1_IN1_OffsetCalc' [-Wimplicit-function-declaration]
+  172 |   float32_t Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |                        ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:173:24: warning: implicit declaration of function 'ADC1_IN2_OffsetCalc' [-Wimplicit-function-declaration]
+  173 |   float32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |                        ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:175:24: warning: implicit declaration of function 'ADC2_IN3_OffsetCalc' [-Wimplicit-function-declaration]
+  175 |   float32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |                        ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:176:24: warning: implicit declaration of function 'ADC2_IN4_OffsetCalc' [-Wimplicit-function-declaration]
+  176 |   float32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |                        ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:178:24: warning: implicit declaration of function 'ADC3_IN1_OffsetCalc' [-Wimplicit-function-declaration]
+  178 |   float32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |                        ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:179:24: warning: implicit declaration of function 'ADC3_IN2_OffsetCalc' [-Wimplicit-function-declaration]
+  179 |   float32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |                        ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:179:13: warning: unused variable 'Offset_6' [-Wunused-variable]
+  179 |   float32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |             ^~~~~~~~
+../Core/Src/main.c:178:13: warning: unused variable 'Offset_5' [-Wunused-variable]
+  178 |   float32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |             ^~~~~~~~
+../Core/Src/main.c:176:13: warning: unused variable 'Offset_4' [-Wunused-variable]
+  176 |   float32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |             ^~~~~~~~
+../Core/Src/main.c:175:13: warning: unused variable 'Offset_3' [-Wunused-variable]
+  175 |   float32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |             ^~~~~~~~
+../Core/Src/main.c:173:13: warning: unused variable 'Offset_2' [-Wunused-variable]
+  173 |   float32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |             ^~~~~~~~
+../Core/Src/main.c:172:13: warning: unused variable 'Offset_1' [-Wunused-variable]
+  172 |   float32_t Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |             ^~~~~~~~
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:32:51 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:179:13: warning: unused variable 'Offset_6' [-Wunused-variable]
+  179 |   float32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |             ^~~~~~~~
+../Core/Src/main.c:178:13: warning: unused variable 'Offset_5' [-Wunused-variable]
+  178 |   float32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |             ^~~~~~~~
+../Core/Src/main.c:176:13: warning: unused variable 'Offset_4' [-Wunused-variable]
+  176 |   float32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |             ^~~~~~~~
+../Core/Src/main.c:175:13: warning: unused variable 'Offset_3' [-Wunused-variable]
+  175 |   float32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |             ^~~~~~~~
+../Core/Src/main.c:173:13: warning: unused variable 'Offset_2' [-Wunused-variable]
+  173 |   float32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |             ^~~~~~~~
+../Core/Src/main.c:172:13: warning: unused variable 'Offset_1' [-Wunused-variable]
+  172 |   float32_t Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |             ^~~~~~~~
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:42:38 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:46:10 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:5: error: 'ADC3_IN2_Offset_ptr' undeclared (first use in this function); did you mean 'ADC3_IN2_MA_ptr'?
+  403 |     ADC3_IN2_Offset_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |     ^~~~~~~~~~~~~~~~~~~
+      |     ADC3_IN2_MA_ptr
+../Core/Src/_ADCn_INx_MA.c:403:45: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_Offset_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                             ^
+../Core/Src/_ADCn_INx_MA.c:403:51: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_Offset_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                                   ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:46:21 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:47:42 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:47: error: 'Offset_3' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:273:47: error: 'Offset_4' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:338:47: error: 'Offset_5' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                               ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:403:47: error: 'Offset_6' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                               ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:49:56 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:209:41: error: 'u' undeclared (first use in this function)
+  209 |     ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c:209:41: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:41: error: 'u' undeclared (first use in this function)
+  273 |     ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:41: error: 'u' undeclared (first use in this function)
+  338 |     ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                         ^
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:41: error: 'u' undeclared (first use in this function)
+  403 |     ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                         ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:51:41 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:24: multiple definition of `Offset_1'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:24: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:25: multiple definition of `Offset_2'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:25: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:26: multiple definition of `Offset_3'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:26: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:27: multiple definition of `Offset_4'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:27: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:28: multiple definition of `Offset_5'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:28: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:29: multiple definition of `Offset_6'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:29: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:24: multiple definition of `Offset_1'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:24: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:25: multiple definition of `Offset_2'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:25: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:26: multiple definition of `Offset_3'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:26: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:27: multiple definition of `Offset_4'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:27: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:28: multiple definition of `Offset_5'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:28: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:29: multiple definition of `Offset_6'; ./Core/Src/_ADCn_INx_MA.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_MA.h:29: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: semgdaq.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:58:25 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:208:51: error: 'Offset_3' undeclared (first use in this function)
+  208 |         ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:51: error: 'Offset_4' undeclared (first use in this function)
+  273 |         ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:51: error: 'Offset_5' undeclared (first use in this function)
+  338 |         ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:51: error: 'Offset_6' undeclared (first use in this function)
+  403 |         ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                                   ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:00:00 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/_ADCn_INx_MA.h:19,
+                 from ../Core/Src/_ADCn_INx_MA.c:13:
+../Core/Inc/_ADCn_INx_Offset.h:26:32: error: unknown type name 'ADC1_IN1_MA'; did you mean 'ADC1_IN1_NF'?
+   26 | float32_t  ADC1_IN1_OffsetCalc(ADC1_IN1_MA *ADC1_IN1_Offset_ptr); // Calculates the offset (mean of the baseline signal) for ADC1 channel 1 to be subtracted from data that follows
+      |                                ^~~~~~~~~~~
+      |                                ADC1_IN1_NF
+In file included from ../Core/Inc/_ADCn_INx_MA.h:19,
+                 from ../Core/Src/_ADCn_INx_MA.c:13:
+../Core/Inc/_ADCn_INx_Offset.h:28:32: error: unknown type name 'ADC1_IN2_MA'; did you mean 'ADC1_IN2_NF'?
+   28 | float32_t  ADC1_IN2_OffsetCalc(ADC1_IN2_MA *ADC1_IN2_Offset_ptr);
+      |                                ^~~~~~~~~~~
+      |                                ADC1_IN2_NF
+../Core/Inc/_ADCn_INx_Offset.h:30:32: error: unknown type name 'ADC2_IN3_MA'; did you mean 'ADC2_IN3_NF'?
+   30 | float32_t  ADC2_IN3_OffsetCalc(ADC2_IN3_MA *ADC2_IN3_Offset_ptr);
+      |                                ^~~~~~~~~~~
+      |                                ADC2_IN3_NF
+../Core/Inc/_ADCn_INx_Offset.h:32:32: error: unknown type name 'ADC2_IN4_MA'; did you mean 'ADC2_IN4_NF'?
+   32 | float32_t  ADC2_IN4_OffsetCalc(ADC2_IN4_MA *ADC2_IN4_Offset_ptr);
+      |                                ^~~~~~~~~~~
+      |                                ADC2_IN4_NF
+../Core/Inc/_ADCn_INx_Offset.h:34:32: error: unknown type name 'ADC3_IN1_MA'; did you mean 'ADC3_IN1_NF'?
+   34 | float32_t  ADC3_IN1_OffsetCalc(ADC3_IN1_MA *ADC3_IN1_Offset_ptr);
+      |                                ^~~~~~~~~~~
+      |                                ADC3_IN1_NF
+../Core/Inc/_ADCn_INx_Offset.h:36:32: error: unknown type name 'ADC3_IN2_MA'; did you mean 'ADC3_IN2_NF'?
+   36 | float32_t  ADC3_IN2_OffsetCalc(ADC3_IN2_MA *ADC3_IN2_Offset_ptr);
+      |                                ^~~~~~~~~~~
+      |                                ADC3_IN2_NF
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:00:37 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:77:51: error: 'Offset_1' undeclared (first use in this function)
+   77 |         ADC1_IN1_MA_ptr->MA_ADC1_IN1_OutBfr[u] -= Offset_1;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c:77:51: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC1_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:143:51: error: 'Offset_2' undeclared (first use in this function)
+  143 |         ADC1_IN2_MA_ptr->MA_ADC1_IN2_OutBfr[u] -= Offset_2;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN3_Update':
+../Core/Src/_ADCn_INx_MA.c:208:51: error: 'Offset_3' undeclared (first use in this function)
+  208 |         ADC2_IN3_MA_ptr->MA_ADC2_IN3_OutBfr[u] -= Offset_3;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC2_IN4_Update':
+../Core/Src/_ADCn_INx_MA.c:273:51: error: 'Offset_4' undeclared (first use in this function)
+  273 |         ADC2_IN4_MA_ptr->MA_ADC2_IN4_OutBfr[u] -= Offset_4;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN1_Update':
+../Core/Src/_ADCn_INx_MA.c:338:51: error: 'Offset_5' undeclared (first use in this function)
+  338 |         ADC3_IN1_MA_ptr->MA_ADC3_IN1_OutBfr[u] -= Offset_5;
+      |                                                   ^~~~~~~~
+../Core/Src/_ADCn_INx_MA.c: In function 'MA_ADC3_IN2_Update':
+../Core/Src/_ADCn_INx_MA.c:403:51: error: 'Offset_6' undeclared (first use in this function)
+  403 |         ADC3_IN2_MA_ptr->MA_ADC3_IN2_OutBfr[u] -= Offset_6;
+      |                                                   ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/_ADCn_INx_MA.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:10:04 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:173:3: error: 'Offset_1' undeclared (first use in this function)
+  173 |   Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |   ^~~~~~~~
+../Core/Src/main.c:173:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:174:3: error: 'Offset_2' undeclared (first use in this function)
+  174 |   Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |   ^~~~~~~~
+../Core/Src/main.c:176:3: error: 'Offset_3' undeclared (first use in this function)
+  176 |   Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |   ^~~~~~~~
+../Core/Src/main.c:177:3: error: 'Offset_4' undeclared (first use in this function)
+  177 |   Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |   ^~~~~~~~
+../Core/Src/main.c:179:3: error: 'Offset_5' undeclared (first use in this function)
+  179 |   Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |   ^~~~~~~~
+../Core/Src/main.c:180:3: error: 'Offset_6' undeclared (first use in this function)
+  180 |   Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |   ^~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:11:18 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:3: error: unknown type name 'flaot32_t'; did you mean 'float32_t'?
+  177 |   flaot32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |   ^~~~~~~~~
+      |   float32_t
+../Core/Src/main.c:180:3: error: unknown type name 'flaot32_t'; did you mean 'float32_t'?
+  180 |   flaot32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |   ^~~~~~~~~
+      |   float32_t
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:11:36 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24400	  30844	  10548	  65792	  10100	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+13:34:51 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:13: warning: unused variable 'Offset_6' [-Wunused-variable]
+  180 |   float32_t Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |             ^~~~~~~~
+../Core/Src/main.c:179:13: warning: unused variable 'Offset_5' [-Wunused-variable]
+  179 |   float32_t Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |             ^~~~~~~~
+../Core/Src/main.c:177:13: warning: unused variable 'Offset_4' [-Wunused-variable]
+  177 |   float32_t Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |             ^~~~~~~~
+../Core/Src/main.c:176:13: warning: unused variable 'Offset_3' [-Wunused-variable]
+  176 |   float32_t Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |             ^~~~~~~~
+../Core/Src/main.c:174:13: warning: unused variable 'Offset_2' [-Wunused-variable]
+  174 |   float32_t Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |             ^~~~~~~~
+../Core/Src/main.c:173:14: warning: unused variable 'Offset_1' [-Wunused-variable]
+  173 |   float32_t  Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1); // Collect baseline data
+      |              ^~~~~~~~
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24112	  30844	  10548	  65504	   ffe0	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+13:40:14 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86:2: error: unknown type name 'bool'
+   86 |  bool Offset_1_Calculated = false; // Flag to check if offset 1 has been calculated
+      |  ^~~~
+../Core/Src/main.c:25:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   24 | #include <_ADCn_INx_Offset.h>
+  +++ |+#include <stdbool.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:86:29: error: 'false' undeclared here (not in a function)
+   86 |  bool Offset_1_Calculated = false; // Flag to check if offset 1 has been calculated
+      |                             ^~~~~
+../Core/Src/main.c:86:29: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:40:33 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:86:2: error: unknown type name 'bool'
+   86 |  bool Offset_1_Calculated = 0; // Flag to check if offset 1 has been calculated
+      |  ^~~~
+../Core/Src/main.c:25:1: note: 'bool' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   24 | #include <_ADCn_INx_Offset.h>
+  +++ |+#include <stdbool.h>
+   25 | /* USER CODE END Includes */
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:41:07 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23452	  30844	   6564	  60860	   edbc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+13:48:22 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23596	  30844	   7236	  61676	   f0ec	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:01:20 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23664	  30844	   7236	  61744	   f130	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:04:21 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:205:36: warning: passing argument 1 of 'MA_ADC1_IN2_Update' from incompatible pointer type [-Wincompatible-pointer-types]
+  205 |                 MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN1);  // Fill the buffer with ADC data
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    ADC1_IN1_MA *
+In file included from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Src/main.c:24:
+../Core/Inc/_ADCn_INx_MA.h:98:39: note: expected 'ADC1_IN2_MA *' but argument is of type 'ADC1_IN1_MA *'
+   98 | void MA_ADC1_IN2_Update (ADC1_IN2_MA *ADC1_IN2_MA_ptr);
+      |                          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23956	  30844	   8572	  63372	   f78c	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:04:40 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  23956	  30844	   8572	  63372	   f78c	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:09:38 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24100	  30844	   9236	  64180	   fab4	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:12:04 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24404	  30844	  10580	  65828	  10124	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:12:56 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24468	  30844	  10580	  65892	  10164	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:19:13 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:314:69: error: 'b' undeclared (first use in this function)
+  314 |                           MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[b]  -= Offset_6;
+      |                                                                     ^
+../Core/Src/main.c:314:69: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:19:25 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24744	  30844	  10580	  66168	  10278	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:21:51 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24744	  30844	  10580	  66168	  10278	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:37:08 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24744	  30844	  10580	  66168	  10278	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:41:41 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24744	  30844	  10580	  66168	  10278	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+14:43:49 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:16: multiple definition of `Offset_1'; ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:16: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:17: multiple definition of `Offset_2'; ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:17: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:19: multiple definition of `Offset_3'; ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:19: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:20: multiple definition of `Offset_4'; ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:20: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:22: multiple definition of `Offset_5'; ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:22: first defined here
+C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:23: multiple definition of `Offset_6'; ./Core/Src/_ADCn_INx_Offset.o:C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Debug/../Core/Inc/_ADCn_INx_Offset.h:23: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: semgdaq.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:44:56 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  24744	  30844	  10580	  66168	  10278	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
  

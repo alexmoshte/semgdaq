@@ -1,5 +1,6 @@
 "./Core/Src/_ADCn_INx_MA.o"
 "./Core/Src/_ADCn_INx_NF.o"
+"./Core/Src/_ADCn_INx_Offset.o"
 "./Core/Src/_DMA_Sort.o"
 "./Core/Src/main.o"
 "./Core/Src/stm32g4xx_hal_msp.o"
