@@ -2,7 +2,7 @@
  * _ADCn_INx_Offset.h
  *
  *  Created on: Oct 1, 2024
- *      Author: moshte
+ *  Author: Mwangi Alex. W
  */
 
 #ifndef INC__ADCN_INX_OFFSET_H_

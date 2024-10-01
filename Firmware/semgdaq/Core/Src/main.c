@@ -72,23 +72,39 @@ ADC2_IN4_MA OffsetCalc_ADC2_IN4;
 ADC3_IN1_MA OffsetCalc_ADC3_IN1;
 ADC3_IN2_MA OffsetCalc_ADC3_IN2;
 
+ADC1_IN1_MA SD_BL_ADC1_IN1; // Declaring an instance of standard deviation calculation
+ADC1_IN2_MA SD_BL_ADC1_IN2;
+ADC2_IN3_MA SD_BL_ADC2_IN3;
+ADC2_IN4_MA SD_BL_ADC2_IN4;
+ADC3_IN1_MA SD_BL_ADC3_IN1;
+ADC3_IN2_MA SD_BL_ADC3_IN2;
+
+
 HAL_StatusTypeDef ADC_status;
 
 float32_t Offset_1; // Variable to store the calculated offset
 float32_t Offset_2;
-
 float32_t Offset_3;
 float32_t Offset_4;
-
 float32_t Offset_5;
 float32_t Offset_6;
 
- uint8_t Offset_1_Calculated = 0; // Flag to check if offset 1 has been calculated
- uint8_t Offset_2_Calculated = 0;
- uint8_t Offset_3_Calculated = 0;
- uint8_t Offset_4_Calculated = 0;
- uint8_t Offset_5_Calculated = 0;
- uint8_t Offset_6_Calculated = 0;
+
+uint8_t Offset_1_Calculated = 0; // Flag to check if offset 1 has been calculated
+uint8_t Offset_2_Calculated = 0;
+uint8_t Offset_3_Calculated = 0;
+uint8_t Offset_4_Calculated = 0;
+uint8_t Offset_5_Calculated = 0;
+uint8_t Offset_6_Calculated = 0;
+
+
+float32_t SD_BL_1;
+float32_t SD_BL_2;
+float32_t SD_BL_3;
+float32_t SD_BL_4;
+float32_t SD_BL_5;
+float32_t SD_BL_6;
+
 
 
 /* USER CODE END PV */
@@ -186,7 +202,7 @@ int main(void)
     ADC_status=HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr,ADC_DMA_BUFFERSIZE);
 
 
-  if (Offset_1_Calculated==0)
+  if (Offset_1_Calculated==0) // Calculates the mean and standard deviation for the baseline of the signal for the first buffer fill
     {
 		/* Collects samples to fill the buffer */
 		update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
@@ -195,6 +211,8 @@ int main(void)
 		// Calculate the offset from the filled buffer
 		Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1);
 		Offset_1_Calculated = 1; // Set the flag indicating offset has been calculated
+
+		SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1);
     }
 
 
@@ -207,6 +225,8 @@ int main(void)
   		// Calculate the offset from the filled buffer
   		Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
   		Offset_2_Calculated = 1; // Set the flag indicating offset has been calculated
+
+  		SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
       }
 
 
@@ -219,6 +239,8 @@ int main(void)
   		// Calculate the offset from the filled buffer
   		Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
   		Offset_3_Calculated = 1; // Set the flag indicating offset has been calculated
+
+  		SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
       }
 
 
@@ -231,6 +253,8 @@ int main(void)
    		// Calculate the offset from the filled buffer
    		Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
    		Offset_4_Calculated = 1; // Set the flag indicating offset has been calculated
+
+   		SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
        }
 
 
@@ -243,6 +267,8 @@ int main(void)
  		// Calculate the offset from the filled buffer
  		Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
  		Offset_5_Calculated = 1; // Set the flag indicating offset has been calculated
+
+ 		SD_BL_5 = ADC3_IN1_SD_BL(&SD_BL_ADC3_IN1, Offset_5);
      }
 
 
@@ -255,6 +281,8 @@ int main(void)
   		// Calculate the offset from the filled buffer
   		Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
   		Offset_6_Calculated = 1; // Set the flag indicating offset has been calculated
+
+  		SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
       }
 
   /* USER CODE END 2 */
