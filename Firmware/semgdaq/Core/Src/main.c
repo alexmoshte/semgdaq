@@ -37,6 +37,8 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
+#define NOOFITERATIONS_BL 20
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -90,7 +92,7 @@ float32_t Offset_5;
 float32_t Offset_6;
 
 
-uint8_t Offset_1_Calculated = 0; // Flag to check if offset 1 has been calculated
+uint8_t Offset_1_Calculated = 0; // Initialize the offset calculation flag to zero
 uint8_t Offset_2_Calculated = 0;
 uint8_t Offset_3_Calculated = 0;
 uint8_t Offset_4_Calculated = 0;
@@ -201,8 +203,10 @@ int main(void)
   HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim20);
     ADC_status=HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr,ADC_DMA_BUFFERSIZE);
 
-
-  if (Offset_1_Calculated==0) // Calculates the mean and standard deviation for the baseline of the signal for the first buffer fill
+if(Offset_1_Calculated==0)
+{
+  float32_t OffsetSum_1;
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
     {
 		/* Collects samples to fill the buffer */
 		update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
@@ -210,81 +214,119 @@ int main(void)
 
 		// Calculate the offset from the filled buffer
 		Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1);
-		Offset_1_Calculated = 1; // Set the flag indicating offset has been calculated
-
-		SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1);
+		OffsetSum_1 += Offset_1;
     }
 
+  Offset_1 = OffsetSum_1 / NOOFITERATIONS_BL;
+  Offset_1_Calculated = 1; // Set the flag indicating offset has been calculated
 
-  if (Offset_2_Calculated==0)
-      {
-  		/* Collects samples to fill the buffer */
-  		update_ADC1_IN2_FO_biquad_filter();  // Filters channel 1 data
-  		MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);  // Fill the buffer with ADC data
-
-  		// Calculate the offset from the filled buffer
-  		Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
-  		Offset_2_Calculated = 1; // Set the flag indicating offset has been calculated
-
-  		SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
-      }
+  SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1);
+}
 
 
-  if (Offset_3_Calculated==0)
-      {
-  		/* Collects samples to fill the buffer */
-  		update_ADC2_IN3_FO_biquad_filter();  // Filters channel 1 data
-  		MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);  // Fill the buffer with ADC data
+if(Offset_2_Calculated==0)
+{
+  float32_t OffsetSum_2;
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+    {
+		/* Collects samples to fill the buffer */
+		update_ADC1_IN2_FO_biquad_filter();  // Filters channel 1 data
+		MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);  // Fill the buffer with ADC data
 
-  		// Calculate the offset from the filled buffer
-  		Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
-  		Offset_3_Calculated = 1; // Set the flag indicating offset has been calculated
+		// Calculate the offset from the filled buffer
+		Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+		OffsetSum_2 += Offset_2;
+    }
 
-  		SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
-      }
+  Offset_2 = OffsetSum_2 / NOOFITERATIONS_BL;
+  Offset_2_Calculated = 1; // Set the flag indicating offset has been calculated
 
-
-  if (Offset_4_Calculated==0)
-       {
-   		/* Collects samples to fill the buffer */
-   		update_ADC2_IN4_FO_biquad_filter();  // Filters channel 1 data
-   		MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);  // Fill the buffer with ADC data
-
-   		// Calculate the offset from the filled buffer
-   		Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
-   		Offset_4_Calculated = 1; // Set the flag indicating offset has been calculated
-
-   		SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
-       }
+  SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
+}
 
 
-  if (Offset_5_Calculated==0)
-     {
- 		/* Collects samples to fill the buffer */
- 		update_ADC3_IN1_FO_biquad_filter();  // Filters channel 1 data
- 		MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);  // Fill the buffer with ADC data
+if(Offset_3_Calculated==0)
+{
+  float32_t OffsetSum_3;
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+    {
+		/* Collects samples to fill the buffer */
+		update_ADC2_IN3_FO_biquad_filter();  // Filters channel 1 data
+		MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);  // Fill the buffer with ADC data
 
- 		// Calculate the offset from the filled buffer
- 		Offset_5 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
- 		Offset_5_Calculated = 1; // Set the flag indicating offset has been calculated
+		// Calculate the offset from the filled buffer
+		Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+		OffsetSum_3 += Offset_3;
+    }
 
- 		SD_BL_5 = ADC3_IN1_SD_BL(&SD_BL_ADC3_IN1, Offset_5);
-     }
+  Offset_3 = OffsetSum_3 / NOOFITERATIONS_BL;
+  Offset_3_Calculated = 1; // Set the flag indicating offset has been calculated
+
+  SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
+}
 
 
-  if (Offset_6_Calculated==0)
-      {
-  		/* Collects samples to fill the buffer */
-  		update_ADC3_IN2_FO_biquad_filter();  // Filters channel 1 data
-  		MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);  // Fill the buffer with ADC data
+if(Offset_4_Calculated==0)
+{
+  float32_t OffsetSum_4;
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+    {
+		/* Collects samples to fill the buffer */
+		update_ADC2_IN4_FO_biquad_filter();  // Filters channel 1 data
+		MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);  // Fill the buffer with ADC data
 
-  		// Calculate the offset from the filled buffer
-  		Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
-  		Offset_6_Calculated = 1; // Set the flag indicating offset has been calculated
+		// Calculate the offset from the filled buffer
+		Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+		OffsetSum_4 += Offset_4;
+    }
 
-  		SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
-      }
+  Offset_4 = OffsetSum_4 / NOOFITERATIONS_BL;
+  Offset_4_Calculated = 1; // Set the flag indicating offset has been calculated
 
+  SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
+}
+
+
+if(Offset_5_Calculated==0)
+{
+  float32_t OffsetSum_5;
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+    {
+		/* Collects samples to fill the buffer */
+		update_ADC3_IN1_FO_biquad_filter();  // Filters channel 1 data
+		MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);  // Fill the buffer with ADC data
+
+		// Calculate the offset from the filled buffer
+		Offset_1 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+		OffsetSum_5 += Offset_5;
+    }
+
+  Offset_5 = OffsetSum_5 / NOOFITERATIONS_BL;
+  Offset_5_Calculated = 1; // Set the flag indicating offset has been calculated
+
+  SD_BL_5 = ADC3_IN1_SD_BL(&SD_BL_ADC3_IN1, Offset_5);
+}
+
+
+if(Offset_6_Calculated==0)
+{
+  float32_t OffsetSum_6;
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+    {
+		/* Collects samples to fill the buffer */
+		update_ADC3_IN2_FO_biquad_filter();  // Filters channel 1 data
+		MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);  // Fill the buffer with ADC data
+
+		// Calculate the offset from the filled buffer
+		Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+		OffsetSum_6 += Offset_6;
+    }
+
+  Offset_6 = OffsetSum_6 / NOOFITERATIONS_BL;
+  Offset_6_Calculated = 1; // Set the flag indicating offset has been calculated
+
+  SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
+}
   /* USER CODE END 2 */
 
   /* Infinite loop */

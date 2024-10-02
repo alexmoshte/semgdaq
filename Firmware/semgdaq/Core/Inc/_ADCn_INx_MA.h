@@ -4,9 +4,9 @@
  *  Created on: Sep 25, 2024
  *  Author: Mwangi Alex. W
  *
- *Declares the structs necessary to conduct moving average filtering on the output of the notch filters to eradicate
- *motion artifacts and smoothen data. The moving average filter is a low roll-off low pass filter that ensures the data we accrue
- *from the board is minimized of disturbances that arise from arm movements that don't entail sEMG signal collection and also ensures
+ *Declares the structs necessary to conduct moving average filtering from the output of the notch filters to eradicate
+ *baseline drift and smoothen data. The moving average filter is a low roll-off low pass filter that ensures the data we accrue
+ *from the board is minimized of disturbances that arise from arm movements that cause baseline drift and  don't entail sEMG signal collection and also ensures
  *that the data is smooth.
  *
  */

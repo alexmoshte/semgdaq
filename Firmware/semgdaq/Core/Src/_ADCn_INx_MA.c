@@ -4,8 +4,8 @@
  *  Created on: Sep 25, 2024
  *  Author: Mwangi Alex. W
  *
- *Defines the functions that conduct moving average filtering on the output of the notch filters to eradicate
- *motion artifacts and smoothen data
+ *Defines the functions that conduct moving average filtering on the output of the notch filters to eradicate baseline drift
+ *that arise from motion artifacts and smoothen data
  *
  */
 
