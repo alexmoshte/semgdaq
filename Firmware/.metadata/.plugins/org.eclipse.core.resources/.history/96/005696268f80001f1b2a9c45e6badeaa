@@ -1,0 +1,17 @@
+/*
+ * _ADCn_INx_TKEO.h
+ *
+ * Created on: Oct 2, 2024
+ * Author: Mwangi Alex. W
+ */
+
+#ifndef INC__ADCN_INX_TKEO_H_
+#define INC__ADCN_INX_TKEO_H_
+
+//INCLUDES
+#include "_ADCn_INx_SD_BL.h"
+
+//FUNCTION DECLARATIONS
+void ADC1_IN1_TKEO(ADC1_IN1_MA *ADC1_IN1_TKEO_ptr);
+
+#endif /* INC__ADCN_INX_TKEO_H_ */

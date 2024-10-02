@@ -1,0 +1,18 @@
+/*
+ * _ADCn_INx_TKEO.c
+ *
+ * Created on: Oct 2, 2024
+ * Author: Mwangi Alex. W
+ *
+ * The Teager-Kaiser Energy Operator (TKEO) is a windowing tool used to track the instantaneous energy of the moving average output buffer (segment)
+ * so as the evaluate muscle activation. It captures both amplitude and frequency variations to inform us whenever there has been any muscle activation
+ */
+//INCLUDES
+#include "_ADCn_INx_TKEO.h"
+void ADC1_IN2_TKEO(ADC1_IN1_MA *ADC1_IN1_TKEO_ptr)
+{
+  for(n=1; n<ADC_DMA_SIXTEENTHBUFFERSIZE; n++)
+  {
+	  ADC1_IN1_Tkeo_bfr[n]= ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n] - ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n-1] * ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n+1];
+  }
+}

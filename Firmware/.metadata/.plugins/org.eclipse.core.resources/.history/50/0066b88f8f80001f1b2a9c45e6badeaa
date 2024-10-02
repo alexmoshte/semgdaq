@@ -1,0 +1,11 @@
+/*
+ * _ADCn_INx_TKEO.c
+ *
+ * Created on: Oct 2, 2024
+ * Author: Mwangi Alex. W
+ *
+ * The Teager-Kaiser Energy Operator is a windowing tool used to track the instantaneous energy of the moving average output buffer (segment)
+ * so as the evaluate muscle activation. It captures both amplitude and frequency variations
+ */
+
+

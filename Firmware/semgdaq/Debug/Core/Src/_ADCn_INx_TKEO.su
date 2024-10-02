@@ -1,0 +1,6 @@
+../Core/Src/_ADCn_INx_TKEO.c:24:9:ADC1_IN1_TKEO	56	static
+../Core/Src/_ADCn_INx_TKEO.c:77:9:ADC1_IN2_TKEO	56	static
+../Core/Src/_ADCn_INx_TKEO.c:131:9:ADC2_IN3_TKEO	56	static
+../Core/Src/_ADCn_INx_TKEO.c:184:9:ADC2_IN4_TKEO	56	static
+../Core/Src/_ADCn_INx_TKEO.c:238:9:ADC3_IN1_TKEO	56	static
+../Core/Src/_ADCn_INx_TKEO.c:292:9:ADC3_IN2_TKEO	56	static

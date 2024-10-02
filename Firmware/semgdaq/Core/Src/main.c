@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <_ADCn_INx_SD_BL.h>
+#include <_ADCn_INx_TKEO.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -82,6 +82,15 @@ ADC3_IN1_MA SD_BL_ADC3_IN1;
 ADC3_IN2_MA SD_BL_ADC3_IN2;
 
 
+ADC1_IN1_MA TKEO_ADC1_IN1; // Declaring an instance of TKEO thresholding
+ADC1_IN2_MA TKEO_ADC1_IN2;
+ADC2_IN3_MA TKEO_ADC2_IN3;
+ADC2_IN4_MA TKEO_ADC2_IN4;
+ADC3_IN1_MA TKEO_ADC3_IN1;
+ADC3_IN2_MA TKEO_ADC3_IN2;
+
+
+
 HAL_StatusTypeDef ADC_status;
 
 float32_t Offset_1; // Variable to store the calculated offset
@@ -107,7 +116,12 @@ float32_t SD_BL_4;
 float32_t SD_BL_5;
 float32_t SD_BL_6;
 
-
+uint8_t TKEO_1;
+uint8_t TKEO_2;
+uint8_t TKEO_3;
+uint8_t TKEO_4;
+uint8_t TKEO_5;
+uint8_t TKEO_6;
 
 /* USER CODE END PV */
 
@@ -335,55 +349,71 @@ if(Offset_6_Calculated==0)
   {
 	  update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
 	  MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);
-	  for (uint32_t y = 0; y < ADC_DMA_HALFBUFFERSIZE; y++)
+	  for (uint32_t y = 0; y < ADC_DMA_SIXTEENTHBUFFERSIZE; y++)
 	  {
 		  MovingAverage_ADC1_IN1.MA_ADC1_IN1_OutBfr[y]  -= Offset_1; // Subtract the stored offset
 	  }
+
+	  TKEO_1 = ADC1_IN1_TKEO(&TKEO_ADC1_IN1, SD_BL_1);
 
 
 
 	  update_ADC1_IN2_FO_biquad_filter();
 	  MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);
-	  for (uint32_t z = 0; z < ADC_DMA_HALFBUFFERSIZE; z++)
+	  for (uint32_t z = 0; z < ADC_DMA_SIXTEENTHBUFFERSIZE; z++)
 	  {
 		  MovingAverage_ADC1_IN2.MA_ADC1_IN2_OutBfr[z]  -= Offset_2;
 	  }
+
+	  TKEO_2 = ADC1_IN2_TKEO(&TKEO_ADC1_IN2, SD_BL_2);
 
 
 
 	  update_ADC2_IN3_FO_biquad_filter();
 	  MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);
-	  for (uint32_t g = 0; g < ADC_DMA_HALFBUFFERSIZE; g++)
+	  for (uint32_t g = 0; g <ADC_DMA_SIXTEENTHBUFFERSIZE; g++)
 	  {
 		  MovingAverage_ADC2_IN3.MA_ADC2_IN3_OutBfr[g]  -= Offset_3;
 	  }
+
+	  TKEO_3 = ADC2_IN3_TKEO(&TKEO_ADC2_IN3, SD_BL_3);
+
 
 
 
 	  update_ADC2_IN4_FO_biquad_filter();
 	  MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);
-	  for (uint32_t e = 0; e < ADC_DMA_HALFBUFFERSIZE; e++)
+	  for (uint32_t e = 0; e < ADC_DMA_SIXTEENTHBUFFERSIZE; e++)
 	  {
 		  MovingAverage_ADC2_IN4.MA_ADC2_IN4_OutBfr[e]  -= Offset_4;
 	  }
+
+	  TKEO_4 = ADC2_IN4_TKEO(&TKEO_ADC2_IN4, SD_BL_4);
+
 
 
 
 	  update_ADC3_IN1_FO_biquad_filter();
 	  MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);
-	  for (uint32_t b = 0; b < ADC_DMA_HALFBUFFERSIZE; b++)
+	  for (uint32_t b = 0; b < ADC_DMA_SIXTEENTHBUFFERSIZE; b++)
 	  {
 		  MovingAverage_ADC3_IN1.MA_ADC3_IN1_OutBfr[b]  -= Offset_5;
 	  }
 
 
+	  TKEO_5 = ADC3_IN1_TKEO(&TKEO_ADC3_IN1, SD_BL_5);
+
+
+
 
 	  update_ADC3_IN2_FO_biquad_filter();
 	  MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);
-	  for (uint32_t c = 0; c < ADC_DMA_HALFBUFFERSIZE; c++)
-	  	  {
-	  		  MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;
-	  	  }
+	  for (uint32_t c = 0; c < ADC_DMA_SIXTEENTHBUFFERSIZE; c++)
+	  {
+		  MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;
+	  }
+
+	  TKEO_6 = ADC3_IN2_TKEO(&TKEO_ADC3_IN2, SD_BL_6);
 
 
     /* USER CODE END WHILE */

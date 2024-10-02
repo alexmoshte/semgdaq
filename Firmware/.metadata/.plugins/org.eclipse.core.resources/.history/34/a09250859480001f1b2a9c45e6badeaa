@@ -1,0 +1,34 @@
+/*
+ * _ADCn_INx_TKEO.c
+ *
+ * Created on: Oct 2, 2024
+ * Author: Mwangi Alex. W
+ *
+ * The Teager-Kaiser Energy Operator (TKEO) is a windowing tool used to track the instantaneous energy of the moving average output buffer (segment)
+ * so as the evaluate muscle activation. It captures both amplitude and frequency variations to inform us whenever there has been any muscle activation
+ */
+//INCLUDES
+#include "_ADCn_INx_TKEO.h"
+void ADC1_IN2_TKEO(ADC1_IN1_MA *ADC1_IN1_TKEO_ptr)
+{
+  for(uint32_t n=1; n<ADC_DMA_SIXTEENTHBUFFERSIZE-1 ; n++)
+  {
+	  ADC1_IN1_Tkeo_bfr[n]= (ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n] * ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n]) - (ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n-1] * ADC1_IN1_TKEO_ptr->MA_ADC1_IN1_OutBfr[n+1]);
+  }
+
+  /* Handling boundary conditions */
+  ADC1_IN1_Tkeo_bfr[0] = 0.0f;
+  ADC1_IN1_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE-1] = 0.0f;
+
+
+  float32_t Tkeo_Sum_1 = 0.0f; // Initialize the sum to zero
+  float32_t Tkeo_mean_1 =0.0f; // Initialize the mean to zero
+
+  for (uint32_t h=0; h<ADC_DMA_SIXTEENTHBUFFERSIZE; h++)
+  {
+	Tkeo_Sum_1 += ADC1_IN1_Tkeo_bfr[h];  // Accumulate the sum of all values in the buffer
+  }
+
+  Tkeo_mean_1 = Tkeo_Sum_1/ADC_DMA_SIXTEENTHBUFFERSIZE;
+
+}

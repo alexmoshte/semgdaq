@@ -12,7 +12,7 @@
 #include "_ADCn_INx_Offset.h"
 
 
-//FUNCTION DECLARATIONS_1
+//FUNCTION DECLARATIONS
 float32_t  ADC1_IN1_SD_BL(ADC1_IN1_MA *ADC1_IN1_SD_BL_ptr, float32_t Mean_1); // Calculates the offset (mean of the baseline signal) for ADC1 channel 1 to be subtracted from data that follows
 
 float32_t  ADC1_IN2_SD_BL(ADC1_IN2_MA *ADC1_IN2_SD_BL_ptr, float32_t Mean_2);
