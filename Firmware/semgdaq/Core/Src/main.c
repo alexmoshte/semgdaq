@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <_ADCn_INx_TKEO.h>
+#include <_ADCn_INx_SSC.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,13 +31,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define NOOFITERATIONS_BL 20
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
-#define NOOFITERATIONS_BL 20
 
 /* USER CODE END PM */
 
@@ -60,6 +58,7 @@ ADC1_DMA_sort*ADC1_DMA_sort_ptr; // Declaring a pointer to the sorting structure
 ADC2_DMA_sort*ADC2_DMA_sort_ptr;
 ADC3_DMA_sort*ADC3_DMA_sort_ptr;
 
+
 ADC1_IN1_MA MovingAverage_ADC1_IN1; // Declaring an instance of the moving average structure
 ADC1_IN2_MA MovingAverage_ADC1_IN2;
 ADC2_IN3_MA MovingAverage_ADC2_IN3;
@@ -67,12 +66,14 @@ ADC2_IN4_MA MovingAverage_ADC2_IN4;
 ADC3_IN1_MA MovingAverage_ADC3_IN1;
 ADC3_IN2_MA MovingAverage_ADC3_IN2;
 
+
 ADC1_IN1_MA OffsetCalc_ADC1_IN1; // Declaring an instance of the Offset calculation
 ADC1_IN2_MA OffsetCalc_ADC1_IN2;
 ADC2_IN3_MA OffsetCalc_ADC2_IN3;
 ADC2_IN4_MA OffsetCalc_ADC2_IN4;
 ADC3_IN1_MA OffsetCalc_ADC3_IN1;
 ADC3_IN2_MA OffsetCalc_ADC3_IN2;
+
 
 ADC1_IN1_MA SD_BL_ADC1_IN1; // Declaring an instance of standard deviation calculation
 ADC1_IN2_MA SD_BL_ADC1_IN2;
@@ -82,7 +83,7 @@ ADC3_IN1_MA SD_BL_ADC3_IN1;
 ADC3_IN2_MA SD_BL_ADC3_IN2;
 
 
-ADC1_IN1_MA TKEO_ADC1_IN1; // Declaring an instance of TKEO thresholding
+ADC1_IN1_MA TKEO_ADC1_IN1; // Declaring an instance of TKEO windowing
 ADC1_IN2_MA TKEO_ADC1_IN2;
 ADC2_IN3_MA TKEO_ADC2_IN3;
 ADC2_IN4_MA TKEO_ADC2_IN4;
@@ -90,15 +91,23 @@ ADC3_IN1_MA TKEO_ADC3_IN1;
 ADC3_IN2_MA TKEO_ADC3_IN2;
 
 
+ADC1_IN1_MA SSC_ADC1_IN1; // Declaring an instance of slope sign change feature
+ADC1_IN2_MA SSC_ADC1_IN2;
+ADC2_IN3_MA SSC_ADC2_IN3;
+ADC2_IN4_MA SSC_ADC2_IN4;
+ADC3_IN1_MA SSC_ADC3_IN1;
+ADC3_IN2_MA SSC_ADC3_IN2;
+
 
 HAL_StatusTypeDef ADC_status;
 
-float32_t Offset_1; // Variable to store the calculated offset
-float32_t Offset_2;
-float32_t Offset_3;
-float32_t Offset_4;
-float32_t Offset_5;
-float32_t Offset_6;
+
+float32_t Offset_1 = 0.0f; // Variable to store the calculated offset
+float32_t Offset_2 = 0.0f;
+float32_t Offset_3 = 0.0f;
+float32_t Offset_4 = 0.0f;
+float32_t Offset_5 = 0.0f;
+float32_t Offset_6 = 0.0f;
 
 
 uint8_t Offset_1_Calculated = 0; // Initialize the offset calculation flag to zero
@@ -109,20 +118,28 @@ uint8_t Offset_5_Calculated = 0;
 uint8_t Offset_6_Calculated = 0;
 
 
-float32_t SD_BL_1;
-float32_t SD_BL_2;
-float32_t SD_BL_3;
-float32_t SD_BL_4;
-float32_t SD_BL_5;
-float32_t SD_BL_6;
+float32_t SD_BL_1 = 0.0f;
+float32_t SD_BL_2 = 0.0f;
+float32_t SD_BL_3 = 0.0f;
+float32_t SD_BL_4 = 0.0f;
+float32_t SD_BL_5 = 0.0f;
+float32_t SD_BL_6 = 0.0f;
 
-uint8_t TKEO_1;
-uint8_t TKEO_2;
-uint8_t TKEO_3;
-uint8_t TKEO_4;
-uint8_t TKEO_5;
-uint8_t TKEO_6;
 
+uint8_t TKEO_1 = 0;
+uint8_t TKEO_2 = 0;
+uint8_t TKEO_3 = 0;
+uint8_t TKEO_4 = 0;
+uint8_t TKEO_5 = 0;
+uint8_t TKEO_6 = 0;
+
+
+float32_t SSC_1 = 0.0f;
+float32_t SSC_2 = 0.0f;
+float32_t SSC_3 = 0.0f;
+float32_t SSC_4 = 0.0f;
+float32_t SSC_5 = 0.0f;
+float32_t SSC_6 = 0.0f;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -142,8 +159,6 @@ static void MX_TIM20_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-
 
 /* USER CODE END 0 */
 
@@ -207,26 +222,27 @@ int main(void)
   MX_TIM20_Init();
   /* USER CODE BEGIN 2 */
 	
-  //ADC1 is started using timer 6 tiggered conversions
+  /* ADC1 is started using timer 6 triggered conversions */
   HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim6);
-    ADC_status=HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr,ADC_DMA_BUFFERSIZE);
+    ADC_status=HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr, ADC_DMA_BUFFERSIZE);
 
   HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim7);
-    ADC_status=HAL_ADC_Start_DMA(&hadc2, ADC2_DMA_sort_ptr->ADC2_DMA_bfr,ADC_DMA_BUFFERSIZE);
+    ADC_status=HAL_ADC_Start_DMA(&hadc2, ADC2_DMA_sort_ptr->ADC2_DMA_bfr, ADC_DMA_BUFFERSIZE);
 
   HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim20);
-    ADC_status=HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr,ADC_DMA_BUFFERSIZE);
+    ADC_status=HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr, ADC_DMA_BUFFERSIZE);
 
+/* Calculating the offset value and standard deviation for the base line signal for all the channels */
 if(Offset_1_Calculated==0)
 {
-  float32_t OffsetSum_1;
+  float32_t OffsetSum_1 = 0.0f;
   for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
     {
 		/* Collects samples to fill the buffer */
 		update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
 		MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);  // Fill the buffer with ADC data
 
-		// Calculate the offset from the filled buffer
+		/* Calculate the offset from the filled buffer */
 		Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1);
 		OffsetSum_1 += Offset_1;
     }
@@ -234,26 +250,26 @@ if(Offset_1_Calculated==0)
   Offset_1 = OffsetSum_1 / NOOFITERATIONS_BL;
   Offset_1_Calculated = 1; // Set the flag indicating offset has been calculated
 
-  SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1);
+  SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1); // Calculated the standard deviation for the last buffer fill
 }
 
 
 if(Offset_2_Calculated==0)
 {
   float32_t OffsetSum_2;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
     {
-		/* Collects samples to fill the buffer */
-		update_ADC1_IN2_FO_biquad_filter();  // Filters channel 1 data
-		MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);  // Fill the buffer with ADC data
 
-		// Calculate the offset from the filled buffer
+		update_ADC1_IN2_FO_biquad_filter();
+		MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);
+
+
 		Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
 		OffsetSum_2 += Offset_2;
     }
 
   Offset_2 = OffsetSum_2 / NOOFITERATIONS_BL;
-  Offset_2_Calculated = 1; // Set the flag indicating offset has been calculated
+  Offset_2_Calculated = 1;
 
   SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
 }
@@ -262,19 +278,19 @@ if(Offset_2_Calculated==0)
 if(Offset_3_Calculated==0)
 {
   float32_t OffsetSum_3;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
     {
-		/* Collects samples to fill the buffer */
-		update_ADC2_IN3_FO_biquad_filter();  // Filters channel 1 data
-		MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);  // Fill the buffer with ADC data
 
-		// Calculate the offset from the filled buffer
+		update_ADC2_IN3_FO_biquad_filter();
+		MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);
+
+
 		Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
 		OffsetSum_3 += Offset_3;
     }
 
   Offset_3 = OffsetSum_3 / NOOFITERATIONS_BL;
-  Offset_3_Calculated = 1; // Set the flag indicating offset has been calculated
+  Offset_3_Calculated = 1;
 
   SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
 }
@@ -283,19 +299,19 @@ if(Offset_3_Calculated==0)
 if(Offset_4_Calculated==0)
 {
   float32_t OffsetSum_4;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
     {
-		/* Collects samples to fill the buffer */
-		update_ADC2_IN4_FO_biquad_filter();  // Filters channel 1 data
-		MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);  // Fill the buffer with ADC data
 
-		// Calculate the offset from the filled buffer
+		update_ADC2_IN4_FO_biquad_filter();
+		MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);
+
+
 		Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
 		OffsetSum_4 += Offset_4;
     }
 
   Offset_4 = OffsetSum_4 / NOOFITERATIONS_BL;
-  Offset_4_Calculated = 1; // Set the flag indicating offset has been calculated
+  Offset_4_Calculated = 1;
 
   SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
 }
@@ -307,10 +323,10 @@ if(Offset_5_Calculated==0)
   for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
     {
 		/* Collects samples to fill the buffer */
-		update_ADC3_IN1_FO_biquad_filter();  // Filters channel 1 data
+		update_ADC3_IN1_FO_biquad_filter();  // Notch filters channel 1 data
 		MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);  // Fill the buffer with ADC data
 
-		// Calculate the offset from the filled buffer
+		/* Calculate the offset from the filled buffer */
 		Offset_1 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
 		OffsetSum_5 += Offset_5;
     }
@@ -325,19 +341,19 @@ if(Offset_5_Calculated==0)
 if(Offset_6_Calculated==0)
 {
   float32_t OffsetSum_6;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
     {
-		/* Collects samples to fill the buffer */
-		update_ADC3_IN2_FO_biquad_filter();  // Filters channel 1 data
-		MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);  // Fill the buffer with ADC data
 
-		// Calculate the offset from the filled buffer
+		update_ADC3_IN2_FO_biquad_filter();
+		MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);
+
+
 		Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
 		OffsetSum_6 += Offset_6;
     }
 
   Offset_6 = OffsetSum_6 / NOOFITERATIONS_BL;
-  Offset_6_Calculated = 1; // Set the flag indicating offset has been calculated
+  Offset_6_Calculated = 1;
 
   SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
 }
@@ -347,15 +363,20 @@ if(Offset_6_Calculated==0)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  /* DSP SECTION */
 	  update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
-	  MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);
+	  MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1); // Performs the moving average
 	  for (uint32_t y = 0; y < ADC_DMA_SIXTEENTHBUFFERSIZE; y++)
 	  {
 		  MovingAverage_ADC1_IN1.MA_ADC1_IN1_OutBfr[y]  -= Offset_1; // Subtract the stored offset
 	  }
+	  /* FEATURE EXCTRACTION SECTION */
+      TKEO_1 = ADC1_IN1_TKEO(&TKEO_ADC1_IN1, SD_BL_1); // Performs the windowing through the TKEO operator and returns binary data to indicate presence or absence of muscle activation
 
-	  TKEO_1 = ADC1_IN1_TKEO(&TKEO_ADC1_IN1, SD_BL_1);
-
+      if(TKEO_1 == 1) // Only runs when there is muscle activation.
+      {
+      SSC_1 = ADC1_IN1_SSC(&SSC_ADC1_IN1, 0.5 * Offset_1); // Calculates slope sign changes for active segments
+      }
 
 
 	  update_ADC1_IN2_FO_biquad_filter();
@@ -364,9 +385,12 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC1_IN2.MA_ADC1_IN2_OutBfr[z]  -= Offset_2;
 	  }
-
 	  TKEO_2 = ADC1_IN2_TKEO(&TKEO_ADC1_IN2, SD_BL_2);
 
+	  if(TKEO_2 == 1)
+	  {
+	  SSC_2 = ADC1_IN2_SSC(&SSC_ADC1_IN2, 0.5 * Offset_2);
+	  }
 
 
 	  update_ADC2_IN3_FO_biquad_filter();
@@ -375,10 +399,12 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC2_IN3.MA_ADC2_IN3_OutBfr[g]  -= Offset_3;
 	  }
-
 	  TKEO_3 = ADC2_IN3_TKEO(&TKEO_ADC2_IN3, SD_BL_3);
 
-
+	  if(TKEO_3 == 1)
+	  {
+	  SSC_3 = ADC2_IN3_SSC(&SSC_ADC2_IN3, 0.5 * Offset_3);
+	  }
 
 
 	  update_ADC2_IN4_FO_biquad_filter();
@@ -387,10 +413,12 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC2_IN4.MA_ADC2_IN4_OutBfr[e]  -= Offset_4;
 	  }
-
 	  TKEO_4 = ADC2_IN4_TKEO(&TKEO_ADC2_IN4, SD_BL_4);
 
-
+	  if(TKEO_4 == 1)
+	  {
+	  SSC_4 = ADC2_IN4_SSC(&SSC_ADC2_IN4, 0.5 * Offset_4);
+	  }
 
 
 	  update_ADC3_IN1_FO_biquad_filter();
@@ -399,23 +427,28 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC3_IN1.MA_ADC3_IN1_OutBfr[b]  -= Offset_5;
 	  }
-
-
 	  TKEO_5 = ADC3_IN1_TKEO(&TKEO_ADC3_IN1, SD_BL_5);
 
-
-
-
-	  update_ADC3_IN2_FO_biquad_filter();
-	  MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);
-	  for (uint32_t c = 0; c < ADC_DMA_SIXTEENTHBUFFERSIZE; c++)
+	  if(TKEO_5 == 1)
 	  {
-		  MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;
+	  SSC_5 = ADC3_IN1_SSC(&SSC_ADC3_IN1, 0.5 * Offset_5);
 	  }
 
-	  TKEO_6 = ADC3_IN2_TKEO(&TKEO_ADC3_IN2, SD_BL_6);
 
+	  /* DSP SECTION */
+	  update_ADC3_IN2_FO_biquad_filter(); // Notch filters channel 2 data
+	  MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2); // Performs the moving average
+	  for (uint32_t c = 0; c < ADC_DMA_SIXTEENTHBUFFERSIZE; c++)
+	  {
+		  MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;  // Subtract the stored offset
+	  }
+	  /* FEATURE EXCTRACTION SECTION */
+	  TKEO_6 = ADC3_IN2_TKEO(&TKEO_ADC3_IN2, SD_BL_6); // Performs the windowing through the TKEO operator and returns binary data to indicate presence or absence of muscle activation
 
+	  if(TKEO_6 == 1) // Only runs when there is muscle activation.
+	  {
+	  SSC_6 = ADC3_IN2_SSC(&SSC_ADC3_IN2, 0.5 * Offset_6); // Calculates slope sign changes for active segments
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

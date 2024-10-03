@@ -1,6 +1,6 @@
 ../Core/Src/_DMA_Sort.c:12:6:ADC1_DMA_sort_uhb	24	static
-../Core/Src/_DMA_Sort.c:34:6:ADC1_DMA_sort_lhb	24	static
-../Core/Src/_DMA_Sort.c:57:6:ADC2_DMA_sort_uhb	24	static
-../Core/Src/_DMA_Sort.c:80:6:ADC2_DMA_sort_lhb	24	static
-../Core/Src/_DMA_Sort.c:103:6:ADC3_DMA_sort_uhb	24	static
-../Core/Src/_DMA_Sort.c:125:6:ADC3_DMA_sort_lhb	24	static
+../Core/Src/_DMA_Sort.c:35:6:ADC1_DMA_sort_lhb	24	static
+../Core/Src/_DMA_Sort.c:58:6:ADC2_DMA_sort_uhb	24	static
+../Core/Src/_DMA_Sort.c:81:6:ADC2_DMA_sort_lhb	24	static
+../Core/Src/_DMA_Sort.c:104:6:ADC3_DMA_sort_uhb	24	static
+../Core/Src/_DMA_Sort.c:127:6:ADC3_DMA_sort_lhb	24	static

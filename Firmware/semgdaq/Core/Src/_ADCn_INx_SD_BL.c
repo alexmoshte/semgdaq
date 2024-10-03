@@ -3,6 +3,9 @@
  *
  *  Created on: Oct 1, 2024
  *  Author: Mwangi Alex. W
+ *
+ *  Defines the functions that calculate the standard deviation for the baseline of the signal's sEMG data (before muscle activation)
+ *  from the moving average output buffer which will be used in the TKEO algorithm to identify when muscle activation has taken place
  */
 
 //INCLUSIONS
@@ -33,9 +36,9 @@ float32_t  ADC1_IN2_SD_BL(ADC1_IN2_MA *ADC1_IN2_SD_BL_ptr, float32_t Mean_2)
 	  Variance_2 += Diff_2 * Diff_2;
   }
 
-  Variance_2 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Variance_2 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
- return sqrt(Variance_2); //Square root of variance
+ return sqrt(Variance_2);
 
 }
 
@@ -49,9 +52,9 @@ float32_t  ADC2_IN3_SD_BL(ADC2_IN3_MA *ADC2_IN3_SD_BL_ptr, float32_t Mean_3)
 	  Variance_3 += Diff_3 * Diff_3;
   }
 
-  Variance_3 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Variance_3 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
-  return sqrt(Variance_3); //Square root of variance
+  return sqrt(Variance_3);
 
 }
 
@@ -65,12 +68,11 @@ float32_t  ADC2_IN4_SD_BL(ADC2_IN4_MA *ADC2_IN4_SD_BL_ptr, float32_t Mean_4)
 	  Variance_4 += Diff_4 * Diff_4;
   }
 
-  Variance_4 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Variance_4 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
- return sqrt(Variance_4); //Square root of variance
+ return sqrt(Variance_4);
 
 }
-
 
 
 float32_t  ADC3_IN1_SD_BL(ADC3_IN1_MA *ADC3_IN1_SD_BL_ptr, float32_t Mean_5)
@@ -82,12 +84,11 @@ float32_t  ADC3_IN1_SD_BL(ADC3_IN1_MA *ADC3_IN1_SD_BL_ptr, float32_t Mean_5)
 	  Variance_5 += Diff_5 * Diff_5;
   }
 
-  Variance_5 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Variance_5 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
- return sqrt(Variance_5); //Square root of variance
+ return sqrt(Variance_5);
 
 }
-
 
 
 float32_t  ADC3_IN2_SD_BL(ADC3_IN2_MA *ADC3_IN2_SD_BL_ptr, float32_t Mean_6)

@@ -1,0 +1,15 @@
+/*
+ * _ADCn_INx_SSC.h
+ *
+ *  Created on: Oct 3, 2024
+ *  Author: Mwangi Alex. W
+ *
+ *  Header file for the functions that calculate the slope sign change for the sEMG data in the moving average buffer
+ */
+
+#ifndef INC__ADCN_INX_SSC_H_
+#define INC__ADCN_INX_SSC_H_
+
+
+
+#endif /* INC__ADCN_INX_SSC_H_ */

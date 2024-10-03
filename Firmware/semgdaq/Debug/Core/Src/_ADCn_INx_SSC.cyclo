@@ -1,0 +1,6 @@
+../Core/Src/_ADCn_INx_SSC.c:16:11:ADC1_IN1_SSC	5
+../Core/Src/_ADCn_INx_SSC.c:35:11:ADC1_IN2_SSC	5
+../Core/Src/_ADCn_INx_SSC.c:54:11:ADC2_IN3_SSC	5
+../Core/Src/_ADCn_INx_SSC.c:73:11:ADC2_IN4_SSC	5
+../Core/Src/_ADCn_INx_SSC.c:92:11:ADC3_IN1_SSC	5
+../Core/Src/_ADCn_INx_SSC.c:111:11:ADC3_IN2_SSC	5

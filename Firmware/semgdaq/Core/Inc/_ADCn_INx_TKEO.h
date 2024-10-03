@@ -3,6 +3,9 @@
  *
  * Created on: Oct 2, 2024
  * Author: Mwangi Alex. W
+ *
+ * Header file for the functions that perform windowing on each channel using the Teager Kaiser energy operator (TKEO) to
+ * monitor when muscle activation has occurred
  */
 
 #ifndef INC__ADCN_INX_TKEO_H_
@@ -10,14 +13,6 @@
 
 //INCLUDES
 #include "_ADCn_INx_SD_BL.h"
-
-//STRUCTS, VARIABLES AND POINTERS
-extern float32_t ADC1_IN1_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
-extern float32_t ADC1_IN2_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
-extern float32_t ADC2_IN3_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
-extern float32_t ADC2_IN3_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
-extern float32_t ADC3_IN1_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
-extern float32_t ADC3_IN2_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 
 //FUNCTION DECLARATIONS
 uint8_t ADC1_IN1_TKEO(ADC1_IN1_MA *ADC1_IN1_TKEO_ptr, float32_t StnDev_BL_1);

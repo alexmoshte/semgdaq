@@ -1,6 +1,6 @@
 ../Core/Src/_ADCn_INx_Offset.c:14:12:ADC1_IN1_OffsetCalc	2
-../Core/Src/_ADCn_INx_Offset.c:27:12:ADC1_IN2_OffsetCalc	2
-../Core/Src/_ADCn_INx_Offset.c:41:12:ADC2_IN3_OffsetCalc	2
-../Core/Src/_ADCn_INx_Offset.c:54:12:ADC2_IN4_OffsetCalc	2
-../Core/Src/_ADCn_INx_Offset.c:67:12:ADC3_IN1_OffsetCalc	2
-../Core/Src/_ADCn_INx_Offset.c:80:12:ADC3_IN2_OffsetCalc	2
+../Core/Src/_ADCn_INx_Offset.c:28:12:ADC1_IN2_OffsetCalc	2
+../Core/Src/_ADCn_INx_Offset.c:42:12:ADC2_IN3_OffsetCalc	2
+../Core/Src/_ADCn_INx_Offset.c:56:12:ADC2_IN4_OffsetCalc	2
+../Core/Src/_ADCn_INx_Offset.c:70:12:ADC3_IN1_OffsetCalc	2
+../Core/Src/_ADCn_INx_Offset.c:84:12:ADC3_IN2_OffsetCalc	2

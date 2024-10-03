@@ -5,14 +5,15 @@
  * Author: Mwangi Alex. W
  *
  * The Teager-Kaiser Energy Operator (TKEO) is a windowing tool used to track the instantaneous energy of the moving average output buffer (segment)
- * so as the evaluate muscle activation. It captures both amplitude and frequency variations to inform us whenever there has been any muscle activation
+ * so as the evaluate muscle activation. It captures both amplitude and frequency variations to inform us whenever there has been any muscle activation using
+ * a thresholding technique that compares the standard deviation of the TKEO data calculated with the standard deviation of the baseline signal
  */
 
 //INCLUDES
 #include "_ADCn_INx_TKEO.h"
 
 //VARIABLES
-float32_t ADC1_IN1_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
+float32_t ADC1_IN1_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Buffer that stores the TKEO data
 float32_t ADC1_IN2_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 float32_t ADC2_IN3_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 float32_t ADC2_IN4_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
@@ -81,21 +82,21 @@ uint8_t ADC1_IN2_TKEO(ADC1_IN2_MA *ADC1_IN2_TKEO_ptr, float32_t StnDev_BL_2)
 	  ADC1_IN2_Tkeo_bfr[n]= (ADC1_IN2_TKEO_ptr->MA_ADC1_IN2_OutBfr[n] * ADC1_IN2_TKEO_ptr->MA_ADC1_IN2_OutBfr[n]) - (ADC1_IN2_TKEO_ptr->MA_ADC1_IN2_OutBfr[n-1] * ADC1_IN2_TKEO_ptr->MA_ADC1_IN2_OutBfr[n+1]);
   }
 
-  /* Handling boundary conditions */
+
   ADC1_IN2_Tkeo_bfr[0] = 0.0f;
   ADC1_IN2_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE-1] = 0.0f;
 
 
-  float32_t Tkeo_Sum_2 = 0.0f; // Initialize the sum to zero
-  float32_t Tkeo_mean_2 =0.0f; // Initialize the mean to zero
-  float32_t Tkeo_Variance_2 = 0.0f; // Initialize variance to zero
-  float32_t Tkeo_SD_2 = 0.0f; //Initialize standard deviation to zero
+  float32_t Tkeo_Sum_2 = 0.0f;
+  float32_t Tkeo_mean_2 =0.0f;
+  float32_t Tkeo_Variance_2 = 0.0f;
+  float32_t Tkeo_SD_2 = 0.0f;
 
   uint8_t Tkeo_flag_2 = 0;
 
   for (uint32_t h=0; h<ADC_DMA_SIXTEENTHBUFFERSIZE; h++)
   {
-	Tkeo_Sum_2 += ADC1_IN2_Tkeo_bfr[h];  // Accumulate the sum of all values in the buffer
+	Tkeo_Sum_2 += ADC1_IN2_Tkeo_bfr[h];
   }
 
   Tkeo_mean_2 = Tkeo_Sum_2 / ADC_DMA_SIXTEENTHBUFFERSIZE;
@@ -107,7 +108,7 @@ uint8_t ADC1_IN2_TKEO(ADC1_IN2_MA *ADC1_IN2_TKEO_ptr, float32_t StnDev_BL_2)
   	Tkeo_Variance_2 += Tkeo_Diff_2 * Tkeo_Diff_2;
   }
 
-  Tkeo_Variance_2 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Tkeo_Variance_2 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
   Tkeo_SD_2 = sqrt(Tkeo_Variance_2);
 
@@ -135,21 +136,21 @@ uint8_t ADC2_IN3_TKEO(ADC2_IN3_MA *ADC2_IN3_TKEO_ptr, float32_t StnDev_BL_3)
 	  ADC2_IN3_Tkeo_bfr[n]= (ADC2_IN3_TKEO_ptr->MA_ADC2_IN3_OutBfr[n] * ADC2_IN3_TKEO_ptr->MA_ADC2_IN3_OutBfr[n]) - (ADC2_IN3_TKEO_ptr->MA_ADC2_IN3_OutBfr[n-1] * ADC2_IN3_TKEO_ptr->MA_ADC2_IN3_OutBfr[n+1]);
   }
 
-  /* Handling boundary conditions */
+
   ADC2_IN3_Tkeo_bfr[0] = 0.0f;
   ADC2_IN3_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE-1] = 0.0f;
 
 
-  float32_t Tkeo_Sum_3 = 0.0f; // Initialize the sum to zero
-  float32_t Tkeo_mean_3 =0.0f; // Initialize the mean to zero
-  float32_t Tkeo_Variance_3 = 0.0f; // Initialize variance to zero
-  float32_t Tkeo_SD_3 = 0.0f; //Initialize standard deviation to zero
+  float32_t Tkeo_Sum_3 = 0.0f;
+  float32_t Tkeo_mean_3 =0.0f;
+  float32_t Tkeo_Variance_3 = 0.0f;
+  float32_t Tkeo_SD_3 = 0.0f;
 
   uint8_t Tkeo_flag_3 = 0;
 
   for (uint32_t h=0; h<ADC_DMA_SIXTEENTHBUFFERSIZE; h++)
   {
-	Tkeo_Sum_3 += ADC2_IN3_Tkeo_bfr[h];  // Accumulate the sum of all values in the buffer
+	Tkeo_Sum_3 += ADC2_IN3_Tkeo_bfr[h];
   }
 
   Tkeo_mean_3 = Tkeo_Sum_3 / ADC_DMA_SIXTEENTHBUFFERSIZE;
@@ -161,7 +162,7 @@ uint8_t ADC2_IN3_TKEO(ADC2_IN3_MA *ADC2_IN3_TKEO_ptr, float32_t StnDev_BL_3)
   	Tkeo_Variance_3 += Tkeo_Diff_3 * Tkeo_Diff_3;
   }
 
-  Tkeo_Variance_3 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Tkeo_Variance_3 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
   Tkeo_SD_3 = sqrt(Tkeo_Variance_3);
 
@@ -188,21 +189,21 @@ uint8_t ADC2_IN4_TKEO(ADC2_IN4_MA *ADC2_IN4_TKEO_ptr, float32_t StnDev_BL_4)
 	  ADC2_IN4_Tkeo_bfr[n]= (ADC2_IN4_TKEO_ptr->MA_ADC2_IN4_OutBfr[n] * ADC2_IN4_TKEO_ptr->MA_ADC2_IN4_OutBfr[n]) - (ADC2_IN4_TKEO_ptr->MA_ADC2_IN4_OutBfr[n-1] * ADC2_IN4_TKEO_ptr->MA_ADC2_IN4_OutBfr[n+1]);
   }
 
-  /* Handling boundary conditions */
+
   ADC2_IN4_Tkeo_bfr[0] = 0.0f;
   ADC2_IN4_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE-1] = 0.0f;
 
 
-  float32_t Tkeo_Sum_4 = 0.0f; // Initialize the sum to zero
-  float32_t Tkeo_mean_4 =0.0f; // Initialize the mean to zero
-  float32_t Tkeo_Variance_4 = 0.0f; // Initialize variance to zero
-  float32_t Tkeo_SD_4 = 0.0f; //Initialize standard deviation to zero
+  float32_t Tkeo_Sum_4 = 0.0f;
+  float32_t Tkeo_mean_4 =0.0f;
+  float32_t Tkeo_Variance_4 = 0.0f;
+  float32_t Tkeo_SD_4 = 0.0f;
 
   uint8_t Tkeo_flag_4 = 0;
 
   for (uint32_t h=0; h<ADC_DMA_SIXTEENTHBUFFERSIZE; h++)
   {
-	Tkeo_Sum_4 += ADC2_IN4_Tkeo_bfr[h];  // Accumulate the sum of all values in the buffer
+	Tkeo_Sum_4 += ADC2_IN4_Tkeo_bfr[h];
   }
 
   Tkeo_mean_4 = Tkeo_Sum_4 / ADC_DMA_SIXTEENTHBUFFERSIZE;
@@ -214,7 +215,7 @@ uint8_t ADC2_IN4_TKEO(ADC2_IN4_MA *ADC2_IN4_TKEO_ptr, float32_t StnDev_BL_4)
   	Tkeo_Variance_4 += Tkeo_Diff_4 * Tkeo_Diff_4;
   }
 
-  Tkeo_Variance_4 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Tkeo_Variance_4 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
   Tkeo_SD_4 = sqrt(Tkeo_Variance_4);
 
@@ -296,21 +297,21 @@ uint8_t ADC3_IN2_TKEO(ADC3_IN2_MA *ADC3_IN2_TKEO_ptr, float32_t StnDev_BL_6)
 	  ADC3_IN2_Tkeo_bfr[n]= (ADC3_IN2_TKEO_ptr->MA_ADC3_IN2_OutBfr[n] * ADC3_IN2_TKEO_ptr->MA_ADC3_IN2_OutBfr[n]) - (ADC3_IN2_TKEO_ptr->MA_ADC3_IN2_OutBfr[n-1] * ADC3_IN2_TKEO_ptr->MA_ADC3_IN2_OutBfr[n+1]);
   }
 
-  /* Handling boundary conditions */
+
   ADC3_IN2_Tkeo_bfr[0] = 0.0f;
   ADC3_IN2_Tkeo_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE-1] = 0.0f;
 
 
-  float32_t Tkeo_Sum_6 = 0.0f; // Initialize the sum to zero
-  float32_t Tkeo_mean_6 =0.0f; // Initialize the mean to zero
-  float32_t Tkeo_Variance_6 = 0.0f; // Initialize variance to zero
-  float32_t Tkeo_SD_6 = 0.0f; //Initialize standard deviation to zero
+  float32_t Tkeo_Sum_6 = 0.0f;
+  float32_t Tkeo_mean_6 =0.0f;
+  float32_t Tkeo_Variance_6 = 0.0f;
+  float32_t Tkeo_SD_6 = 0.0f;
 
   uint8_t Tkeo_flag_6 = 0;
 
   for (uint32_t h=0; h<ADC_DMA_SIXTEENTHBUFFERSIZE; h++)
   {
-	Tkeo_Sum_6 += ADC3_IN2_Tkeo_bfr[h];  // Accumulate the sum of all values in the buffer
+	Tkeo_Sum_6 += ADC3_IN2_Tkeo_bfr[h];
   }
 
   Tkeo_mean_6 = Tkeo_Sum_6 / ADC_DMA_SIXTEENTHBUFFERSIZE;
@@ -322,7 +323,7 @@ uint8_t ADC3_IN2_TKEO(ADC3_IN2_MA *ADC3_IN2_TKEO_ptr, float32_t StnDev_BL_6)
   	Tkeo_Variance_6 += Tkeo_Diff_6 * Tkeo_Diff_6;
   }
 
-  Tkeo_Variance_6 /= ADC_DMA_SIXTEENTHBUFFERSIZE; // Average the squared differences
+  Tkeo_Variance_6 /= ADC_DMA_SIXTEENTHBUFFERSIZE;
 
   Tkeo_SD_6 = sqrt(Tkeo_Variance_6);
 

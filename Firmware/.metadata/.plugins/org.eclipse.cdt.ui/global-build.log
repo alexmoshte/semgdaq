@@ -12,3 +12,894 @@ arm-none-eabi-size  semgdaq.elf
   31760	  30944	  22664	  85368	  14d78	semgdaq.elf
 Finished building: default.size.stdout
  
+19:41:57 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+19:42:31 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+20:40:45 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_NF.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_NF.d" -MT"Core/Src/_ADCn_INx_NF.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_NF.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SD_BL.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SD_BL.d" -MT"Core/Src/_ADCn_INx_SD_BL.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SD_BL.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/_DMA_Sort.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_DMA_Sort.d" -MT"Core/Src/_DMA_Sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_DMA_Sort.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvHalfCpltCallback':
+../Core/Src/main.c:896:40: error: 'ADC2_DMA_sort' has no member named 'ADC2_DMA_mon'; did you mean 'ADC2_DMA_bfr'?
+  896 |                     ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
+      |                                        ^~~~~~~~~~~~
+      |                                        ADC2_DMA_bfr
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:929:41: error: 'ADC2_DMA_sort' has no member named 'ADC2_DMA_mon'; did you mean 'ADC2_DMA_bfr'?
+  929 |                      ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
+      |                                         ^~~~~~~~~~~~
+      |                                         ADC2_DMA_bfr
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:42:17 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_NF.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_NF.d" -MT"Core/Src/_ADCn_INx_NF.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_NF.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SD_BL.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SD_BL.d" -MT"Core/Src/_ADCn_INx_SD_BL.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SD_BL.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/_DMA_Sort.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_DMA_Sort.d" -MT"Core/Src/_DMA_Sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_DMA_Sort.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+21:00:54 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SD_BL.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SD_BL.d" -MT"Core/Src/_ADCn_INx_SD_BL.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SD_BL.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+15:38:01 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SD_BL.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SD_BL.d" -MT"Core/Src/_ADCn_INx_SD_BL.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SD_BL.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:03:00 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_MA.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_MA.d" -MT"Core/Src/_ADCn_INx_MA.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_MA.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_NF.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_NF.d" -MT"Core/Src/_ADCn_INx_NF.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_NF.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_Offset.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_Offset.d" -MT"Core/Src/_ADCn_INx_Offset.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_Offset.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SD_BL.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SD_BL.d" -MT"Core/Src/_ADCn_INx_SD_BL.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SD_BL.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_TKEO.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_TKEO.d" -MT"Core/Src/_ADCn_INx_TKEO.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_TKEO.o"
+arm-none-eabi-gcc "../Core/Src/_DMA_Sort.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_DMA_Sort.d" -MT"Core/Src/_DMA_Sort.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_DMA_Sort.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_hal_msp.d" -MT"Core/Src/stm32g4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_it.d" -MT"Core/Src/stm32g4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32g4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32g4xx.d" -MT"Core/Src/system_stm32g4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32g4xx.o"
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/_ADCn_INx_SSC.h:17:2: error: unknown type name 'float32_t'
+   17 |  float32_t ADC1_IN1_SSC (ADC1_IN1_MA *ADC1_IN1_SSC_ptr);
+      |  ^~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:17:26: error: unknown type name 'ADC1_IN1_MA'
+   17 |  float32_t ADC1_IN1_SSC (ADC1_IN1_MA *ADC1_IN1_SSC_ptr);
+      |                          ^~~~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:18:2: error: unknown type name 'float32_t'
+   18 |  float32_t ADC1_IN2_SSC (ADC1_IN2_MA *ADC1_IN2_SSC_ptr);
+      |  ^~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:18:26: error: unknown type name 'ADC1_IN2_MA'
+   18 |  float32_t ADC1_IN2_SSC (ADC1_IN2_MA *ADC1_IN2_SSC_ptr);
+      |                          ^~~~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:19:2: error: unknown type name 'float32_t'
+   19 |  float32_t ADC2_IN3_SSC (ADC2_IN3_MA *ADC2_IN3_SSC_ptr);
+      |  ^~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:19:26: error: unknown type name 'ADC2_IN3_MA'
+   19 |  float32_t ADC2_IN3_SSC (ADC2_IN3_MA *ADC2_IN3_SSC_ptr);
+      |                          ^~~~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:20:2: error: unknown type name 'float32_t'
+   20 |  float32_t ADC2_IN4_SSC (ADC2_IN4_MA *ADC2_IN4_SSC_ptr);
+      |  ^~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:20:26: error: unknown type name 'ADC2_IN4_MA'
+   20 |  float32_t ADC2_IN4_SSC (ADC2_IN4_MA *ADC2_IN4_SSC_ptr);
+      |                          ^~~~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:21:2: error: unknown type name 'float32_t'
+   21 |  float32_t ADC3_IN1_SSC (ADC3_IN1_MA *ADC3_IN1_SSC_ptr);
+      |  ^~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:21:26: error: unknown type name 'ADC3_IN1_MA'
+   21 |  float32_t ADC3_IN1_SSC (ADC3_IN1_MA *ADC3_IN1_SSC_ptr);
+      |                          ^~~~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:22:2: error: unknown type name 'float32_t'
+   22 |  float32_t ADC3_IN2_SSC (ADC3_IN2_MA *ADC3_IN2_SSC_ptr);
+      |  ^~~~~~~~~
+../Core/Inc/_ADCn_INx_SSC.h:22:26: error: unknown type name 'ADC3_IN2_MA'
+   22 |  float32_t ADC3_IN2_SSC (ADC3_IN2_MA *ADC3_IN2_SSC_ptr);
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c:59:1: error: unknown type name 'ADC1_DMA_sort'
+   59 | ADC1_DMA_sort*ADC1_DMA_sort_ptr; // Declaring a pointer to the sorting structure at runtime
+      | ^~~~~~~~~~~~~
+../Core/Src/main.c:60:1: error: unknown type name 'ADC2_DMA_sort'
+   60 | ADC2_DMA_sort*ADC2_DMA_sort_ptr;
+      | ^~~~~~~~~~~~~
+../Core/Src/main.c:61:1: error: unknown type name 'ADC3_DMA_sort'
+   61 | ADC3_DMA_sort*ADC3_DMA_sort_ptr;
+      | ^~~~~~~~~~~~~
+../Core/Src/main.c:63:1: error: unknown type name 'ADC1_IN1_MA'
+   63 | ADC1_IN1_MA MovingAverage_ADC1_IN1; // Declaring an instance of the moving average structure
+      | ^~~~~~~~~~~
+../Core/Src/main.c:64:1: error: unknown type name 'ADC1_IN2_MA'
+   64 | ADC1_IN2_MA MovingAverage_ADC1_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:65:1: error: unknown type name 'ADC2_IN3_MA'
+   65 | ADC2_IN3_MA MovingAverage_ADC2_IN3;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:66:1: error: unknown type name 'ADC2_IN4_MA'
+   66 | ADC2_IN4_MA MovingAverage_ADC2_IN4;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:67:1: error: unknown type name 'ADC3_IN1_MA'
+   67 | ADC3_IN1_MA MovingAverage_ADC3_IN1;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:68:1: error: unknown type name 'ADC3_IN2_MA'
+   68 | ADC3_IN2_MA MovingAverage_ADC3_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:70:1: error: unknown type name 'ADC1_IN1_MA'
+   70 | ADC1_IN1_MA OffsetCalc_ADC1_IN1; // Declaring an instance of the Offset calculation
+      | ^~~~~~~~~~~
+../Core/Src/main.c:71:1: error: unknown type name 'ADC1_IN2_MA'
+   71 | ADC1_IN2_MA OffsetCalc_ADC1_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:72:1: error: unknown type name 'ADC2_IN3_MA'
+   72 | ADC2_IN3_MA OffsetCalc_ADC2_IN3;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:73:1: error: unknown type name 'ADC2_IN4_MA'
+   73 | ADC2_IN4_MA OffsetCalc_ADC2_IN4;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:74:1: error: unknown type name 'ADC3_IN1_MA'
+   74 | ADC3_IN1_MA OffsetCalc_ADC3_IN1;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:75:1: error: unknown type name 'ADC3_IN2_MA'
+   75 | ADC3_IN2_MA OffsetCalc_ADC3_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:77:1: error: unknown type name 'ADC1_IN1_MA'
+   77 | ADC1_IN1_MA SD_BL_ADC1_IN1; // Declaring an instance of standard deviation calculation
+      | ^~~~~~~~~~~
+../Core/Src/main.c:78:1: error: unknown type name 'ADC1_IN2_MA'
+   78 | ADC1_IN2_MA SD_BL_ADC1_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:79:1: error: unknown type name 'ADC2_IN3_MA'
+   79 | ADC2_IN3_MA SD_BL_ADC2_IN3;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:80:1: error: unknown type name 'ADC2_IN4_MA'
+   80 | ADC2_IN4_MA SD_BL_ADC2_IN4;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:81:1: error: unknown type name 'ADC3_IN1_MA'
+   81 | ADC3_IN1_MA SD_BL_ADC3_IN1;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:82:1: error: unknown type name 'ADC3_IN2_MA'
+   82 | ADC3_IN2_MA SD_BL_ADC3_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:85:1: error: unknown type name 'ADC1_IN1_MA'
+   85 | ADC1_IN1_MA TKEO_ADC1_IN1; // Declaring an instance of TKEO thresholding
+      | ^~~~~~~~~~~
+../Core/Src/main.c:86:1: error: unknown type name 'ADC1_IN2_MA'
+   86 | ADC1_IN2_MA TKEO_ADC1_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:87:1: error: unknown type name 'ADC2_IN3_MA'
+   87 | ADC2_IN3_MA TKEO_ADC2_IN3;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:88:1: error: unknown type name 'ADC2_IN4_MA'
+   88 | ADC2_IN4_MA TKEO_ADC2_IN4;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:89:1: error: unknown type name 'ADC3_IN1_MA'
+   89 | ADC3_IN1_MA TKEO_ADC3_IN1;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:90:1: error: unknown type name 'ADC3_IN2_MA'
+   90 | ADC3_IN2_MA TKEO_ADC3_IN2;
+      | ^~~~~~~~~~~
+../Core/Src/main.c:96:1: error: unknown type name 'float32_t'
+   96 | float32_t Offset_1; // Variable to store the calculated offset
+      | ^~~~~~~~~
+../Core/Src/main.c:97:1: error: unknown type name 'float32_t'
+   97 | float32_t Offset_2;
+      | ^~~~~~~~~
+../Core/Src/main.c:98:1: error: unknown type name 'float32_t'
+   98 | float32_t Offset_3;
+      | ^~~~~~~~~
+../Core/Src/main.c:99:1: error: unknown type name 'float32_t'
+   99 | float32_t Offset_4;
+      | ^~~~~~~~~
+../Core/Src/main.c:100:1: error: unknown type name 'float32_t'
+  100 | float32_t Offset_5;
+      | ^~~~~~~~~
+../Core/Src/main.c:101:1: error: unknown type name 'float32_t'
+  101 | float32_t Offset_6;
+      | ^~~~~~~~~
+../Core/Src/main.c:112:1: error: unknown type name 'float32_t'
+  112 | float32_t SD_BL_1;
+      | ^~~~~~~~~
+../Core/Src/main.c:113:1: error: unknown type name 'float32_t'
+  113 | float32_t SD_BL_2;
+      | ^~~~~~~~~
+../Core/Src/main.c:114:1: error: unknown type name 'float32_t'
+  114 | float32_t SD_BL_3;
+      | ^~~~~~~~~
+../Core/Src/main.c:115:1: error: unknown type name 'float32_t'
+  115 | float32_t SD_BL_4;
+      | ^~~~~~~~~
+../Core/Src/main.c:116:1: error: unknown type name 'float32_t'
+  116 | float32_t SD_BL_5;
+      | ^~~~~~~~~
+../Core/Src/main.c:117:1: error: unknown type name 'float32_t'
+  117 | float32_t SD_BL_6;
+      | ^~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:166:3: warning: implicit declaration of function 'init_ADC1_IN1_struct' [-Wimplicit-function-declaration]
+  166 |   init_ADC1_IN1_struct(); // Pointer to the source buffer is initialized at runtime
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:167:3: warning: implicit declaration of function 'init_ADC1_IN1_FO_biquad_filter' [-Wimplicit-function-declaration]
+  167 |   init_ADC1_IN1_FO_biquad_filter();  // Initializes the filter coefficients and variables
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:168:3: warning: implicit declaration of function 'MA_ADC1_IN1_Init'; did you mean 'MX_ADC1_Init'? [-Wimplicit-function-declaration]
+  168 |   MA_ADC1_IN1_Init(&MovingAverage_ADC1_IN1); // Initializes all the output and moving average buffers to zero and the index to zero
+      |   ^~~~~~~~~~~~~~~~
+      |   MX_ADC1_Init
+../Core/Src/main.c:170:3: warning: implicit declaration of function 'init_ADC1_IN2_struct' [-Wimplicit-function-declaration]
+  170 |   init_ADC1_IN2_struct();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:171:3: warning: implicit declaration of function 'init_ADC1_IN2_FO_biquad_filter' [-Wimplicit-function-declaration]
+  171 |   init_ADC1_IN2_FO_biquad_filter();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:172:3: warning: implicit declaration of function 'MA_ADC1_IN2_Init'; did you mean 'MX_ADC2_Init'? [-Wimplicit-function-declaration]
+  172 |   MA_ADC1_IN2_Init(&MovingAverage_ADC1_IN2);
+      |   ^~~~~~~~~~~~~~~~
+      |   MX_ADC2_Init
+../Core/Src/main.c:174:3: warning: implicit declaration of function 'init_ADC2_IN3_struct' [-Wimplicit-function-declaration]
+  174 |   init_ADC2_IN3_struct();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:175:3: warning: implicit declaration of function 'init_ADC2_IN3_FO_biquad_filter' [-Wimplicit-function-declaration]
+  175 |   init_ADC2_IN3_FO_biquad_filter();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:176:3: warning: implicit declaration of function 'MA_ADC2_IN3_Init'; did you mean 'MX_ADC3_Init'? [-Wimplicit-function-declaration]
+  176 |   MA_ADC2_IN3_Init(&MovingAverage_ADC2_IN3);
+      |   ^~~~~~~~~~~~~~~~
+      |   MX_ADC3_Init
+../Core/Src/main.c:178:3: warning: implicit declaration of function 'init_ADC2_IN4_struct' [-Wimplicit-function-declaration]
+  178 |   init_ADC2_IN4_struct();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:179:3: warning: implicit declaration of function 'init_ADC2_IN4_FO_biquad_filter' [-Wimplicit-function-declaration]
+  179 |   init_ADC2_IN4_FO_biquad_filter();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:180:3: warning: implicit declaration of function 'MA_ADC2_IN4_Init'; did you mean 'MX_ADC2_Init'? [-Wimplicit-function-declaration]
+  180 |   MA_ADC2_IN4_Init(&MovingAverage_ADC2_IN4);
+      |   ^~~~~~~~~~~~~~~~
+      |   MX_ADC2_Init
+../Core/Src/main.c:182:3: warning: implicit declaration of function 'init_ADC3_IN1_struct' [-Wimplicit-function-declaration]
+  182 |   init_ADC3_IN1_struct();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:183:3: warning: implicit declaration of function 'init_ADC3_IN1_FO_biquad_filter' [-Wimplicit-function-declaration]
+  183 |   init_ADC3_IN1_FO_biquad_filter();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:184:3: warning: implicit declaration of function 'MA_ADC3_IN1_Init'; did you mean 'MX_ADC3_Init'? [-Wimplicit-function-declaration]
+  184 |   MA_ADC3_IN1_Init(&MovingAverage_ADC3_IN1);
+      |   ^~~~~~~~~~~~~~~~
+      |   MX_ADC3_Init
+../Core/Src/main.c:186:3: warning: implicit declaration of function 'init_ADC3_IN2_struct' [-Wimplicit-function-declaration]
+  186 |   init_ADC3_IN2_struct();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:187:3: warning: implicit declaration of function 'init_ADC3_IN2_FO_biquad_filter' [-Wimplicit-function-declaration]
+  187 |   init_ADC3_IN2_FO_biquad_filter();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:188:3: warning: implicit declaration of function 'MA_ADC3_IN2_Init'; did you mean 'MX_ADC3_Init'? [-Wimplicit-function-declaration]
+  188 |   MA_ADC3_IN2_Init(&MovingAverage_ADC3_IN2);
+      |   ^~~~~~~~~~~~~~~~
+      |   MX_ADC3_Init
+../Core/Src/main.c:212:59: error: request for member 'ADC1_DMA_bfr' in something not a structure or union
+  212 |     ADC_status=HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr, ADC_DMA_BUFFERSIZE);
+      |                                                           ^~
+../Core/Src/main.c:212:75: error: 'ADC_DMA_BUFFERSIZE' undeclared (first use in this function); did you mean 'IS_DMA_BUFFER_SIZE'?
+  212 |     ADC_status=HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr, ADC_DMA_BUFFERSIZE);
+      |                                                                           ^~~~~~~~~~~~~~~~~~
+      |                                                                           IS_DMA_BUFFER_SIZE
+../Core/Src/main.c:212:75: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:215:59: error: request for member 'ADC2_DMA_bfr' in something not a structure or union
+  215 |     ADC_status=HAL_ADC_Start_DMA(&hadc2, ADC2_DMA_sort_ptr->ADC2_DMA_bfr, ADC_DMA_BUFFERSIZE);
+      |                                                           ^~
+../Core/Src/main.c:218:59: error: request for member 'ADC3_DMA_bfr' in something not a structure or union
+  218 |     ADC_status=HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr, ADC_DMA_BUFFERSIZE);
+      |                                                           ^~
+../Core/Src/main.c:222:3: error: unknown type name 'float32_t'
+  222 |   float32_t OffsetSum_1;
+      |   ^~~~~~~~~
+../Core/Src/main.c:226:17: warning: implicit declaration of function 'update_ADC1_IN1_FO_biquad_filter' [-Wimplicit-function-declaration]
+  226 |                 update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:227:17: warning: implicit declaration of function 'MA_ADC1_IN1_Update' [-Wimplicit-function-declaration]
+  227 |                 MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);  // Fill the buffer with ADC data
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:230:28: warning: implicit declaration of function 'ADC1_IN1_OffsetCalc' [-Wimplicit-function-declaration]
+  230 |                 Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:237:13: warning: implicit declaration of function 'ADC1_IN1_SD_BL' [-Wimplicit-function-declaration]
+  237 |   SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:243:3: error: unknown type name 'float32_t'
+  243 |   float32_t OffsetSum_2;
+      |   ^~~~~~~~~
+../Core/Src/main.c:247:17: warning: implicit declaration of function 'update_ADC1_IN2_FO_biquad_filter' [-Wimplicit-function-declaration]
+  247 |                 update_ADC1_IN2_FO_biquad_filter();  // Filters channel 1 data
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:248:17: warning: implicit declaration of function 'MA_ADC1_IN2_Update' [-Wimplicit-function-declaration]
+  248 |                 MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);  // Fill the buffer with ADC data
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:251:28: warning: implicit declaration of function 'ADC1_IN2_OffsetCalc' [-Wimplicit-function-declaration]
+  251 |                 Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:258:13: warning: implicit declaration of function 'ADC1_IN2_SD_BL' [-Wimplicit-function-declaration]
+  258 |   SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:264:3: error: unknown type name 'float32_t'
+  264 |   float32_t OffsetSum_3;
+      |   ^~~~~~~~~
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'update_ADC2_IN3_FO_biquad_filter' [-Wimplicit-function-declaration]
+  268 |                 update_ADC2_IN3_FO_biquad_filter();  // Filters channel 1 data
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'MA_ADC2_IN3_Update' [-Wimplicit-function-declaration]
+  269 |                 MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);  // Fill the buffer with ADC data
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:272:28: warning: implicit declaration of function 'ADC2_IN3_OffsetCalc' [-Wimplicit-function-declaration]
+  272 |                 Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:279:13: warning: implicit declaration of function 'ADC2_IN3_SD_BL' [-Wimplicit-function-declaration]
+  279 |   SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:285:3: error: unknown type name 'float32_t'
+  285 |   float32_t OffsetSum_4;
+      |   ^~~~~~~~~
+../Core/Src/main.c:289:17: warning: implicit declaration of function 'update_ADC2_IN4_FO_biquad_filter' [-Wimplicit-function-declaration]
+  289 |                 update_ADC2_IN4_FO_biquad_filter();  // Filters channel 1 data
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:290:17: warning: implicit declaration of function 'MA_ADC2_IN4_Update' [-Wimplicit-function-declaration]
+  290 |                 MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);  // Fill the buffer with ADC data
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:293:28: warning: implicit declaration of function 'ADC2_IN4_OffsetCalc' [-Wimplicit-function-declaration]
+  293 |                 Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:300:13: warning: implicit declaration of function 'ADC2_IN4_SD_BL' [-Wimplicit-function-declaration]
+  300 |   SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:306:3: error: unknown type name 'float32_t'
+  306 |   float32_t OffsetSum_5;
+      |   ^~~~~~~~~
+../Core/Src/main.c:310:17: warning: implicit declaration of function 'update_ADC3_IN1_FO_biquad_filter' [-Wimplicit-function-declaration]
+  310 |                 update_ADC3_IN1_FO_biquad_filter();  // Filters channel 1 data
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:311:17: warning: implicit declaration of function 'MA_ADC3_IN1_Update' [-Wimplicit-function-declaration]
+  311 |                 MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);  // Fill the buffer with ADC data
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:314:28: warning: implicit declaration of function 'ADC3_IN1_OffsetCalc' [-Wimplicit-function-declaration]
+  314 |                 Offset_1 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:321:13: warning: implicit declaration of function 'ADC3_IN1_SD_BL' [-Wimplicit-function-declaration]
+  321 |   SD_BL_5 = ADC3_IN1_SD_BL(&SD_BL_ADC3_IN1, Offset_5);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:327:3: error: unknown type name 'float32_t'
+  327 |   float32_t OffsetSum_6;
+      |   ^~~~~~~~~
+../Core/Src/main.c:331:17: warning: implicit declaration of function 'update_ADC3_IN2_FO_biquad_filter' [-Wimplicit-function-declaration]
+  331 |                 update_ADC3_IN2_FO_biquad_filter();  // Filters channel 1 data
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:332:17: warning: implicit declaration of function 'MA_ADC3_IN2_Update' [-Wimplicit-function-declaration]
+  332 |                 MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);  // Fill the buffer with ADC data
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:335:28: warning: implicit declaration of function 'ADC3_IN2_OffsetCalc' [-Wimplicit-function-declaration]
+  335 |                 Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+      |                            ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:342:13: warning: implicit declaration of function 'ADC3_IN2_SD_BL' [-Wimplicit-function-declaration]
+  342 |   SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
+      |             ^~~~~~~~~~~~~~
+../Core/Src/main.c:352:36: error: 'ADC_DMA_SIXTEENTHBUFFERSIZE' undeclared (first use in this function)
+  352 |           for (uint32_t y = 0; y < ADC_DMA_SIXTEENTHBUFFERSIZE; y++)
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:354:41: error: request for member 'MA_ADC1_IN1_OutBfr' in something not a structure or union
+  354 |                   MovingAverage_ADC1_IN1.MA_ADC1_IN1_OutBfr[y]  -= Offset_1; // Subtract the stored offset
+      |                                         ^
+../Core/Src/main.c:357:20: warning: implicit declaration of function 'ADC1_IN1_TKEO' [-Wimplicit-function-declaration]
+  357 |           TKEO_1 = ADC1_IN1_TKEO(&TKEO_ADC1_IN1, SD_BL_1);
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c:365:41: error: request for member 'MA_ADC1_IN2_OutBfr' in something not a structure or union
+  365 |                   MovingAverage_ADC1_IN2.MA_ADC1_IN2_OutBfr[z]  -= Offset_2;
+      |                                         ^
+../Core/Src/main.c:368:20: warning: implicit declaration of function 'ADC1_IN2_TKEO' [-Wimplicit-function-declaration]
+  368 |           TKEO_2 = ADC1_IN2_TKEO(&TKEO_ADC1_IN2, SD_BL_2);
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c:376:41: error: request for member 'MA_ADC2_IN3_OutBfr' in something not a structure or union
+  376 |                   MovingAverage_ADC2_IN3.MA_ADC2_IN3_OutBfr[g]  -= Offset_3;
+      |                                         ^
+../Core/Src/main.c:379:20: warning: implicit declaration of function 'ADC2_IN3_TKEO' [-Wimplicit-function-declaration]
+  379 |           TKEO_3 = ADC2_IN3_TKEO(&TKEO_ADC2_IN3, SD_BL_3);
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c:388:41: error: request for member 'MA_ADC2_IN4_OutBfr' in something not a structure or union
+  388 |                   MovingAverage_ADC2_IN4.MA_ADC2_IN4_OutBfr[e]  -= Offset_4;
+      |                                         ^
+../Core/Src/main.c:391:20: warning: implicit declaration of function 'ADC2_IN4_TKEO' [-Wimplicit-function-declaration]
+  391 |           TKEO_4 = ADC2_IN4_TKEO(&TKEO_ADC2_IN4, SD_BL_4);
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c:400:41: error: request for member 'MA_ADC3_IN1_OutBfr' in something not a structure or union
+  400 |                   MovingAverage_ADC3_IN1.MA_ADC3_IN1_OutBfr[b]  -= Offset_5;
+      |                                         ^
+../Core/Src/main.c:404:20: warning: implicit declaration of function 'ADC3_IN1_TKEO' [-Wimplicit-function-declaration]
+  404 |           TKEO_5 = ADC3_IN1_TKEO(&TKEO_ADC3_IN1, SD_BL_5);
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c:413:41: error: request for member 'MA_ADC3_IN2_OutBfr' in something not a structure or union
+  413 |                   MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;
+      |                                         ^
+../Core/Src/main.c:416:20: warning: implicit declaration of function 'ADC3_IN2_TKEO' [-Wimplicit-function-declaration]
+  416 |           TKEO_6 = ADC3_IN2_TKEO(&TKEO_ADC3_IN2, SD_BL_6);
+      |                    ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_ADC_ConvHalfCpltCallback':
+../Core/Src/main.c:883:17: warning: implicit declaration of function 'ADC1_DMA_sort_uhb' [-Wimplicit-function-declaration]
+  883 |                 ADC1_DMA_sort_uhb(); // Handles the upper half of the DMA buffer
+      |                 ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:885:34: error: request for member 'ADC1_DMA_mon' in something not a structure or union
+  885 |                 ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];  // Monitors one of the DMA buffer registers in the upper half of the buffer
+      |                                  ^~
+../Core/Src/main.c:885:66: error: request for member 'ADC1_DMA_bfr' in something not a structure or union
+  885 |                 ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];  // Monitors one of the DMA buffer registers in the upper half of the buffer
+      |                                                                  ^~
+../Core/Src/main.c:885:81: error: 'ADC_DMA_QUATERBUFFERSIZE' undeclared (first use in this function)
+  885 |                 ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];  // Monitors one of the DMA buffer registers in the upper half of the buffer
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:886:34: error: request for member 'ADC1_IN1_mon' in something not a structure or union
+  886 |                 ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the upper half of the buffer
+      |                                  ^~
+../Core/Src/main.c:886:66: error: request for member 'ADC1_IN1_bfr' in something not a structure or union
+  886 |                 ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the upper half of the buffer
+      |                                                                  ^~
+../Core/Src/main.c:886:81: error: 'ADC_DMA_EIGHTHBUFFERSIZE' undeclared (first use in this function)
+  886 |                 ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the upper half of the buffer
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:887:34: error: request for member 'ADC1_IN2_mon' in something not a structure or union
+  887 |                 ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the upper half of the buffer
+      |                                  ^~
+../Core/Src/main.c:887:66: error: request for member 'ADC1_IN2_bfr' in something not a structure or union
+  887 |                 ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the upper half of the buffer
+      |                                                                  ^~
+../Core/Src/main.c:894:21: warning: implicit declaration of function 'ADC2_DMA_sort_uhb' [-Wimplicit-function-declaration]
+  894 |                     ADC2_DMA_sort_uhb();
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:896:38: error: request for member 'ADC2_DMA_mon' in something not a structure or union
+  896 |                     ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
+      |                                      ^~
+../Core/Src/main.c:896:70: error: request for member 'ADC2_DMA_bfr' in something not a structure or union
+  896 |                     ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
+      |                                                                      ^~
+../Core/Src/main.c:897:38: error: request for member 'ADC2_IN3_mon' in something not a structure or union
+  897 |                     ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                      ^~
+../Core/Src/main.c:897:70: error: request for member 'ADC2_IN3_bfr' in something not a structure or union
+  897 |                     ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                      ^~
+../Core/Src/main.c:898:38: error: request for member 'ADC2_IN4_mon' in something not a structure or union
+  898 |                     ADC2_DMA_sort_ptr->ADC2_IN4_mon=ADC2_DMA_sort_ptr->ADC2_IN4_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                      ^~
+../Core/Src/main.c:898:70: error: request for member 'ADC2_IN4_bfr' in something not a structure or union
+  898 |                     ADC2_DMA_sort_ptr->ADC2_IN4_mon=ADC2_DMA_sort_ptr->ADC2_IN4_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                      ^~
+../Core/Src/main.c:904:21: warning: implicit declaration of function 'ADC3_DMA_sort_uhb' [-Wimplicit-function-declaration]
+  904 |                     ADC3_DMA_sort_uhb();
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:906:38: error: request for member 'ADC3_DMA_mon' in something not a structure or union
+  906 |                     ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
+      |                                      ^~
+../Core/Src/main.c:906:70: error: request for member 'ADC3_DMA_bfr' in something not a structure or union
+  906 |                     ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_QUATERBUFFERSIZE];
+      |                                                                      ^~
+../Core/Src/main.c:907:38: error: request for member 'ADC3_IN1_mon' in something not a structure or union
+  907 |                     ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                      ^~
+../Core/Src/main.c:907:70: error: request for member 'ADC3_IN1_bfr' in something not a structure or union
+  907 |                     ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                      ^~
+../Core/Src/main.c:908:38: error: request for member 'ADC3_IN2_mon' in something not a structure or union
+  908 |                     ADC3_DMA_sort_ptr->ADC3_IN2_mon=ADC3_DMA_sort_ptr->ADC3_IN2_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                      ^~
+../Core/Src/main.c:908:70: error: request for member 'ADC3_IN2_bfr' in something not a structure or union
+  908 |                     ADC3_DMA_sort_ptr->ADC3_IN2_mon=ADC3_DMA_sort_ptr->ADC3_IN2_bfr[ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                      ^~
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:916:25: warning: implicit declaration of function 'ADC1_DMA_sort_lhb' [-Wimplicit-function-declaration]
+  916 |                         ADC1_DMA_sort_lhb(); // Handles the lower half of the DMA buffer
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:918:42: error: request for member 'ADC1_DMA_mon' in something not a structure or union
+  918 |                         ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE]; // Monitors one of the DMA buffer registers in the lower half of the buffer
+      |                                          ^~
+../Core/Src/main.c:918:74: error: request for member 'ADC1_DMA_bfr' in something not a structure or union
+  918 |                         ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE]; // Monitors one of the DMA buffer registers in the lower half of the buffer
+      |                                                                          ^~
+../Core/Src/main.c:918:89: error: 'ADC_DMA_HALFBUFFERSIZE' undeclared (first use in this function); did you mean 'IS_DMA_BUFFER_SIZE'?
+  918 |                         ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE]; // Monitors one of the DMA buffer registers in the lower half of the buffer
+      |                                                                                         ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                         IS_DMA_BUFFER_SIZE
+../Core/Src/main.c:918:114: error: 'ADC_DMA_QUATERBUFFERSIZE' undeclared (first use in this function)
+  918 |                         ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE]; // Monitors one of the DMA buffer registers in the lower half of the buffer
+      |                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:919:42: error: request for member 'ADC1_IN1_mon' in something not a structure or union
+  919 |                         ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the lower half of the buffer
+      |                                          ^~
+../Core/Src/main.c:919:74: error: request for member 'ADC1_IN1_bfr' in something not a structure or union
+  919 |                         ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the lower half of the buffer
+      |                                                                          ^~
+../Core/Src/main.c:919:116: error: 'ADC_DMA_EIGHTHBUFFERSIZE' undeclared (first use in this function)
+  919 |                         ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the lower half of the buffer
+      |                                                                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:920:42: error: request for member 'ADC1_IN2_mon' in something not a structure or union
+  920 |                         ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the lower half of the buffer
+      |                                          ^~
+../Core/Src/main.c:920:74: error: request for member 'ADC1_IN2_bfr' in something not a structure or union
+  920 |                         ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the lower half of the buffer
+      |                                                                          ^~
+../Core/Src/main.c:927:22: warning: implicit declaration of function 'ADC2_DMA_sort_lhb' [-Wimplicit-function-declaration]
+  927 |                      ADC2_DMA_sort_lhb();
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:929:39: error: request for member 'ADC2_DMA_mon' in something not a structure or union
+  929 |                      ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
+      |                                       ^~
+../Core/Src/main.c:929:71: error: request for member 'ADC2_DMA_bfr' in something not a structure or union
+  929 |                      ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
+      |                                                                       ^~
+../Core/Src/main.c:930:39: error: request for member 'ADC2_IN3_mon' in something not a structure or union
+  930 |                      ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                       ^~
+../Core/Src/main.c:930:71: error: request for member 'ADC2_IN3_bfr' in something not a structure or union
+  930 |                      ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                       ^~
+../Core/Src/main.c:931:43: error: request for member 'ADC2_IN4_mon' in something not a structure or union
+  931 |                          ADC2_DMA_sort_ptr->ADC2_IN4_mon=ADC2_DMA_sort_ptr->ADC2_IN4_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                           ^~
+../Core/Src/main.c:931:75: error: request for member 'ADC2_IN4_bfr' in something not a structure or union
+  931 |                          ADC2_DMA_sort_ptr->ADC2_IN4_mon=ADC2_DMA_sort_ptr->ADC2_IN4_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                           ^~
+../Core/Src/main.c:937:22: warning: implicit declaration of function 'ADC3_DMA_sort_lhb' [-Wimplicit-function-declaration]
+  937 |                      ADC3_DMA_sort_lhb();
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:939:43: error: request for member 'ADC3_DMA_mon' in something not a structure or union
+  939 |                          ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
+      |                                           ^~
+../Core/Src/main.c:939:75: error: request for member 'ADC3_DMA_bfr' in something not a structure or union
+  939 |                          ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
+      |                                                                           ^~
+../Core/Src/main.c:940:43: error: request for member 'ADC3_IN1_mon' in something not a structure or union
+  940 |                          ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                           ^~
+../Core/Src/main.c:940:75: error: request for member 'ADC3_IN1_bfr' in something not a structure or union
+  940 |                          ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                           ^~
+../Core/Src/main.c:941:43: error: request for member 'ADC3_IN2_mon' in something not a structure or union
+  941 |                          ADC3_DMA_sort_ptr->ADC3_IN2_mon=ADC3_DMA_sort_ptr->ADC3_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                           ^~
+../Core/Src/main.c:941:75: error: request for member 'ADC3_IN2_bfr' in something not a structure or union
+  941 |                          ADC3_DMA_sort_ptr->ADC3_IN2_mon=ADC3_DMA_sort_ptr->ADC3_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+      |                                                                           ^~
+make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:03:58 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:18:51 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/_ADCn_INx_SSC.c:12:1: error: unknown type name 'float32_t'
+   12 | float32_t ADC1_IN1_SSC (ADC1_IN1_MA *ADC1_IN1_SSC_ptr, float32_t Threshold_1)
+      | ^~~~~~~~~
+../Core/Src/_ADCn_INx_SSC.c:12:25: error: unknown type name 'ADC1_IN1_MA'
+   12 | float32_t ADC1_IN1_SSC (ADC1_IN1_MA *ADC1_IN1_SSC_ptr, float32_t Threshold_1)
+      |                         ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_SSC.c:12:56: error: unknown type name 'float32_t'
+   12 | float32_t ADC1_IN1_SSC (ADC1_IN1_MA *ADC1_IN1_SSC_ptr, float32_t Threshold_1)
+      |                                                        ^~~~~~~~~
+make: *** [Core/Src/subdir.mk:55: Core/Src/_ADCn_INx_SSC.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:19:45 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+../Core/Src/_ADCn_INx_SSC.c: In function 'ADC1_IN1_SSC':
+../Core/Src/_ADCn_INx_SSC.c:18:13: warning: unused variable 'SSC_Count_1' [-Wunused-variable]
+   18 |   float32_t SSC_Count_1 = 0.0f;
+      |             ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_SSC.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+   30 | }
+      | ^
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:24:20 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:33:02 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:35:32 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:37:07 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:42:45 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+../Core/Src/_ADCn_INx_SSC.c: In function 'ADC3_IN1_SSC':
+../Core/Src/_ADCn_INx_SSC.c:103:8: error: 'SSC_Count_1' undeclared (first use in this function); did you mean 'SSC_Count_5'?
+  103 |        SSC_Count_1++;
+      |        ^~~~~~~~~~~
+      |        SSC_Count_5
+../Core/Src/_ADCn_INx_SSC.c:103:8: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_SSC.c:94:13: warning: unused variable 'SSC_Count_5' [-Wunused-variable]
+   94 |   float32_t SSC_Count_5 = 0.0f;
+      |             ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_SSC.c:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+  108 | }
+      | ^
+make: *** [Core/Src/subdir.mk:55: Core/Src/_ADCn_INx_SSC.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:43:00 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:49:23 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:51:50 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  31760	  30944	  22664	  85368	  14d78	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:07:09 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  32028	  30944	  23328	  86300	  1511c	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:13:18 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33132	  30944	  26000	  90076	  15fdc	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:13:37 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33360	  30944	  26672	  90976	  16360	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:14:53 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_SSC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_SSC.d" -MT"Core/Src/_ADCn_INx_SSC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_SSC.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33360	  30944	  26672	  90976	  16360	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:17:56 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33388	  30944	  26672	  91004	  1637c	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:29:41 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  26672	  91028	  16394	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+17:33:40 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  26672	  91028	  16394	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 

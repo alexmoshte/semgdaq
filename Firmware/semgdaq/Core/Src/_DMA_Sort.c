@@ -27,9 +27,10 @@ void ADC1_DMA_sort_uhb (void)
 				ADC1_DMA_sort_ptr->ADC1_IN2_bfr[p]=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m];
 			}
 		}
-    }
+     }
 
 };
+
 
 void ADC1_DMA_sort_lhb (void)
 {
@@ -49,7 +50,7 @@ void ADC1_DMA_sort_lhb (void)
 				ADC1_DMA_sort_ptr->ADC1_IN2_bfr[p]=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m];
 			}
 		}
-    }
+     }
 
 };
 
@@ -72,7 +73,7 @@ void ADC2_DMA_sort_uhb (void)
 				ADC2_DMA_sort_ptr->ADC2_IN4_bfr[p]=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m];
 			}
 		}
-    }
+     }
 
 };
 
@@ -95,7 +96,7 @@ void ADC2_DMA_sort_lhb (void)
 				ADC2_DMA_sort_ptr->ADC2_IN4_bfr[p]=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m];
 			}
 		}
-    }
+     }
 
 };
 
@@ -118,9 +119,10 @@ void ADC3_DMA_sort_uhb (void)
 				ADC3_DMA_sort_ptr->ADC3_IN2_bfr[p]=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m];
 			}
 		}
-    }
+     }
 
 };
+
 
 void ADC3_DMA_sort_lhb (void)
 {
@@ -140,6 +142,6 @@ void ADC3_DMA_sort_lhb (void)
 				ADC3_DMA_sort_ptr->ADC3_IN2_bfr[p]=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m];
 			}
 		}
-    }
+     }
 
 };

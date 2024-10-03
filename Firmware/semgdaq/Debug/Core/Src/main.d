@@ -30,9 +30,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/_ADCn_INx_TKEO.h ../Core/Inc/_ADCn_INx_SD_BL.h \
- ../Core/Inc/_ADCn_INx_Offset.h ../Core/Inc/_ADCn_INx_MA.h \
- ../Core/Inc/_ADCn_INx_NF.h ../Core/Inc/_DMA_Sort.h \
+ ../Core/Inc/_ADCn_INx_SSC.h ../Core/Inc/_ADCn_INx_TKEO.h \
+ ../Core/Inc/_ADCn_INx_SD_BL.h ../Core/Inc/_ADCn_INx_Offset.h \
+ ../Core/Inc/_ADCn_INx_MA.h ../Core/Inc/_ADCn_INx_NF.h \
+ ../Core/Inc/_DMA_Sort.h \
  C:/Users/moshte/Desktop/moshte/Firmware\ projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h
 ../Core/Inc/main.h:
@@ -67,6 +68,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
+../Core/Inc/_ADCn_INx_SSC.h:
 ../Core/Inc/_ADCn_INx_TKEO.h:
 ../Core/Inc/_ADCn_INx_SD_BL.h:
 ../Core/Inc/_ADCn_INx_Offset.h:
