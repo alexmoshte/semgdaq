@@ -1,0 +1,41 @@
+/*
+ * _ADCn_INx_AR.c
+ *
+ * Created on: Oct 7, 2024
+ * Author: Mwangi Alex. W
+ */
+
+//INCLUDES
+#include "_ADCn_INx_AR.h"
+
+//VARIABLES
+float32_t AutoCorr_1[AR_ORDER];
+float32_t AutoCorr_2[AR_ORDER];
+float32_t AutoCorr_3[AR_ORDER];
+float32_t AutoCorr_4[AR_ORDER];
+float32_t AutoCorr_5[AR_ORDER];
+float32_t AutoCorr_6[AR_ORDER];
+
+ADC1_IN1_MA AR_ADC1_IN1; // Declaring an instance of Auto-regression feature
+ADC1_IN2_MA AR_ADC1_IN2;
+ADC2_IN3_MA AR_ADC2_IN3;
+ADC2_IN4_MA AR_ADC2_IN4;
+ADC3_IN1_MA AR_ADC3_IN1;
+ADC3_IN2_MA AR_ADC3_IN2;
+
+//FUNCTION DEFINITIONS
+void ADC1_IN1_autocorr_calc(void)
+{
+	/* Iterate through each lag*/
+	for(uint32_t n=0; n<AR_ORDER; n++)
+	{
+		float32_t result = 0.0f;
+
+		/* Number of valid points for the dot product at this lag */
+		uint32_t Blocksize = ADC_DMA_SIXTEENTHBUFFERSIZE - AR_ORDER;
+
+		arm_dot_prod_f32(&(AR_ADC1_IN1.MA_ADC1_IN1_OutBfr[n]), AR_ADC1_IN1.MA_ADC1_IN1_OutBfr, Blocksize, &result);
+
+		AutoCorr_1[n] = result / ADC_DMA_SIXTEENTHBUFFERSIZE;
+	}
+}

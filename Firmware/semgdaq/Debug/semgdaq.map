@@ -4,6 +4,8 @@ C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firm
                               ./Core/Src/_ADCn_INx_NF.o (arm_biquad_cascade_df2T_f32)
 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_biquad_cascade_df2t_init_f32.o)
                               ./Core/Src/_ADCn_INx_NF.o (arm_biquad_cascade_df2T_init_f32)
+C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+                              ./Core/Src/_ADCn_INx_AR.o (arm_dot_prod_f32)
 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
                               C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (exit)
 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
@@ -81,6 +83,178 @@ Discarded input sections
  .debug_str     0x0000000000000000       0xe2 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x0000000000000000       0x1c C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_AR.o
+ .text          0x0000000000000000        0x0 ./Core/Src/_ADCn_INx_AR.o
+ .data          0x0000000000000000        0x0 ./Core/Src/_ADCn_INx_AR.o
+ .bss           0x0000000000000000        0x0 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AutoCorr_1
+                0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AutoCorr_2
+                0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AutoCorr_3
+                0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AutoCorr_4
+                0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AutoCorr_5
+                0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AutoCorr_6
+                0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AR_ADC1_IN1
+                0x0000000000000000      0x2a4 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AR_ADC1_IN2
+                0x0000000000000000      0x2a4 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AR_ADC2_IN3
+                0x0000000000000000      0x2a4 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AR_ADC2_IN4
+                0x0000000000000000      0x2a4 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AR_ADC3_IN1
+                0x0000000000000000      0x2a4 ./Core/Src/_ADCn_INx_AR.o
+ .bss.AR_ADC3_IN2
+                0x0000000000000000      0x2a4 ./Core/Src/_ADCn_INx_AR.o
+ .text.ADC1_IN1_autocorr_calc
+                0x0000000000000000       0x6c ./Core/Src/_ADCn_INx_AR.o
+ .text.ADC1_IN2_autocorr_calc
+                0x0000000000000000       0x6c ./Core/Src/_ADCn_INx_AR.o
+ .text.ADC2_IN3_autocorr_calc
+                0x0000000000000000       0x6c ./Core/Src/_ADCn_INx_AR.o
+ .text.ADC2_IN4_autocorr_calc
+                0x0000000000000000       0x6c ./Core/Src/_ADCn_INx_AR.o
+ .text.ADC3_IN1_autocorr_calc
+                0x0000000000000000       0x6c ./Core/Src/_ADCn_INx_AR.o
+ .text.ADC3_IN2_autocorr_calc
+                0x0000000000000000       0x6c ./Core/Src/_ADCn_INx_AR.o
+ .debug_info    0x0000000000000000      0x538 ./Core/Src/_ADCn_INx_AR.o
+ .debug_abbrev  0x0000000000000000      0x14b ./Core/Src/_ADCn_INx_AR.o
+ .debug_aranges
+                0x0000000000000000       0x48 ./Core/Src/_ADCn_INx_AR.o
+ .debug_rnglists
+                0x0000000000000000       0x31 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x344 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0xaae ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x161 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x2e ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x51 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x103 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x6a ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x1df ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0xfb ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000     0x1011 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x11f ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000    0x12222 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x6d ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000     0x354d ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x174 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x5c ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000     0x157b ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x5cf ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x1b6 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x2d0 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x4a2 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x18b ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x23d ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000     0x1112 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x72e ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x391 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x211 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x416 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x10e ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x1ae ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x122 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x3d1 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0xbe8 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x4ee ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x321 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x61 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x2a ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x34 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x34 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x58 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x177 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x369 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x35 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0x20 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x19b ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000      0x201 ./Core/Src/_ADCn_INx_AR.o
+ .debug_macro   0x0000000000000000       0xc8 ./Core/Src/_ADCn_INx_AR.o
+ .debug_line    0x0000000000000000      0xc09 ./Core/Src/_ADCn_INx_AR.o
+ .debug_str     0x0000000000000000    0xdacac ./Core/Src/_ADCn_INx_AR.o
+ .comment       0x0000000000000000       0x44 ./Core/Src/_ADCn_INx_AR.o
+ .debug_frame   0x0000000000000000       0xe8 ./Core/Src/_ADCn_INx_AR.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Core/Src/_ADCn_INx_AR.o
  .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_MA.o
  .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_MA.o
  .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_MA.o
@@ -144,6 +318,66 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./Core/Src/_ADCn_INx_MA.o
  .data          0x0000000000000000        0x0 ./Core/Src/_ADCn_INx_MA.o
  .bss           0x0000000000000000        0x0 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0xaae ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x161 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x2e ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x28 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x51 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x103 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x6a ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x1df ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0xfb ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000     0x1011 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x11f ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000    0x12222 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x6d ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000     0x354d ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x174 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x5c ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000     0x157b ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x5cf ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x1b6 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x2d0 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x4a2 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x18b ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x23d ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000     0x1112 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x72e ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x391 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x211 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x416 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x10e ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x1ae ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x122 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x3d1 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0xbe8 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x4ee ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x321 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x61 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x2a ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x34 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x16 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x43 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x34 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x58 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x177 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x369 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x10 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x35 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0x20 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x19b ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000      0x201 ./Core/Src/_ADCn_INx_MA.o
+ .debug_macro   0x0000000000000000       0xc8 ./Core/Src/_ADCn_INx_MA.o
  .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_NF.o
  .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_NF.o
  .group         0x0000000000000000        0xc ./Core/Src/_ADCn_INx_NF.o
@@ -4042,6 +4276,23 @@ Discarded input sections
  .text          0x0000000000000000        0x0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_biquad_cascade_df2t_init_f32.o)
  .data          0x0000000000000000        0x0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_biquad_cascade_df2t_init_f32.o)
  .bss           0x0000000000000000        0x0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_biquad_cascade_df2t_init_f32.o)
+ .text          0x0000000000000000        0x0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .data          0x0000000000000000        0x0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .bss           0x0000000000000000        0x0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .text.arm_dot_prod_f32
+                0x0000000000000000       0xb0 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_info    0x0000000000000000      0xb02 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_abbrev  0x0000000000000000      0x210 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_loc     0x0000000000000000      0x241 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_aranges
+                0x0000000000000000       0x20 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_ranges  0x0000000000000000       0x10 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_line    0x0000000000000000      0x2f6 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_str     0x0000000000000000      0x67d C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .comment       0x0000000000000000       0x76 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .debug_frame   0x0000000000000000       0x34 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
+ .ARM.attributes
+                0x0000000000000000       0x34 C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC\libarm_cortexM4lf_math.a(arm_dot_prod_f32.o)
  .text          0x0000000000000000        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
  .data          0x0000000000000000        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
  .bss           0x0000000000000000        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
@@ -4287,6 +4538,7 @@ Linker script and memory map
 LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
 LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+LOAD ./Core/Src/_ADCn_INx_AR.o
 LOAD ./Core/Src/_ADCn_INx_MA.o
 LOAD ./Core/Src/_ADCn_INx_NF.o
 LOAD ./Core/Src/_ADCn_INx_Offset.o
@@ -5111,7 +5363,7 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .igot.plt      0x00000000200078d8        0x0 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x00000000200078d8                . = ALIGN (0x4)
 
-.bss            0x00000000200078d8     0x622c load address 0x000000000800fb64
+.bss            0x00000000200078d8     0x63dc load address 0x000000000800fb64
                 0x00000000200078d8                _sbss = .
                 0x00000000200078d8                __bss_start__ = _sbss
  *(.bss)
@@ -5136,239 +5388,239 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000020007944       0x10 ./Core/Src/_ADCn_INx_NF.o
                 0x0000000020007944                ADC3_IN2_States
  .bss.ADC1_IN1_Tkeo_bfr
-                0x0000000020007954      0x274 ./Core/Src/_ADCn_INx_TKEO.o
+                0x0000000020007954      0x280 ./Core/Src/_ADCn_INx_TKEO.o
                 0x0000000020007954                ADC1_IN1_Tkeo_bfr
  .bss.ADC1_IN2_Tkeo_bfr
-                0x0000000020007bc8      0x274 ./Core/Src/_ADCn_INx_TKEO.o
-                0x0000000020007bc8                ADC1_IN2_Tkeo_bfr
+                0x0000000020007bd4      0x280 ./Core/Src/_ADCn_INx_TKEO.o
+                0x0000000020007bd4                ADC1_IN2_Tkeo_bfr
  .bss.ADC2_IN3_Tkeo_bfr
-                0x0000000020007e3c      0x274 ./Core/Src/_ADCn_INx_TKEO.o
-                0x0000000020007e3c                ADC2_IN3_Tkeo_bfr
+                0x0000000020007e54      0x280 ./Core/Src/_ADCn_INx_TKEO.o
+                0x0000000020007e54                ADC2_IN3_Tkeo_bfr
  .bss.ADC2_IN4_Tkeo_bfr
-                0x00000000200080b0      0x274 ./Core/Src/_ADCn_INx_TKEO.o
-                0x00000000200080b0                ADC2_IN4_Tkeo_bfr
+                0x00000000200080d4      0x280 ./Core/Src/_ADCn_INx_TKEO.o
+                0x00000000200080d4                ADC2_IN4_Tkeo_bfr
  .bss.ADC3_IN1_Tkeo_bfr
-                0x0000000020008324      0x274 ./Core/Src/_ADCn_INx_TKEO.o
-                0x0000000020008324                ADC3_IN1_Tkeo_bfr
+                0x0000000020008354      0x280 ./Core/Src/_ADCn_INx_TKEO.o
+                0x0000000020008354                ADC3_IN1_Tkeo_bfr
  .bss.ADC3_IN2_Tkeo_bfr
-                0x0000000020008598      0x274 ./Core/Src/_ADCn_INx_TKEO.o
-                0x0000000020008598                ADC3_IN2_Tkeo_bfr
- .bss.hadc1     0x000000002000880c       0x6c ./Core/Src/main.o
-                0x000000002000880c                hadc1
- .bss.hadc2     0x0000000020008878       0x6c ./Core/Src/main.o
-                0x0000000020008878                hadc2
- .bss.hadc3     0x00000000200088e4       0x6c ./Core/Src/main.o
-                0x00000000200088e4                hadc3
+                0x00000000200085d4      0x280 ./Core/Src/_ADCn_INx_TKEO.o
+                0x00000000200085d4                ADC3_IN2_Tkeo_bfr
+ .bss.hadc1     0x0000000020008854       0x6c ./Core/Src/main.o
+                0x0000000020008854                hadc1
+ .bss.hadc2     0x00000000200088c0       0x6c ./Core/Src/main.o
+                0x00000000200088c0                hadc2
+ .bss.hadc3     0x000000002000892c       0x6c ./Core/Src/main.o
+                0x000000002000892c                hadc3
  .bss.hdma_adc1
-                0x0000000020008950       0x60 ./Core/Src/main.o
-                0x0000000020008950                hdma_adc1
+                0x0000000020008998       0x60 ./Core/Src/main.o
+                0x0000000020008998                hdma_adc1
  .bss.hdma_adc2
-                0x00000000200089b0       0x60 ./Core/Src/main.o
-                0x00000000200089b0                hdma_adc2
+                0x00000000200089f8       0x60 ./Core/Src/main.o
+                0x00000000200089f8                hdma_adc2
  .bss.hdma_adc3
-                0x0000000020008a10       0x60 ./Core/Src/main.o
-                0x0000000020008a10                hdma_adc3
- .bss.hfmac     0x0000000020008a70       0x38 ./Core/Src/main.o
-                0x0000000020008a70                hfmac
- .bss.htim6     0x0000000020008aa8       0x4c ./Core/Src/main.o
-                0x0000000020008aa8                htim6
- .bss.htim7     0x0000000020008af4       0x4c ./Core/Src/main.o
-                0x0000000020008af4                htim7
- .bss.htim20    0x0000000020008b40       0x4c ./Core/Src/main.o
-                0x0000000020008b40                htim20
+                0x0000000020008a58       0x60 ./Core/Src/main.o
+                0x0000000020008a58                hdma_adc3
+ .bss.hfmac     0x0000000020008ab8       0x38 ./Core/Src/main.o
+                0x0000000020008ab8                hfmac
+ .bss.htim6     0x0000000020008af0       0x4c ./Core/Src/main.o
+                0x0000000020008af0                htim6
+ .bss.htim7     0x0000000020008b3c       0x4c ./Core/Src/main.o
+                0x0000000020008b3c                htim7
+ .bss.htim20    0x0000000020008b88       0x4c ./Core/Src/main.o
+                0x0000000020008b88                htim20
  .bss.ADC1_DMA_sort_ptr
-                0x0000000020008b8c        0x4 ./Core/Src/main.o
-                0x0000000020008b8c                ADC1_DMA_sort_ptr
+                0x0000000020008bd4        0x4 ./Core/Src/main.o
+                0x0000000020008bd4                ADC1_DMA_sort_ptr
  .bss.ADC2_DMA_sort_ptr
-                0x0000000020008b90        0x4 ./Core/Src/main.o
-                0x0000000020008b90                ADC2_DMA_sort_ptr
+                0x0000000020008bd8        0x4 ./Core/Src/main.o
+                0x0000000020008bd8                ADC2_DMA_sort_ptr
  .bss.ADC3_DMA_sort_ptr
-                0x0000000020008b94        0x4 ./Core/Src/main.o
-                0x0000000020008b94                ADC3_DMA_sort_ptr
+                0x0000000020008bdc        0x4 ./Core/Src/main.o
+                0x0000000020008bdc                ADC3_DMA_sort_ptr
  .bss.MovingAverage_ADC1_IN1
-                0x0000000020008b98      0x298 ./Core/Src/main.o
-                0x0000000020008b98                MovingAverage_ADC1_IN1
+                0x0000000020008be0      0x2a4 ./Core/Src/main.o
+                0x0000000020008be0                MovingAverage_ADC1_IN1
  .bss.MovingAverage_ADC1_IN2
-                0x0000000020008e30      0x298 ./Core/Src/main.o
-                0x0000000020008e30                MovingAverage_ADC1_IN2
+                0x0000000020008e84      0x2a4 ./Core/Src/main.o
+                0x0000000020008e84                MovingAverage_ADC1_IN2
  .bss.MovingAverage_ADC2_IN3
-                0x00000000200090c8      0x298 ./Core/Src/main.o
-                0x00000000200090c8                MovingAverage_ADC2_IN3
+                0x0000000020009128      0x2a4 ./Core/Src/main.o
+                0x0000000020009128                MovingAverage_ADC2_IN3
  .bss.MovingAverage_ADC2_IN4
-                0x0000000020009360      0x298 ./Core/Src/main.o
-                0x0000000020009360                MovingAverage_ADC2_IN4
+                0x00000000200093cc      0x2a4 ./Core/Src/main.o
+                0x00000000200093cc                MovingAverage_ADC2_IN4
  .bss.MovingAverage_ADC3_IN1
-                0x00000000200095f8      0x298 ./Core/Src/main.o
-                0x00000000200095f8                MovingAverage_ADC3_IN1
+                0x0000000020009670      0x2a4 ./Core/Src/main.o
+                0x0000000020009670                MovingAverage_ADC3_IN1
  .bss.MovingAverage_ADC3_IN2
-                0x0000000020009890      0x298 ./Core/Src/main.o
-                0x0000000020009890                MovingAverage_ADC3_IN2
+                0x0000000020009914      0x2a4 ./Core/Src/main.o
+                0x0000000020009914                MovingAverage_ADC3_IN2
  .bss.OffsetCalc_ADC1_IN1
-                0x0000000020009b28      0x298 ./Core/Src/main.o
-                0x0000000020009b28                OffsetCalc_ADC1_IN1
+                0x0000000020009bb8      0x2a4 ./Core/Src/main.o
+                0x0000000020009bb8                OffsetCalc_ADC1_IN1
  .bss.OffsetCalc_ADC1_IN2
-                0x0000000020009dc0      0x298 ./Core/Src/main.o
-                0x0000000020009dc0                OffsetCalc_ADC1_IN2
+                0x0000000020009e5c      0x2a4 ./Core/Src/main.o
+                0x0000000020009e5c                OffsetCalc_ADC1_IN2
  .bss.OffsetCalc_ADC2_IN3
-                0x000000002000a058      0x298 ./Core/Src/main.o
-                0x000000002000a058                OffsetCalc_ADC2_IN3
+                0x000000002000a100      0x2a4 ./Core/Src/main.o
+                0x000000002000a100                OffsetCalc_ADC2_IN3
  .bss.OffsetCalc_ADC2_IN4
-                0x000000002000a2f0      0x298 ./Core/Src/main.o
-                0x000000002000a2f0                OffsetCalc_ADC2_IN4
+                0x000000002000a3a4      0x2a4 ./Core/Src/main.o
+                0x000000002000a3a4                OffsetCalc_ADC2_IN4
  .bss.OffsetCalc_ADC3_IN1
-                0x000000002000a588      0x298 ./Core/Src/main.o
-                0x000000002000a588                OffsetCalc_ADC3_IN1
+                0x000000002000a648      0x2a4 ./Core/Src/main.o
+                0x000000002000a648                OffsetCalc_ADC3_IN1
  .bss.OffsetCalc_ADC3_IN2
-                0x000000002000a820      0x298 ./Core/Src/main.o
-                0x000000002000a820                OffsetCalc_ADC3_IN2
+                0x000000002000a8ec      0x2a4 ./Core/Src/main.o
+                0x000000002000a8ec                OffsetCalc_ADC3_IN2
  .bss.SD_BL_ADC1_IN1
-                0x000000002000aab8      0x298 ./Core/Src/main.o
-                0x000000002000aab8                SD_BL_ADC1_IN1
+                0x000000002000ab90      0x2a4 ./Core/Src/main.o
+                0x000000002000ab90                SD_BL_ADC1_IN1
  .bss.SD_BL_ADC1_IN2
-                0x000000002000ad50      0x298 ./Core/Src/main.o
-                0x000000002000ad50                SD_BL_ADC1_IN2
+                0x000000002000ae34      0x2a4 ./Core/Src/main.o
+                0x000000002000ae34                SD_BL_ADC1_IN2
  .bss.SD_BL_ADC2_IN3
-                0x000000002000afe8      0x298 ./Core/Src/main.o
-                0x000000002000afe8                SD_BL_ADC2_IN3
+                0x000000002000b0d8      0x2a4 ./Core/Src/main.o
+                0x000000002000b0d8                SD_BL_ADC2_IN3
  .bss.SD_BL_ADC2_IN4
-                0x000000002000b280      0x298 ./Core/Src/main.o
-                0x000000002000b280                SD_BL_ADC2_IN4
+                0x000000002000b37c      0x2a4 ./Core/Src/main.o
+                0x000000002000b37c                SD_BL_ADC2_IN4
  .bss.SD_BL_ADC3_IN1
-                0x000000002000b518      0x298 ./Core/Src/main.o
-                0x000000002000b518                SD_BL_ADC3_IN1
+                0x000000002000b620      0x2a4 ./Core/Src/main.o
+                0x000000002000b620                SD_BL_ADC3_IN1
  .bss.SD_BL_ADC3_IN2
-                0x000000002000b7b0      0x298 ./Core/Src/main.o
-                0x000000002000b7b0                SD_BL_ADC3_IN2
+                0x000000002000b8c4      0x2a4 ./Core/Src/main.o
+                0x000000002000b8c4                SD_BL_ADC3_IN2
  .bss.TKEO_ADC1_IN1
-                0x000000002000ba48      0x298 ./Core/Src/main.o
-                0x000000002000ba48                TKEO_ADC1_IN1
+                0x000000002000bb68      0x2a4 ./Core/Src/main.o
+                0x000000002000bb68                TKEO_ADC1_IN1
  .bss.TKEO_ADC1_IN2
-                0x000000002000bce0      0x298 ./Core/Src/main.o
-                0x000000002000bce0                TKEO_ADC1_IN2
+                0x000000002000be0c      0x2a4 ./Core/Src/main.o
+                0x000000002000be0c                TKEO_ADC1_IN2
  .bss.TKEO_ADC2_IN3
-                0x000000002000bf78      0x298 ./Core/Src/main.o
-                0x000000002000bf78                TKEO_ADC2_IN3
+                0x000000002000c0b0      0x2a4 ./Core/Src/main.o
+                0x000000002000c0b0                TKEO_ADC2_IN3
  .bss.TKEO_ADC2_IN4
-                0x000000002000c210      0x298 ./Core/Src/main.o
-                0x000000002000c210                TKEO_ADC2_IN4
+                0x000000002000c354      0x2a4 ./Core/Src/main.o
+                0x000000002000c354                TKEO_ADC2_IN4
  .bss.TKEO_ADC3_IN1
-                0x000000002000c4a8      0x298 ./Core/Src/main.o
-                0x000000002000c4a8                TKEO_ADC3_IN1
+                0x000000002000c5f8      0x2a4 ./Core/Src/main.o
+                0x000000002000c5f8                TKEO_ADC3_IN1
  .bss.TKEO_ADC3_IN2
-                0x000000002000c740      0x298 ./Core/Src/main.o
-                0x000000002000c740                TKEO_ADC3_IN2
+                0x000000002000c89c      0x2a4 ./Core/Src/main.o
+                0x000000002000c89c                TKEO_ADC3_IN2
  .bss.SSC_ADC1_IN1
-                0x000000002000c9d8      0x298 ./Core/Src/main.o
-                0x000000002000c9d8                SSC_ADC1_IN1
+                0x000000002000cb40      0x2a4 ./Core/Src/main.o
+                0x000000002000cb40                SSC_ADC1_IN1
  .bss.SSC_ADC1_IN2
-                0x000000002000cc70      0x298 ./Core/Src/main.o
-                0x000000002000cc70                SSC_ADC1_IN2
+                0x000000002000cde4      0x2a4 ./Core/Src/main.o
+                0x000000002000cde4                SSC_ADC1_IN2
  .bss.SSC_ADC2_IN3
-                0x000000002000cf08      0x298 ./Core/Src/main.o
-                0x000000002000cf08                SSC_ADC2_IN3
+                0x000000002000d088      0x2a4 ./Core/Src/main.o
+                0x000000002000d088                SSC_ADC2_IN3
  .bss.SSC_ADC2_IN4
-                0x000000002000d1a0      0x298 ./Core/Src/main.o
-                0x000000002000d1a0                SSC_ADC2_IN4
+                0x000000002000d32c      0x2a4 ./Core/Src/main.o
+                0x000000002000d32c                SSC_ADC2_IN4
  .bss.SSC_ADC3_IN1
-                0x000000002000d438      0x298 ./Core/Src/main.o
-                0x000000002000d438                SSC_ADC3_IN1
+                0x000000002000d5d0      0x2a4 ./Core/Src/main.o
+                0x000000002000d5d0                SSC_ADC3_IN1
  .bss.SSC_ADC3_IN2
-                0x000000002000d6d0      0x298 ./Core/Src/main.o
-                0x000000002000d6d0                SSC_ADC3_IN2
+                0x000000002000d874      0x2a4 ./Core/Src/main.o
+                0x000000002000d874                SSC_ADC3_IN2
  .bss.ADC_status
-                0x000000002000d968        0x1 ./Core/Src/main.o
-                0x000000002000d968                ADC_status
- *fill*         0x000000002000d969        0x3 
- .bss.Offset_1  0x000000002000d96c        0x4 ./Core/Src/main.o
-                0x000000002000d96c                Offset_1
- .bss.Offset_2  0x000000002000d970        0x4 ./Core/Src/main.o
-                0x000000002000d970                Offset_2
- .bss.Offset_3  0x000000002000d974        0x4 ./Core/Src/main.o
-                0x000000002000d974                Offset_3
- .bss.Offset_4  0x000000002000d978        0x4 ./Core/Src/main.o
-                0x000000002000d978                Offset_4
- .bss.Offset_5  0x000000002000d97c        0x4 ./Core/Src/main.o
-                0x000000002000d97c                Offset_5
- .bss.Offset_6  0x000000002000d980        0x4 ./Core/Src/main.o
-                0x000000002000d980                Offset_6
+                0x000000002000db18        0x1 ./Core/Src/main.o
+                0x000000002000db18                ADC_status
+ *fill*         0x000000002000db19        0x3 
+ .bss.Offset_1  0x000000002000db1c        0x4 ./Core/Src/main.o
+                0x000000002000db1c                Offset_1
+ .bss.Offset_2  0x000000002000db20        0x4 ./Core/Src/main.o
+                0x000000002000db20                Offset_2
+ .bss.Offset_3  0x000000002000db24        0x4 ./Core/Src/main.o
+                0x000000002000db24                Offset_3
+ .bss.Offset_4  0x000000002000db28        0x4 ./Core/Src/main.o
+                0x000000002000db28                Offset_4
+ .bss.Offset_5  0x000000002000db2c        0x4 ./Core/Src/main.o
+                0x000000002000db2c                Offset_5
+ .bss.Offset_6  0x000000002000db30        0x4 ./Core/Src/main.o
+                0x000000002000db30                Offset_6
  .bss.Offset_1_Calculated
-                0x000000002000d984        0x1 ./Core/Src/main.o
-                0x000000002000d984                Offset_1_Calculated
+                0x000000002000db34        0x1 ./Core/Src/main.o
+                0x000000002000db34                Offset_1_Calculated
  .bss.Offset_2_Calculated
-                0x000000002000d985        0x1 ./Core/Src/main.o
-                0x000000002000d985                Offset_2_Calculated
+                0x000000002000db35        0x1 ./Core/Src/main.o
+                0x000000002000db35                Offset_2_Calculated
  .bss.Offset_3_Calculated
-                0x000000002000d986        0x1 ./Core/Src/main.o
-                0x000000002000d986                Offset_3_Calculated
+                0x000000002000db36        0x1 ./Core/Src/main.o
+                0x000000002000db36                Offset_3_Calculated
  .bss.Offset_4_Calculated
-                0x000000002000d987        0x1 ./Core/Src/main.o
-                0x000000002000d987                Offset_4_Calculated
+                0x000000002000db37        0x1 ./Core/Src/main.o
+                0x000000002000db37                Offset_4_Calculated
  .bss.Offset_5_Calculated
-                0x000000002000d988        0x1 ./Core/Src/main.o
-                0x000000002000d988                Offset_5_Calculated
+                0x000000002000db38        0x1 ./Core/Src/main.o
+                0x000000002000db38                Offset_5_Calculated
  .bss.Offset_6_Calculated
-                0x000000002000d989        0x1 ./Core/Src/main.o
-                0x000000002000d989                Offset_6_Calculated
- *fill*         0x000000002000d98a        0x2 
- .bss.SD_BL_1   0x000000002000d98c        0x4 ./Core/Src/main.o
-                0x000000002000d98c                SD_BL_1
- .bss.SD_BL_2   0x000000002000d990        0x4 ./Core/Src/main.o
-                0x000000002000d990                SD_BL_2
- .bss.SD_BL_3   0x000000002000d994        0x4 ./Core/Src/main.o
-                0x000000002000d994                SD_BL_3
- .bss.SD_BL_4   0x000000002000d998        0x4 ./Core/Src/main.o
-                0x000000002000d998                SD_BL_4
- .bss.SD_BL_5   0x000000002000d99c        0x4 ./Core/Src/main.o
-                0x000000002000d99c                SD_BL_5
- .bss.SD_BL_6   0x000000002000d9a0        0x4 ./Core/Src/main.o
-                0x000000002000d9a0                SD_BL_6
- .bss.TKEO_1    0x000000002000d9a4        0x1 ./Core/Src/main.o
-                0x000000002000d9a4                TKEO_1
- .bss.TKEO_2    0x000000002000d9a5        0x1 ./Core/Src/main.o
-                0x000000002000d9a5                TKEO_2
- .bss.TKEO_3    0x000000002000d9a6        0x1 ./Core/Src/main.o
-                0x000000002000d9a6                TKEO_3
- .bss.TKEO_4    0x000000002000d9a7        0x1 ./Core/Src/main.o
-                0x000000002000d9a7                TKEO_4
- .bss.TKEO_5    0x000000002000d9a8        0x1 ./Core/Src/main.o
-                0x000000002000d9a8                TKEO_5
- .bss.TKEO_6    0x000000002000d9a9        0x1 ./Core/Src/main.o
-                0x000000002000d9a9                TKEO_6
- *fill*         0x000000002000d9aa        0x2 
- .bss.SSC_1     0x000000002000d9ac        0x4 ./Core/Src/main.o
-                0x000000002000d9ac                SSC_1
- .bss.SSC_2     0x000000002000d9b0        0x4 ./Core/Src/main.o
-                0x000000002000d9b0                SSC_2
- .bss.SSC_3     0x000000002000d9b4        0x4 ./Core/Src/main.o
-                0x000000002000d9b4                SSC_3
- .bss.SSC_4     0x000000002000d9b8        0x4 ./Core/Src/main.o
-                0x000000002000d9b8                SSC_4
- .bss.SSC_5     0x000000002000d9bc        0x4 ./Core/Src/main.o
-                0x000000002000d9bc                SSC_5
- .bss.SSC_6     0x000000002000d9c0        0x4 ./Core/Src/main.o
-                0x000000002000d9c0                SSC_6
+                0x000000002000db39        0x1 ./Core/Src/main.o
+                0x000000002000db39                Offset_6_Calculated
+ *fill*         0x000000002000db3a        0x2 
+ .bss.SD_BL_1   0x000000002000db3c        0x4 ./Core/Src/main.o
+                0x000000002000db3c                SD_BL_1
+ .bss.SD_BL_2   0x000000002000db40        0x4 ./Core/Src/main.o
+                0x000000002000db40                SD_BL_2
+ .bss.SD_BL_3   0x000000002000db44        0x4 ./Core/Src/main.o
+                0x000000002000db44                SD_BL_3
+ .bss.SD_BL_4   0x000000002000db48        0x4 ./Core/Src/main.o
+                0x000000002000db48                SD_BL_4
+ .bss.SD_BL_5   0x000000002000db4c        0x4 ./Core/Src/main.o
+                0x000000002000db4c                SD_BL_5
+ .bss.SD_BL_6   0x000000002000db50        0x4 ./Core/Src/main.o
+                0x000000002000db50                SD_BL_6
+ .bss.TKEO_1    0x000000002000db54        0x1 ./Core/Src/main.o
+                0x000000002000db54                TKEO_1
+ .bss.TKEO_2    0x000000002000db55        0x1 ./Core/Src/main.o
+                0x000000002000db55                TKEO_2
+ .bss.TKEO_3    0x000000002000db56        0x1 ./Core/Src/main.o
+                0x000000002000db56                TKEO_3
+ .bss.TKEO_4    0x000000002000db57        0x1 ./Core/Src/main.o
+                0x000000002000db57                TKEO_4
+ .bss.TKEO_5    0x000000002000db58        0x1 ./Core/Src/main.o
+                0x000000002000db58                TKEO_5
+ .bss.TKEO_6    0x000000002000db59        0x1 ./Core/Src/main.o
+                0x000000002000db59                TKEO_6
+ *fill*         0x000000002000db5a        0x2 
+ .bss.SSC_1     0x000000002000db5c        0x4 ./Core/Src/main.o
+                0x000000002000db5c                SSC_1
+ .bss.SSC_2     0x000000002000db60        0x4 ./Core/Src/main.o
+                0x000000002000db60                SSC_2
+ .bss.SSC_3     0x000000002000db64        0x4 ./Core/Src/main.o
+                0x000000002000db64                SSC_3
+ .bss.SSC_4     0x000000002000db68        0x4 ./Core/Src/main.o
+                0x000000002000db68                SSC_4
+ .bss.SSC_5     0x000000002000db6c        0x4 ./Core/Src/main.o
+                0x000000002000db6c                SSC_5
+ .bss.SSC_6     0x000000002000db70        0x4 ./Core/Src/main.o
+                0x000000002000db70                SSC_6
  .bss.HAL_RCC_ADC12_CLK_ENABLED
-                0x000000002000d9c4        0x4 ./Core/Src/stm32g4xx_hal_msp.o
- .bss.uwTick    0x000000002000d9c8        0x4 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o
-                0x000000002000d9c8                uwTick
- .bss.__sf      0x000000002000d9cc      0x138 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
-                0x000000002000d9cc                __sf
+                0x000000002000db74        0x4 ./Core/Src/stm32g4xx_hal_msp.o
+ .bss.uwTick    0x000000002000db78        0x4 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o
+                0x000000002000db78                uwTick
+ .bss.__sf      0x000000002000db7c      0x138 C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
+                0x000000002000db7c                __sf
  *(COMMON)
-                0x000000002000db04                . = ALIGN (0x4)
-                0x000000002000db04                _ebss = .
-                0x000000002000db04                __bss_end__ = _ebss
+                0x000000002000dcb4                . = ALIGN (0x4)
+                0x000000002000dcb4                _ebss = .
+                0x000000002000dcb4                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x000000002000db04      0x604 load address 0x000000000800fb64
-                0x000000002000db08                . = ALIGN (0x8)
- *fill*         0x000000002000db04        0x4 
+                0x000000002000dcb4      0x604 load address 0x000000000800fb64
+                0x000000002000dcb8                . = ALIGN (0x8)
+ *fill*         0x000000002000dcb4        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x000000002000db08                PROVIDE (_end = .)
-                0x000000002000dd08                . = (. + _Min_Heap_Size)
- *fill*         0x000000002000db08      0x200 
-                0x000000002000e108                . = (. + _Min_Stack_Size)
- *fill*         0x000000002000dd08      0x400 
-                0x000000002000e108                . = ALIGN (0x8)
+                0x000000002000dcb8                PROVIDE (_end = .)
+                0x000000002000deb8                . = (. + _Min_Heap_Size)
+ *fill*         0x000000002000dcb8      0x200 
+                0x000000002000e2b8                . = (. + _Min_Stack_Size)
+ *fill*         0x000000002000deb8      0x400 
+                0x000000002000e2b8                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -5657,90 +5909,30 @@ LOAD C:/ST/STM32CubeIDE_1.14.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x0000000000000ec2      0x1cc ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.o
 
-.debug_macro    0x0000000000000000    0x22569
+.debug_macro    0x0000000000000000     0x3627
  .debug_macro   0x0000000000000000      0x30c ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000000030c      0xaae ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000000dba       0x16 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000000dd0      0x161 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000000f31       0x2e ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000000f5f       0x28 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000000f87       0x22 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000000fa9       0x8e ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000001037       0x51 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000001088      0x103 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000000118b       0x6a ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x00000000000011f5      0x1df ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x00000000000013d4       0x1c ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x00000000000013f0       0x22 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000001412       0xfb ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000000150d     0x1011 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000000251e      0x11f ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000000263d    0x12222 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001485f       0x6d ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x00000000000148cc     0x354d ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000017e19      0x174 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000017f8d       0x5c ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000017fe9     0x157b ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000019564      0x5cf ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000019b33      0x1b6 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000019ce9      0x2d0 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x0000000000019fb9      0x4a2 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001a45b      0x18b ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001a5e6       0x43 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001a629      0x23d ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001a866     0x1112 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001b978      0x72e ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001c0a6      0x391 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001c437      0x211 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001c648      0x416 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ca5e      0x10e ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001cb6c      0x1ae ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001cd1a      0x122 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ce3c      0x3d1 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001d20d      0xbe8 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ddf5      0x4ee ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e2e3      0x321 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e604       0x61 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e665       0x2a ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e68f       0x43 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e6d2       0x34 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e706       0x16 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e71c       0x43 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e75f       0x34 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e793       0x10 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e7a3       0x58 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e7fb       0x8e ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e889       0x1c ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001e8a5      0x177 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ea1c      0x369 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ed85       0x10 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ed95       0x35 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001edca       0x20 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001edea      0x19b ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001ef85      0x201 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001f186       0xc8 ./Core/Src/_ADCn_INx_MA.o
- .debug_macro   0x000000000001f24e      0x2fc ./Core/Src/_ADCn_INx_NF.o
- .debug_macro   0x000000000001f54a      0x316 ./Core/Src/_ADCn_INx_Offset.o
- .debug_macro   0x000000000001f860      0x320 ./Core/Src/_ADCn_INx_SD_BL.o
- .debug_macro   0x000000000001fb80      0x334 ./Core/Src/_ADCn_INx_SSC.o
- .debug_macro   0x000000000001feb4      0x32a ./Core/Src/_ADCn_INx_TKEO.o
- .debug_macro   0x00000000000201de      0x1f1 ./Core/Src/_DMA_Sort.o
- .debug_macro   0x00000000000203cf      0x344 ./Core/Src/main.o
- .debug_macro   0x0000000000020713      0x1f1 ./Core/Src/stm32g4xx_hal_msp.o
- .debug_macro   0x0000000000020904      0x1fb ./Core/Src/stm32g4xx_it.o
- .debug_macro   0x0000000000020aff      0x1e7 ./Core/Src/system_stm32g4xx.o
- .debug_macro   0x0000000000020ce6      0x235 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o
- .debug_macro   0x0000000000020f1b      0x204 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.o
- .debug_macro   0x000000000002111f      0x1f3 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.o
- .debug_macro   0x0000000000021312      0x1e7 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o
- .debug_macro   0x00000000000214f9      0x1e7 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.o
- .debug_macro   0x00000000000216e0      0x274 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fmac.o
- .debug_macro   0x0000000000021954      0x1ee ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o
- .debug_macro   0x0000000000021b42      0x211 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o
- .debug_macro   0x0000000000021d53      0x229 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o
- .debug_macro   0x0000000000021f7c      0x211 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o
- .debug_macro   0x000000000002218d      0x1ef ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.o
- .debug_macro   0x000000000002237c      0x1ed ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.o
+ .debug_macro   0x000000000000030c      0x2fc ./Core/Src/_ADCn_INx_NF.o
+ .debug_macro   0x0000000000000608      0x316 ./Core/Src/_ADCn_INx_Offset.o
+ .debug_macro   0x000000000000091e      0x320 ./Core/Src/_ADCn_INx_SD_BL.o
+ .debug_macro   0x0000000000000c3e      0x334 ./Core/Src/_ADCn_INx_SSC.o
+ .debug_macro   0x0000000000000f72      0x32a ./Core/Src/_ADCn_INx_TKEO.o
+ .debug_macro   0x000000000000129c      0x1f1 ./Core/Src/_DMA_Sort.o
+ .debug_macro   0x000000000000148d      0x344 ./Core/Src/main.o
+ .debug_macro   0x00000000000017d1      0x1f1 ./Core/Src/stm32g4xx_hal_msp.o
+ .debug_macro   0x00000000000019c2      0x1fb ./Core/Src/stm32g4xx_it.o
+ .debug_macro   0x0000000000001bbd      0x1e7 ./Core/Src/system_stm32g4xx.o
+ .debug_macro   0x0000000000001da4      0x235 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o
+ .debug_macro   0x0000000000001fd9      0x204 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.o
+ .debug_macro   0x00000000000021dd      0x1f3 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.o
+ .debug_macro   0x00000000000023d0      0x1e7 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o
+ .debug_macro   0x00000000000025b7      0x1e7 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.o
+ .debug_macro   0x000000000000279e      0x274 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fmac.o
+ .debug_macro   0x0000000000002a12      0x1ee ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o
+ .debug_macro   0x0000000000002c00      0x211 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o
+ .debug_macro   0x0000000000002e11      0x229 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o
+ .debug_macro   0x000000000000303a      0x211 ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o
+ .debug_macro   0x000000000000324b      0x1ef ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.o
+ .debug_macro   0x000000000000343a      0x1ed ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.o
 
 .debug_line     0x0000000000000000    0x1a5d3
  .debug_line    0x0000000000000000      0xee8 ./Core/Src/_ADCn_INx_MA.o
