@@ -1093,3 +1093,859 @@ Finished building: default.size.stdout
  
 Finished building: semgdaq.list
  
+09:22:58 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:45:19: warning: unused variable 'Yule_Walker_Matrix_1' [-Wunused-variable]
+   45 |         float32_t Yule_Walker_Matrix_1[AR_ORDER * AR_ORDER]; //Array that hold the matrix data
+      |                   ^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+10:02:18 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:61:63: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   61 |                 Yule_Walker_Matrix_1[r * 10 + c] = AutoCorr_1[abs(r - c)];  // We are placing the elements in a one-dimensional array Yule-Walker matrix as if it represents a 10x10 matrix. This is done by calculating the correct index for each matrix element using (i * 10 + j)
+      |                                                               ^~~
+../Core/Src/_ADCn_INx_AR.c:10:1: note: include '<stdlib.h>' or provide a declaration of 'abs'
+    9 | #include "_ADCn_INx_AR.h"
+  +++ |+#include <stdlib.h>
+   10 | 
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+10:03:54 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:61:62: error: array subscript is not an integer
+   61 |                 Yule_Walker_Matrix_1[r * 10 + c] = AutoCorr_1[fabs(r - c)];  // We are placing the elements in a one-dimensional array Yule-Walker matrix as if it represents a 10x10 matrix. This is done by calculating the correct index for each matrix element using (i * 10 + j)
+      |                                                              ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:04:18 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+10:05:04 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+10:28:33 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c:19:1: error: unknown type name 'float32'; did you mean '_Float32'?
+   19 | float32
+      | ^~~~~~~
+      | _Float32
+../Core/Src/_ADCn_INx_AR.c:21:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'AR_ADC1_IN1'
+   21 | ADC1_IN1_MA AR_ADC1_IN1; // Declaring an instance of Auto-regression feature
+      |             ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC1_IN1_autocorr_calc':
+../Core/Src/_ADCn_INx_AR.c:55:36: error: 'AR_ADC1_IN1' undeclared (first use in this function); did you mean 'AR_ADC3_IN1'?
+   55 |                 arm_dot_prod_f32(&(AR_ADC1_IN1.MA_ADC1_IN1_OutBfr[n]), AR_ADC1_IN1.MA_ADC1_IN1_OutBfr, Blocksize_1, &result_1);
+      |                                    ^~~~~~~~~~~
+      |                                    AR_ADC3_IN1
+../Core/Src/_ADCn_INx_AR.c:55:36: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:82:51: warning: passing argument 1 of 'arm_mat_inverse_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+   82 |         arm_status status_1 = arm_mat_inverse_f32(&Yule_Walker_Matrix_1, &Yule_Walker_Matrix_Inv_1);
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   float32_t (*)[100] {aka float (*)[100]}
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:5075:35: note: expected 'const arm_matrix_instance_f32 *' but argument is of type 'float32_t (*)[100]' {aka 'float (*)[100]'}
+ 5075 |   const arm_matrix_instance_f32 * src,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../Core/Src/_ADCn_INx_AR.c:82:74: warning: passing argument 2 of 'arm_mat_inverse_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+   82 |         arm_status status_1 = arm_mat_inverse_f32(&Yule_Walker_Matrix_1, &Yule_Walker_Matrix_Inv_1);
+      |                                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                          |
+      |                                                                          float32_t (*)[100] {aka float (*)[100]}
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:5076:29: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'float32_t (*)[100]' {aka 'float (*)[100]'}
+ 5076 |   arm_matrix_instance_f32 * dst);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:29:24 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:80:51: warning: passing argument 1 of 'arm_mat_inverse_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+   80 |         arm_status status_1 = arm_mat_inverse_f32(&Yule_Walker_Matrix_1, &Yule_Walker_Matrix_Inv_1);
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~
+      |                                                   |
+      |                                                   float32_t (*)[100] {aka float (*)[100]}
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:5075:35: note: expected 'const arm_matrix_instance_f32 *' but argument is of type 'float32_t (*)[100]' {aka 'float (*)[100]'}
+ 5075 |   const arm_matrix_instance_f32 * src,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../Core/Src/_ADCn_INx_AR.c:80:74: warning: passing argument 2 of 'arm_mat_inverse_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+   80 |         arm_status status_1 = arm_mat_inverse_f32(&Yule_Walker_Matrix_1, &Yule_Walker_Matrix_Inv_1);
+      |                                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                          |
+      |                                                                          float32_t (*)[100] {aka float (*)[100]}
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:5076:29: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'float32_t (*)[100]' {aka 'float (*)[100]'}
+ 5076 |   arm_matrix_instance_f32 * dst);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+10:40:37 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:05:39 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c:42:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   42 | arm_matrix_matrix_f32 ADC1_IN1_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:43:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   43 | arm_matrix_matrix_f32 ADC1_IN2_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:44:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   44 | arm_matrix_matrix_f32 ADC2_IN3_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:45:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   45 | arm_matrix_matrix_f32 ADC2_IN4_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:46:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   46 | arm_matrix_matrix_f32 ADC3_IN1_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:47:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   47 | arm_matrix_matrix_f32 ADC3_IN2_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:49:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   49 | arm_matrix_matrix_f32 ADC1_IN1_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:50:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   50 | arm_matrix_matrix_f32 ADC1_IN2_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:51:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   51 | arm_matrix_matrix_f32 ADC2_IN3_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:52:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   52 | arm_matrix_matrix_f32 ADC2_IN3_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:53:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   53 | arm_matrix_matrix_f32 ADC3_IN1_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:54:1: error: unknown type name 'arm_matrix_matrix_f32'; did you mean 'arm_matrix_instance_f32'?
+   54 | arm_matrix_matrix_f32 ADC3_IN2_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:82:26: warning: passing argument 1 of 'arm_mat_init_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+   82 |         arm_mat_init_f32(&ADC1_IN1_AC_mtx, AR_ORDER, 1, AC_Matrix_1);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1853:35: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1853 |         arm_matrix_instance_f32 * S,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+../Core/Src/_ADCn_INx_AR.c:110:34: warning: passing argument 1 of 'arm_mat_init_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+  110 |                 arm_mat_init_f32(&ADC1_IN1_coeffs_mtx , AR_ORDER, 1 , Coeffs_Matrix_1);
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  |
+      |                                  int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1853:35: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1853 |         arm_matrix_instance_f32 * S,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+../Core/Src/_ADCn_INx_AR.c:112:77: warning: passing argument 2 of 'arm_mat_mult_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                                                                             ^~~~~~~~~~~~~~~~
+      |                                                                             |
+      |                                                                             int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1678:35: note: expected 'const arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1678 |   const arm_matrix_instance_f32 * pSrcB,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/_ADCn_INx_AR.c:112:95: warning: passing argument 3 of 'arm_mat_mult_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                                                                                               ^~~~~~~~~~~~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1679:35: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1679 |         arm_matrix_instance_f32 * pDst);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/_ADCn_INx_AR.c:112:20: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                    ^~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:07:49 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c:42:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   42 | arm_matrix_matrix_instance_f32 ADC1_IN1_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:43:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   43 | arm_matrix_matrix_instance_f32 ADC1_IN2_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:44:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   44 | arm_matrix_matrix_instance_f32 ADC2_IN3_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:45:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   45 | arm_matrix_matrix_instance_f32 ADC2_IN4_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:46:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   46 | arm_matrix_matrix_instance_f32 ADC3_IN1_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:47:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   47 | arm_matrix_matrix_instance_f32 ADC3_IN2_AC_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:49:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   49 | arm_matrix_matrix_instance_f32 ADC1_IN1_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:50:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   50 | arm_matrix_matrix_instance_f32 ADC1_IN2_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:51:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   51 | arm_matrix_matrix_instance_f32 ADC2_IN3_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:52:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   52 | arm_matrix_matrix_instance_f32 ADC2_IN3_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:53:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   53 | arm_matrix_matrix_instance_f32 ADC3_IN1_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c:54:1: error: unknown type name 'arm_matrix_matrix_instance_f32'; did you mean 'arm_matrix_instance_f32'?
+   54 | arm_matrix_matrix_instance_f32 ADC3_IN2_coeffs_mtx;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | arm_matrix_instance_f32
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:82:26: warning: passing argument 1 of 'arm_mat_init_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+   82 |         arm_mat_init_f32(&ADC1_IN1_AC_mtx, AR_ORDER, 1, AC_Matrix_1);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1853:35: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1853 |         arm_matrix_instance_f32 * S,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+../Core/Src/_ADCn_INx_AR.c:110:34: warning: passing argument 1 of 'arm_mat_init_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+  110 |                 arm_mat_init_f32(&ADC1_IN1_coeffs_mtx , AR_ORDER, 1 , Coeffs_Matrix_1);
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  |
+      |                                  int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1853:35: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1853 |         arm_matrix_instance_f32 * S,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+../Core/Src/_ADCn_INx_AR.c:112:77: warning: passing argument 2 of 'arm_mat_mult_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                                                                             ^~~~~~~~~~~~~~~~
+      |                                                                             |
+      |                                                                             int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1678:35: note: expected 'const arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1678 |   const arm_matrix_instance_f32 * pSrcB,
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/_ADCn_INx_AR.c:112:95: warning: passing argument 3 of 'arm_mat_mult_f32' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                                                                                               ^~~~~~~~~~~~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int *
+In file included from ../Core/Inc/_ADCn_INx_NF.h:23,
+                 from ../Core/Inc/_ADCn_INx_MA.h:18,
+                 from ../Core/Inc/_ADCn_INx_Offset.h:13,
+                 from ../Core/Inc/_ADCn_INx_SD_BL.h:15,
+                 from ../Core/Inc/_ADCn_INx_TKEO.h:15,
+                 from ../Core/Inc/_ADCn_INx_SSC.h:14,
+                 from ../Core/Inc/_ADCn_INx_AR.h:12,
+                 from ../Core/Src/_ADCn_INx_AR.c:9:
+C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h:1679:35: note: expected 'arm_matrix_instance_f32 *' but argument is of type 'int *'
+ 1679 |         arm_matrix_instance_f32 * pDst);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/_ADCn_INx_AR.c:112:20: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                    ^~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:08:45 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:112:20: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                    ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:27:04 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:112:20: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                    ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:28:58 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+11:40:37 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:112:20: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                    ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC1_IN1_autoreg_calc':
+../Core/Src/_ADCn_INx_AR.c:123:13: error: 'StatusCoeffs_1' undeclared (first use in this function)
+  123 |         if (StatusCoeffs_1 == ARM_MATH_SUCCESS)
+      |             ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:123:13: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:42:58 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:112:27: error: 'StatusCoeffs_1' has both 'extern' and initializer
+  112 |         extern arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                           ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:112:44: error: initializer element is not constant
+  112 |         extern arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                                            ^~~~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:112:27: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         extern arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                           ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC1_IN1_autoreg_calc':
+../Core/Src/_ADCn_INx_AR.c:123:13: error: 'StatusCoeffs_1' undeclared (first use in this function)
+  123 |         if (StatusCoeffs_1 == ARM_MATH_SUCCESS)
+      |             ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:123:13: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/_ADCn_INx_AR.c:112:27: warning: 'StatusCoeffs_1' defined but not used [-Wunused-variable]
+  112 |         extern arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                           ^~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:43:25 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:112:20: warning: unused variable 'StatusCoeffs_1' [-Wunused-variable]
+  112 |         arm_status StatusCoeffs_1 = arm_mat_mult_f32( &ADC1_IN1_Inv_YW_mtx, &ADC1_IN1_AC_mtx, &ADC1_IN1_coeffs_mtx );
+      |                    ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC1_IN1_autoreg_calc':
+../Core/Src/_ADCn_INx_AR.c:123:13: error: 'StatusCoeffs_1' undeclared (first use in this function)
+  123 |         if (StatusCoeffs_1 == ARM_MATH_SUCCESS)
+      |             ^~~~~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:123:13: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:49:25 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+15:14:45 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+15:53:40 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:124:51: error: invalid initializer
+  124 |                 float32_t AR_Coeffs_1[AR_ORDER] = 0.0f; // Buffer that holds the coefficient values. Initialized to zero before computation
+      |                                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c:134:8: error: 'AR_Coeffs_1' undeclared (first use in this function)
+  134 | return AR_Coeffs_1;
+      |        ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:134:8: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_AR.c:136:1: warning: control reaches end of non-void function [-Wreturn-type]
+  136 | }
+      | ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:55:30 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c:27:35: error: invalid initializer
+   27 | float32_t AR_Coeffs_1[AR_ORDER] = 0.0f; // Buffer that holds the coefficient values. Initialized to zero before computation
+      |                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c:28:35: error: invalid initializer
+   28 | float32_t AR_Coeffs_2[AR_ORDER] = 0.0f;
+      |                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c:29:35: error: invalid initializer
+   29 | float32_t AR_Coeffs_3[AR_ORDER] = 0.0f;
+      |                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c:30:35: error: invalid initializer
+   30 | float32_t AR_Coeffs_4[AR_ORDER] = 0.0f;
+      |                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c:31:35: error: invalid initializer
+   31 | float32_t AR_Coeffs_5[AR_ORDER] = 0.0f;
+      |                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c:32:35: error: invalid initializer
+   32 | float32_t AR_Coeffs_6[AR_ORDER] = 0.0f;
+      |                                   ^~~~
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:140:8: error: incompatible types when returning type 'float32_t *' {aka 'float *'} but 'float32_t' {aka 'float'} was expected
+  140 | return AR_Coeffs_1;
+      |        ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:142:1: warning: control reaches end of non-void function [-Wreturn-type]
+  142 | }
+      | ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:59:04 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'AD1_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:142:8: error: incompatible types when returning type 'float32_t *' {aka 'float *'} but 'float32_t' {aka 'float'} was expected
+  142 | return AR_Coeffs_1;
+      |        ^~~~~~~~~~~
+../Core/Src/_ADCn_INx_AR.c:144:1: warning: control reaches end of non-void function [-Wreturn-type]
+  144 | }
+      | ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:01:11 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c:95:12: error: conflicting types for 'AD1_IN1_autoreg_coeffs'; have 'float32_t *(void)' {aka 'float *(void)'}
+   95 | float32_t* AD1_IN1_autoreg_coeffs(void)
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/_ADCn_INx_AR.c:17:
+../Core/Inc/_ADCn_INx_AR.h:28:11: note: previous declaration of 'AD1_IN1_autoreg_coeffs' with type 'float32_t(void)' {aka 'float(void)'}
+   28 | float32_t AD1_IN1_autoreg_coeffs(void); // Calculates the auto-regression coefficients using the Yule-Walker equations. The coefficients are stored in a buffer
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:01:53 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:08:45 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:14:32 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC2_IN3_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:260:68: error: 'Yule_Walker_Matrix_Inv_3' undeclared (first use in this function); did you mean 'Yule_Walker_Matrix_Inv_2'?
+  260 |         arm_mat_init_f32(&ADC2_IN3_Inv_YW_mtx, AR_ORDER, AR_ORDER, Yule_Walker_Matrix_Inv_3); // Initializes the inverse Yule-Walker matrix
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                    Yule_Walker_Matrix_Inv_2
+../Core/Src/_ADCn_INx_AR.c:260:68: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_AR.c:258:19: warning: unused variable 'Yule_Walker_Matrix_Inv_2' [-Wunused-variable]
+  258 |         float32_t Yule_Walker_Matrix_Inv_2[AR_ORDER * AR_ORDER]; // Array that hold the inverse matrix data (100 elements)
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:14:58 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:19:05 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC2_IN4_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:337:35: error: 'ADC2_IN4_coeffs_mtx' undeclared (first use in this function); did you mean 'ADC2_IN3_coeffs_mtx'?
+  337 |                 arm_mat_init_f32(&ADC2_IN4_coeffs_mtx , AR_ORDER, 1 , AR_Coeffs_4); //Initializes the coefficients Matrix
+      |                                   ^~~~~~~~~~~~~~~~~~~
+      |                                   ADC2_IN3_coeffs_mtx
+../Core/Src/_ADCn_INx_AR.c:337:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:19:21 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC2_IN4_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:337:35: error: 'ADC2_IN4_coeffs_mtx' undeclared (first use in this function); did you mean 'ADC2_IN3_coeffs_mtx'?
+  337 |                 arm_mat_init_f32(&ADC2_IN4_coeffs_mtx , AR_ORDER, 1 , AR_Coeffs_4); //Initializes the coefficients Matrix
+      |                                   ^~~~~~~~~~~~~~~~~~~
+      |                                   ADC2_IN3_coeffs_mtx
+../Core/Src/_ADCn_INx_AR.c:337:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:20:03 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:24:04 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+../Core/Src/_ADCn_INx_AR.c: In function 'ADC3_IN1_autoreg_coeffs':
+../Core/Src/_ADCn_INx_AR.c:401:12: error: 'StatusInv_1' undeclared (first use in this function); did you mean 'StatusInv_5'?
+  401 |         if(StatusInv_1 == ARM_MATH_SUCCESS) // Check if operation was successful
+      |            ^~~~~~~~~~~
+      |            StatusInv_5
+../Core/Src/_ADCn_INx_AR.c:401:12: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/_ADCn_INx_AR.c:399:20: warning: unused variable 'StatusInv_5' [-Wunused-variable]
+  399 |         arm_status StatusInv_5 = arm_mat_inverse_f32(&ADC3_IN1_YW_mtx, &ADC3_IN1_Inv_YW_mtx);
+      |                    ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/_ADCn_INx_AR.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:24:14 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:26:22 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:27:33 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  33412	  30944	  27104	  91460	  16544	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:38:23 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:389:12: error: assignment to expression with array type
+  389 |       AR_1 = ADC1_IN1_autoreg_coeffs();
+      |            ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:40:14 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:389:12: error: assignment to expression with array type
+  389 |       AR_1 = ADC1_IN1_autoreg_coeffs();
+      |            ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:40:21 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:389:12: error: assignment to expression with array type
+  389 |       AR_1 = ADC1_IN1_autoreg_coeffs();
+      |            ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:41:05 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  34888	  30944	  27904	  93736	  16e28	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:46:40 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  37124	  30944	  31888	  99956	  18674	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
+16:47:40 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-size  semgdaq.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37124	  30944	  31888	  99956	  18674	semgdaq.elf
+Finished building: default.size.stdout
+ 
+17:00:40 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/_ADCn_INx_AR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/_ADCn_INx_AR.d" -MT"Core/Src/_ADCn_INx_AR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/_ADCn_INx_AR.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G4A1xx -c -I../Core/Inc -I"C:/Users/moshte/Desktop/moshte/Firmware projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+  37124	  30944	  31888	  99956	  18674	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 

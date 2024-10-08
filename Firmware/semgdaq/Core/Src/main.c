@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <_ADCn_INx_SSC.h>
+#include <_ADCn_INx_AR.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -140,6 +140,13 @@ float32_t SSC_3 = 0.0f;
 float32_t SSC_4 = 0.0f;
 float32_t SSC_5 = 0.0f;
 float32_t SSC_6 = 0.0f;
+
+float32_t* AR_1;
+float32_t* AR_2;
+float32_t* AR_3;
+float32_t* AR_4;
+float32_t* AR_5;
+float32_t* AR_6;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -375,7 +382,12 @@ if(Offset_6_Calculated==0)
 
       if(TKEO_1 == 1) // Only runs when there is muscle activation.
       {
+      /*Slope sign change*/
       SSC_1 = ADC1_IN1_SSC(&SSC_ADC1_IN1, 0.5 * Offset_1); // Calculates slope sign changes for active segments
+      /*Computes the auto-correlation values and the auto-regression coefficients and returns the latter*/
+      ADC1_IN1_autocorr_calc();
+      AR_1 = ADC1_IN1_autoreg_coeffs();
+
       }
 
 
@@ -390,6 +402,8 @@ if(Offset_6_Calculated==0)
 	  if(TKEO_2 == 1)
 	  {
 	  SSC_2 = ADC1_IN2_SSC(&SSC_ADC1_IN2, 0.5 * Offset_2);
+	  ADC1_IN2_autocorr_calc();
+	  AR_2 = ADC1_IN2_autoreg_coeffs();
 	  }
 
 
@@ -404,6 +418,8 @@ if(Offset_6_Calculated==0)
 	  if(TKEO_3 == 1)
 	  {
 	  SSC_3 = ADC2_IN3_SSC(&SSC_ADC2_IN3, 0.5 * Offset_3);
+	  ADC2_IN3_autocorr_calc();
+	  AR_3 = ADC2_IN3_autoreg_coeffs();
 	  }
 
 
@@ -418,6 +434,8 @@ if(Offset_6_Calculated==0)
 	  if(TKEO_4 == 1)
 	  {
 	  SSC_4 = ADC2_IN4_SSC(&SSC_ADC2_IN4, 0.5 * Offset_4);
+	  ADC2_IN4_autocorr_calc();
+	  AR_4 = ADC2_IN4_autoreg_coeffs();
 	  }
 
 
@@ -432,6 +450,8 @@ if(Offset_6_Calculated==0)
 	  if(TKEO_5 == 1)
 	  {
 	  SSC_5 = ADC3_IN1_SSC(&SSC_ADC3_IN1, 0.5 * Offset_5);
+	  ADC3_IN1_autocorr_calc();
+	  AR_5 = ADC3_IN1_autoreg_coeffs();
 	  }
 
 
@@ -447,7 +467,11 @@ if(Offset_6_Calculated==0)
 
 	  if(TKEO_6 == 1) // Only runs when there is muscle activation.
 	  {
+	  /*Slope sign change*/
 	  SSC_6 = ADC3_IN2_SSC(&SSC_ADC3_IN2, 0.5 * Offset_6); // Calculates slope sign changes for active segments
+	  /*Computes the auto-correlation values and the auto-regression coefficients and returns the latter*/
+	  ADC3_IN2_autocorr_calc();
+	  AR_6 = ADC3_IN2_autoreg_coeffs();
 	  }
     /* USER CODE END WHILE */
 
