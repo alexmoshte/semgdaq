@@ -1,0 +1,39 @@
+/*
+ * _ADCn_INx_STFT.h
+ *
+ *  Created on: Oct 14, 2024
+ *  Author: Mwangi Alex. W
+ *
+ *  Header file for declaring functions that are responsible for computing the short time Fourier transform for all channels from the moving average buffer
+ *
+ */
+
+#ifndef INC__ADCN_INX_STFT_H_
+#define INC__ADCN_INX_STFT_H_
+
+//INCLUDES
+#include "_ADCn_INx_SSC.h"
+
+//STRUCTS & VARIABLES
+typedef struct
+{
+	/* For the Gaussian window function */
+	float32_t Gaussian_Win_1[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Array for the Gaussian window
+	float32_t Sigma_1; // The standard deviation for the Gaussian. Determines the width of the window
+	float32_t mu_1; // The mean which is also the center of the window. Usually set to N/2 such that the Gaussinian is symmetric
+
+	/* For the FT computations */
+	float32_t Windowed_STFT_bfr_1[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Buffer where the windowed version of the moving average data buffer is stored
+	float32_t ADC1_IN1_FFT_Out_bfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Buffer where the FFT's output is stored
+} ADC1_IN1_STFT_par;
+
+//FUNCTION DECLARATIONS
+void ADC1_IN1_STFT_Update(ADC1_IN1_STFT_par*ADC1_IN1_STFT_par_ptr, ADC1_IN1_MA *ADC1_IN1_STFT_ptr);
+void ADC1_IN2_STFT_Update(void);
+void ADC2_IN3_STFT_Update(void);
+void ADC2_IN4_STFT_Update(void);
+void ADC3_IN1_STFT_Update(void);
+void ADC3_IN2_STFT_Update(void);
+
+
+#endif /* INC__ADCN_INX_STFT_H_ */

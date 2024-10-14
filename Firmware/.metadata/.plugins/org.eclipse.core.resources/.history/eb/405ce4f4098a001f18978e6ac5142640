@@ -1,0 +1,26 @@
+/*
+ * _ADCn_INx_STFT.h
+ *
+ *  Created on: Oct 14, 2024
+ *  Author: Mwangi Alex. W
+ *
+ *  Header file for declaring functions that are responsible for computing the short time Fourier transform for all channels from the moving average buffer
+ *
+ */
+
+#ifndef INC__ADCN_INX_STFT_H_
+#define INC__ADCN_INX_STFT_H_
+
+//INCLUDES
+#include "_ADCn_INx_SSC.h"
+
+//FUNCTION DECLARATIONS
+void ADC1_IN1_STFT_Update(void);
+void ADC1_IN2_STFT_Update(void);
+void ADC2_IN3_STFT_Update(void);
+void ADC2_IN4_STFT_Update(void);
+void ADC3_IN1_STFT_Update(void);
+void ADC3_IN2_STFT_Update(void);
+
+
+#endif /* INC__ADCN_INX_STFT_H_ */

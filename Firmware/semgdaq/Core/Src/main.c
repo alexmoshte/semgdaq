@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <_ADCn_INx_AR.h>
+#include <_ADCn_INx_STFT.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,14 +58,12 @@ ADC1_DMA_sort*ADC1_DMA_sort_ptr; // Declaring a pointer to the sorting structure
 ADC2_DMA_sort*ADC2_DMA_sort_ptr;
 ADC3_DMA_sort*ADC3_DMA_sort_ptr;
 
-
 ADC1_IN1_MA MovingAverage_ADC1_IN1; // Declaring an instance of the moving average structure
 ADC1_IN2_MA MovingAverage_ADC1_IN2;
 ADC2_IN3_MA MovingAverage_ADC2_IN3;
 ADC2_IN4_MA MovingAverage_ADC2_IN4;
 ADC3_IN1_MA MovingAverage_ADC3_IN1;
 ADC3_IN2_MA MovingAverage_ADC3_IN2;
-
 
 ADC1_IN1_MA OffsetCalc_ADC1_IN1; // Declaring an instance of the Offset calculation
 ADC1_IN2_MA OffsetCalc_ADC1_IN2;
@@ -74,14 +72,12 @@ ADC2_IN4_MA OffsetCalc_ADC2_IN4;
 ADC3_IN1_MA OffsetCalc_ADC3_IN1;
 ADC3_IN2_MA OffsetCalc_ADC3_IN2;
 
-
 ADC1_IN1_MA SD_BL_ADC1_IN1; // Declaring an instance of standard deviation calculation
 ADC1_IN2_MA SD_BL_ADC1_IN2;
 ADC2_IN3_MA SD_BL_ADC2_IN3;
 ADC2_IN4_MA SD_BL_ADC2_IN4;
 ADC3_IN1_MA SD_BL_ADC3_IN1;
 ADC3_IN2_MA SD_BL_ADC3_IN2;
-
 
 ADC1_IN1_MA TKEO_ADC1_IN1; // Declaring an instance of TKEO windowing
 ADC1_IN2_MA TKEO_ADC1_IN2;
@@ -90,7 +86,6 @@ ADC2_IN4_MA TKEO_ADC2_IN4;
 ADC3_IN1_MA TKEO_ADC3_IN1;
 ADC3_IN2_MA TKEO_ADC3_IN2;
 
-
 ADC1_IN1_MA SSC_ADC1_IN1; // Declaring an instance of slope sign change feature
 ADC1_IN2_MA SSC_ADC1_IN2;
 ADC2_IN3_MA SSC_ADC2_IN3;
@@ -98,6 +93,19 @@ ADC2_IN4_MA SSC_ADC2_IN4;
 ADC3_IN1_MA SSC_ADC3_IN1;
 ADC3_IN2_MA SSC_ADC3_IN2;
 
+ADC1_IN1_MA STFT_ADC1_IN1; // Declaring an instance of short time Fourier transform
+ADC1_IN2_MA STFT_ADC1_IN2;
+ADC2_IN3_MA STFT_ADC2_IN3;
+ADC2_IN4_MA STFT_ADC2_IN4;
+ADC3_IN1_MA STFT_ADC3_IN1;
+ADC3_IN2_MA STFT_ADC3_IN2;
+
+ADC1_IN1_STFT_par STFT_par_ADC1_IN1; // Declaring an instance of short time Fourier transform parameters
+ADC1_IN2_STFT_par STFT_par_ADC1_IN2;
+ADC2_IN3_STFT_par STFT_par_ADC2_IN3;
+ADC2_IN4_STFT_par STFT_par_ADC2_IN4;
+ADC3_IN1_STFT_par STFT_par_ADC3_IN1;
+ADC3_IN2_STFT_par STFT_par_ADC3_IN2;
 
 HAL_StatusTypeDef ADC_status;
 
@@ -147,6 +155,13 @@ float32_t* AR_3;
 float32_t* AR_4;
 float32_t* AR_5;
 float32_t* AR_6;
+
+float32_t* STFT_1;
+float32_t* STFT_2;
+float32_t* STFT_3;
+float32_t* STFT_4;
+float32_t* STFT_5;
+float32_t* STFT_6;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -384,10 +399,11 @@ if(Offset_6_Calculated==0)
       {
       /*Slope sign change*/
       SSC_1 = ADC1_IN1_SSC(&SSC_ADC1_IN1, 0.5 * Offset_1); // Calculates slope sign changes for active segments
-      /*Computes the auto-correlation values and the auto-regression coefficients and returns the latter*/
+      /*Computes the autocorrelation values and the autoregression coefficients and returns the latter*/
       ADC1_IN1_autocorr_calc();
       AR_1 = ADC1_IN1_autoreg_coeffs();
-
+      /* Computes the short time Fourier transform from the moving average buffer */
+      STFT_1 = ADC1_IN1_STFT_Update(&STFT_par_ADC1_IN1, &STFT_ADC1_IN1);
       }
 
 
@@ -404,6 +420,7 @@ if(Offset_6_Calculated==0)
 	  SSC_2 = ADC1_IN2_SSC(&SSC_ADC1_IN2, 0.5 * Offset_2);
 	  ADC1_IN2_autocorr_calc();
 	  AR_2 = ADC1_IN2_autoreg_coeffs();
+	  STFT_2 = ADC1_IN2_STFT_Update(&STFT_par_ADC1_IN2, &STFT_ADC1_IN2);
 	  }
 
 
@@ -420,6 +437,7 @@ if(Offset_6_Calculated==0)
 	  SSC_3 = ADC2_IN3_SSC(&SSC_ADC2_IN3, 0.5 * Offset_3);
 	  ADC2_IN3_autocorr_calc();
 	  AR_3 = ADC2_IN3_autoreg_coeffs();
+	  STFT_3 = ADC2_IN3_STFT_Update(&STFT_par_ADC2_IN3, &STFT_ADC2_IN3);
 	  }
 
 
@@ -436,6 +454,7 @@ if(Offset_6_Calculated==0)
 	  SSC_4 = ADC2_IN4_SSC(&SSC_ADC2_IN4, 0.5 * Offset_4);
 	  ADC2_IN4_autocorr_calc();
 	  AR_4 = ADC2_IN4_autoreg_coeffs();
+	  STFT_4 = ADC2_IN4_STFT_Update(&STFT_par_ADC2_IN4, &STFT_ADC2_IN4);
 	  }
 
 
@@ -452,6 +471,7 @@ if(Offset_6_Calculated==0)
 	  SSC_5 = ADC3_IN1_SSC(&SSC_ADC3_IN1, 0.5 * Offset_5);
 	  ADC3_IN1_autocorr_calc();
 	  AR_5 = ADC3_IN1_autoreg_coeffs();
+	  STFT_5 = ADC3_IN1_STFT_Update(&STFT_par_ADC3_IN1, &STFT_ADC3_IN1);
 	  }
 
 
@@ -469,9 +489,11 @@ if(Offset_6_Calculated==0)
 	  {
 	  /*Slope sign change*/
 	  SSC_6 = ADC3_IN2_SSC(&SSC_ADC3_IN2, 0.5 * Offset_6); // Calculates slope sign changes for active segments
-	  /*Computes the auto-correlation values and the auto-regression coefficients and returns the latter*/
+	  /*Computes the autocorrelation values and the autoregression coefficients and returns the latter*/
 	  ADC3_IN2_autocorr_calc();
 	  AR_6 = ADC3_IN2_autoreg_coeffs();
+	  /* Computes the short time Fourier transform from the moving average buffer */
+	  STFT_6 = ADC3_IN2_STFT_Update(&STFT_par_ADC3_IN2, &STFT_ADC3_IN2);
 	  }
     /* USER CODE END WHILE */
 

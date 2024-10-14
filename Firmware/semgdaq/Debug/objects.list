@@ -4,6 +4,7 @@
 "./Core/Src/_ADCn_INx_Offset.o"
 "./Core/Src/_ADCn_INx_SD_BL.o"
 "./Core/Src/_ADCn_INx_SSC.o"
+"./Core/Src/_ADCn_INx_STFT.o"
 "./Core/Src/_ADCn_INx_TKEO.o"
 "./Core/Src/_DMA_Sort.o"
 "./Core/Src/main.o"

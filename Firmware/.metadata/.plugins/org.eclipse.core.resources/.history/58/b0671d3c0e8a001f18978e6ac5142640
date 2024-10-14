@@ -1,0 +1,18 @@
+/*
+ * _ADCn_INx_STFT.c
+ *
+ * Created on: Oct 14, 2024
+ * Author: Mwangi Alex. W
+ */
+
+//INCLUDES
+#include "_ADCn_INx_STFT.h"
+
+//FUNCTION DEFINITIONS
+
+void ADC1_IN1_STFT_Update(ADC1_IN1_STFT_par*ADC1_IN1_STFT_par_ptr)
+{
+
+}
+
+

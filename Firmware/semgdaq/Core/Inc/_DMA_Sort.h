@@ -15,18 +15,18 @@
 // MACROS
 enum
 {
-ADC_DMA_BUFFERSIZE= 2500,
-ADC_DMA_HALFBUFFERSIZE= 1250,
-ADC_DMA_QUATERBUFFERSIZE= 625,
-ADC_DMA_EIGHTHBUFFERSIZE= 312,
-ADC_DMA_SIXTEENTHBUFFERSIZE=160
+ADC_DMA_BUFFERSIZE= 3000,
+ADC_DMA_HALFBUFFERSIZE= 1500,
+ADC_DMA_QUATERBUFFERSIZE= 750,
+ADC_DMA_EIGHTHBUFFERSIZE= 375,
+ADC_DMA_SIXTEENTHBUFFERSIZE=256
 };
 
 //INCLUDES
 #include "stm32g4xx_hal.h"
 
 //STRUCTS, VARIABLES AND POINTERS
-typedef struct //Struct for ADC1
+typedef struct // Struct for ADC1
 {
 	uint32_t ADC1_DMA_bfr[ADC_DMA_BUFFERSIZE]; // Buffer that stores the ADC conversions-source buffer
 	uint32_t ADC1_DMA_mon; // Variable to monitor one value from the DMA buffer
@@ -42,7 +42,7 @@ typedef struct //Struct for ADC1
 extern ADC1_DMA_sort*ADC1_DMA_sort_ptr;  // Pointer to the struct
 
 
-typedef struct //Struct for ADC2
+typedef struct // Struct for ADC2
 {
 	uint32_t ADC2_DMA_bfr[ADC_DMA_BUFFERSIZE];
 	uint32_t ADC2_DMA_mon;
@@ -58,7 +58,7 @@ typedef struct //Struct for ADC2
 extern ADC2_DMA_sort*ADC2_DMA_sort_ptr;
 
 
-typedef struct //Struct for ADC3
+typedef struct // Struct for ADC3
 {
 	uint32_t ADC3_DMA_bfr[ADC_DMA_BUFFERSIZE];
 	uint32_t ADC3_DMA_mon;

@@ -1,0 +1,30 @@
+/*
+ * _ADCn_INx_STFT.c
+ *
+ * Created on: Oct 14, 2024
+ * Author: Mwangi Alex. W
+ */
+
+//INCLUDES
+#include "_ADCn_INx_STFT.h"
+
+//FUNCTION DEFINITIONS
+void ADC1_IN1_STFT_Update(ADC1_IN1_STFT_par*ADC1_IN1_STFT_par_ptr, ADC1_IN1_MA*ADC1_IN1_STFT_ptr)
+{
+	ADC1_IN1_STFT_par_ptr->Sigma_1 = (ADC_DMA_SIXTEENTHBUFFERSIZE / 6); // The Gaussian window spans about + or - 3 * Sigma_1 from the mean (center of the window). Setting Sigma_1 = (ADC_DMA_SIXTEENTHBUFFERSIZE / 6) ensures that almost all of the window (99.7%) lies within the buffer
+	ADC1_IN1_STFT_par_ptr->mu_1 = ((ADC_DMA_SIXTEENTHBUFFERSIZE-1)/(2.0f));
+
+    /* Generating the Gaussian window*/
+	for(uint32_t n = 0; n < ADC_DMA_SIXTEENTHBUFFERSIZE; n++)
+	{
+		float32_t exponent_1 = -0.5f*(pow(((n - ADC1_IN1_STFT_par_ptr->mu_1)/ADC1_IN1_STFT_par_ptr->Sigma_1), 2));
+		ADC1_IN1_STFT_par_ptr->Gaussian_Win_1[n] = exp(exponent_1);
+	}
+
+	for (uint32_t m = 0; m < ADC_DMA_SIXTEENTHBUFFERSIZE; m++)
+	{
+
+	}
+}
+
+
