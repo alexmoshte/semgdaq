@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <_ADCn_INx_STFT.h>
+#include <_ADCn_INx_DAC1_Cond.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,6 +100,13 @@ ADC2_IN4_MA STFT_ADC2_IN4;
 ADC3_IN1_MA STFT_ADC3_IN1;
 ADC3_IN2_MA STFT_ADC3_IN2;
 
+ADC1_IN1_MA DAC1_ADC1_IN1; // Declaring an instance for DAC monitoring
+ADC1_IN2_MA DAC1_ADC1_IN2;
+ADC2_IN3_MA DAC1_ADC2_IN3;
+ADC2_IN4_MA DAC1_ADC2_IN4;
+ADC3_IN1_MA DAC1_ADC3_IN1;
+ADC3_IN2_MA DAC1_ADC3_IN2;
+
 ADC1_IN1_STFT_par STFT_par_ADC1_IN1; // Declaring an instance of short time Fourier transform parameters
 ADC1_IN2_STFT_par STFT_par_ADC1_IN2;
 ADC2_IN3_STFT_par STFT_par_ADC2_IN3;
@@ -175,6 +182,7 @@ static void MX_FMAC_Init(void);
 static void MX_TIM6_Init(void);
 static void MX_TIM7_Init(void);
 static void MX_TIM20_Init(void);
+static void MX_DAC1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -242,6 +250,7 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM7_Init();
   MX_TIM20_Init();
+  MX_DAC1_Init();
   /* USER CODE BEGIN 2 */
 	
   /* ADC1 is started using timer 6 triggered conversions */
@@ -390,8 +399,12 @@ if(Offset_6_Calculated==0)
 	  MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1); // Performs the moving average
 	  for (uint32_t y = 0; y < ADC_DMA_SIXTEENTHBUFFERSIZE; y++)
 	  {
-		  MovingAverage_ADC1_IN1.MA_ADC1_IN1_OutBfr[y]  -= Offset_1; // Subtract the stored offset
+		  MovingAverage_ADC1_IN1.MA_ADC1_IN1_OutBfr[y]  -= Offset_1; // Subtracts the stored offset
 	  }
+      #ifdef MONITOR_CHANNEL_1_LEFT
+	  ADC1_IN1_DAC_Update(&DAC1_ADC1_IN1); // For monitoring the channel on an oscilloscope through the DAC
+      #endif
+
 	  /* FEATURE EXCTRACTION SECTION */
       TKEO_1 = ADC1_IN1_TKEO(&TKEO_ADC1_IN1, SD_BL_1); // Performs the windowing through the TKEO operator and returns binary data to indicate presence or absence of muscle activation
 
@@ -413,6 +426,11 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC1_IN2.MA_ADC1_IN2_OutBfr[z]  -= Offset_2;
 	  }
+      #ifdef MONITOR_CHANNEL_4_RIGHT
+	  ADC1_IN2_DAC_Update(&DAC1_ADC1_IN2);
+      #endif
+
+
 	  TKEO_2 = ADC1_IN2_TKEO(&TKEO_ADC1_IN2, SD_BL_2);
 
 	  if(TKEO_2 == 1)
@@ -430,6 +448,11 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC2_IN3.MA_ADC2_IN3_OutBfr[g]  -= Offset_3;
 	  }
+
+      #ifdef MONITOR_CHANNEL_2_LEFT
+	  ADC2_IN3_DAC_Update(&DAC1_ADC2_IN3);
+      #endif
+
 	  TKEO_3 = ADC2_IN3_TKEO(&TKEO_ADC2_IN3, SD_BL_3);
 
 	  if(TKEO_3 == 1)
@@ -447,6 +470,11 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC2_IN4.MA_ADC2_IN4_OutBfr[e]  -= Offset_4;
 	  }
+
+      #ifdef MONITOR_CHANNEL_5_RIGHT
+	  ADC2_IN4_DAC_Update(&DAC1_ADC2_IN4);
+      #endif
+
 	  TKEO_4 = ADC2_IN4_TKEO(&TKEO_ADC2_IN4, SD_BL_4);
 
 	  if(TKEO_4 == 1)
@@ -464,6 +492,11 @@ if(Offset_6_Calculated==0)
 	  {
 		  MovingAverage_ADC3_IN1.MA_ADC3_IN1_OutBfr[b]  -= Offset_5;
 	  }
+      #ifdef MONITOR_CHANNEL_3_LEFT
+	  ADC3_IN1_DAC_Update(&DAC1_ADC3_IN1);
+      #endif
+
+
 	  TKEO_5 = ADC3_IN1_TKEO(&TKEO_ADC3_IN1, SD_BL_5);
 
 	  if(TKEO_5 == 1)
@@ -480,8 +513,12 @@ if(Offset_6_Calculated==0)
 	  MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2); // Performs the moving average
 	  for (uint32_t c = 0; c < ADC_DMA_SIXTEENTHBUFFERSIZE; c++)
 	  {
-		  MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;  // Subtract the stored offset
+		  MovingAverage_ADC3_IN2.MA_ADC3_IN2_OutBfr[c]  -= Offset_6;  // Subtracts the stored offset
 	  }
+      #ifdef MONITOR_CHANNEL_6_RIGHT
+	  ADC3_IN2_DAC_Update(&DAC1_ADC3_IN2); // For monitoring the channel on an oscilloscope through the DAC
+      #endif
+
 	  /* FEATURE EXCTRACTION SECTION */
 	  TKEO_6 = ADC3_IN2_TKEO(&TKEO_ADC3_IN2, SD_BL_6); // Performs the windowing through the TKEO operator and returns binary data to indicate presence or absence of muscle activation
 
@@ -761,6 +798,61 @@ static void MX_ADC3_Init(void)
 }
 
 /**
+  * @brief DAC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_DAC1_Init(void)
+{
+
+  /* USER CODE BEGIN DAC1_Init 0 */
+
+  /* USER CODE END DAC1_Init 0 */
+
+  DAC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN DAC1_Init 1 */
+
+  /* USER CODE END DAC1_Init 1 */
+
+  /** DAC Initialization
+  */
+  hdac1.Instance = DAC1;
+  if (HAL_DAC_Init(&hdac1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** DAC channel OUT1 config
+  */
+  sConfig.DAC_HighFrequency = DAC_HIGH_FREQUENCY_INTERFACE_MODE_AUTOMATIC;
+  sConfig.DAC_DMADoubleDataMode = DISABLE;
+  sConfig.DAC_SignedFormat = DISABLE;
+  sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
+  sConfig.DAC_Trigger = DAC_TRIGGER_T6_TRGO;
+  sConfig.DAC_Trigger2 = DAC_TRIGGER_NONE;
+  sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+  sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_EXTERNAL;
+  sConfig.DAC_UserTrimming = DAC_TRIMMING_FACTORY;
+  if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** DAC channel OUT2 config
+  */
+  sConfig.DAC_Trigger = DAC_TRIGGER_T7_TRGO;
+  if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DAC1_Init 2 */
+
+  /* USER CODE END DAC1_Init 2 */
+
+}
+
+/**
   * @brief FMAC Initialization Function
   * @param None
   * @retval None
@@ -925,12 +1017,18 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
   /* DMA1_Channel6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
   /* DMA2_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Channel1_IRQn);
+  /* DMA2_Channel6_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Channel6_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Channel6_IRQn);
 
 }
 

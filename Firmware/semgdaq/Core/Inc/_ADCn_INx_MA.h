@@ -27,7 +27,7 @@ typedef struct
 
 	float32_t MA_ADC1_IN1_bfr[MA_FILTER_LENGTH]; // Buffer where present and past samples are stores for convolution
 
-	float32_t MA_ADC1_IN1_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; //Output Buffer
+	float32_t MA_ADC1_IN1_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Output Buffer
 
 } ADC1_IN1_MA;
 
@@ -71,7 +71,7 @@ typedef struct
 
 	float32_t MA_ADC3_IN1_bfr[MA_FILTER_LENGTH]; // Buffer where present and past samples are stores for convolution
 
-	float32_t MA_ADC3_IN1_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; //Output Buffer
+	float32_t MA_ADC3_IN1_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Output Buffer
 
 } ADC3_IN1_MA;
 

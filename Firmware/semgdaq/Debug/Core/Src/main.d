@@ -21,6 +21,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h \
@@ -30,11 +32,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/_ADCn_INx_STFT.h ../Core/Inc/_ADCn_INx_AR.h \
- ../Core/Inc/_ADCn_INx_SSC.h ../Core/Inc/_ADCn_INx_TKEO.h \
- ../Core/Inc/_ADCn_INx_SD_BL.h ../Core/Inc/_ADCn_INx_Offset.h \
- ../Core/Inc/_ADCn_INx_MA.h ../Core/Inc/_ADCn_INx_NF.h \
- ../Core/Inc/_DMA_Sort.h \
+ ../Core/Inc/_ADCn_INx_DAC1_Cond.h ../Core/Inc/_ADCn_INx_STFT.h \
+ ../Core/Inc/_ADCn_INx_AR.h ../Core/Inc/_ADCn_INx_SSC.h \
+ ../Core/Inc/_ADCn_INx_TKEO.h ../Core/Inc/_ADCn_INx_SD_BL.h \
+ ../Core/Inc/_ADCn_INx_Offset.h ../Core/Inc/_ADCn_INx_MA.h \
+ ../Core/Inc/_ADCn_INx_NF.h ../Core/Inc/_DMA_Sort.h \
  C:/Users/moshte/Desktop/moshte/Firmware\ projects/CubeIDE/Workspace/semgdaq_/Firmware/semgdaq/Drivers/CMSIS/DSP/Include/arm_math.h \
  ../Drivers/CMSIS/Include/cmsis_compiler.h
 ../Core/Inc/main.h:
@@ -60,6 +62,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h:
@@ -69,6 +73,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
+../Core/Inc/_ADCn_INx_DAC1_Cond.h:
 ../Core/Inc/_ADCn_INx_STFT.h:
 ../Core/Inc/_ADCn_INx_AR.h:
 ../Core/Inc/_ADCn_INx_SSC.h:
