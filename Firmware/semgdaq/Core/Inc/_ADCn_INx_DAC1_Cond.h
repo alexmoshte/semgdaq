@@ -26,5 +26,4 @@ void ADC2_IN4_DAC_Update(ADC2_IN4_MA *ADC2_IN4_DAC_ptr);
 void ADC3_IN1_DAC_Update(ADC3_IN1_MA *ADC3_IN1_DAC_ptr);
 void ADC3_IN2_DAC_Update(ADC3_IN2_MA *ADC3_IN2_DAC_ptr);
 
-
 #endif /* INC__ADCN_INX_DAC1_COND_H_ */

@@ -29,6 +29,8 @@ typedef struct
 
 	float32_t MA_ADC1_IN1_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Output Buffer
 
+	float32_t MA_ADC1_IN1_Level_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Output Buffer that stores the data converted from voltage values (0-3.3V) to levels (0-4096). The levels are fed to the DAC for monitoring
+
 } ADC1_IN1_MA;
 
 
@@ -39,6 +41,8 @@ typedef struct
 	float32_t MA_ADC1_IN2_bfr[MA_FILTER_LENGTH];
 
 	float32_t MA_ADC1_IN2_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
+
+	float32_t MA_ADC1_IN2_Level_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 
 } ADC1_IN2_MA;
 
@@ -51,6 +55,8 @@ typedef struct
 
 	float32_t MA_ADC2_IN3_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 
+	float32_t MA_ADC2_IN3_Level_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
+
 } ADC2_IN3_MA;
 
 
@@ -61,6 +67,8 @@ typedef struct
 	float32_t MA_ADC2_IN4_bfr[MA_FILTER_LENGTH];
 
 	float32_t MA_ADC2_IN4_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
+
+	float32_t MA_ADC2_IN4_Level_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 
 } ADC2_IN4_MA;
 
@@ -73,6 +81,8 @@ typedef struct
 
 	float32_t MA_ADC3_IN1_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Output Buffer
 
+	float32_t MA_ADC3_IN1_Level_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE]; // Output Buffer that stores the data converted from voltage values (0-3.3V) to levels (0-4096). The levels are fed to the DAC for monitoring
+
 } ADC3_IN1_MA;
 
 
@@ -83,6 +93,8 @@ typedef struct
 	float32_t MA_ADC3_IN2_bfr[MA_FILTER_LENGTH];
 
 	float32_t MA_ADC3_IN2_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
+
+	float32_t MA_ADC3_IN2_Level_OutBfr[ADC_DMA_SIXTEENTHBUFFERSIZE];
 
 } ADC3_IN2_MA;
 

@@ -17,14 +17,14 @@ void ADC1_DMA_sort_uhb (void)
 		{
 			for(uint32_t n=0; n<ADC_DMA_QUATERBUFFERSIZE-1; n++)  // Stores data on the upper half of IN1 channel data buffer
 			{
-				ADC1_DMA_sort_ptr->ADC1_IN1_bfr[n]=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m];
+				ADC1_DMA_sort_ptr->ADC1_IN1_bfr[n] = ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
             }
         }
 		else  // Checks that the buffer register location is odd and loads the data
 		{
 			for(uint32_t p=0; p<ADC_DMA_QUATERBUFFERSIZE-1; p++)  // Stores data on the upper half of IN2 channel data buffer
 			{
-				ADC1_DMA_sort_ptr->ADC1_IN2_bfr[p]=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m];
+				ADC1_DMA_sort_ptr->ADC1_IN2_bfr[p] = ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
 			}
 		}
      }
@@ -40,14 +40,14 @@ void ADC1_DMA_sort_lhb (void)
 		{
 			for(uint32_t n=ADC_DMA_QUATERBUFFERSIZE; n<ADC_DMA_HALFBUFFERSIZE-1; n++)  // Stores data on the lower half of IN1 channel data buffer
 			{
-				ADC1_DMA_sort_ptr->ADC1_IN1_bfr[n]=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m];
+				ADC1_DMA_sort_ptr->ADC1_IN1_bfr[n] = ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
             }
         }
 		else  // Checks that the buffer register location is odd and loads the data
 		{
 			for(uint32_t p=ADC_DMA_QUATERBUFFERSIZE; p<ADC_DMA_HALFBUFFERSIZE-1; p++)  // Stores data on the lower half of IN2 channel data buffer
 			{
-				ADC1_DMA_sort_ptr->ADC1_IN2_bfr[p]=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m];
+				ADC1_DMA_sort_ptr->ADC1_IN2_bfr[p] = ADC1_DMA_sort_ptr->ADC1_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
 			}
 		}
      }
@@ -63,14 +63,14 @@ void ADC2_DMA_sort_uhb (void)
 		{
 			for(uint32_t n=0; n<ADC_DMA_QUATERBUFFERSIZE-1; n++)
 			{
-				ADC2_DMA_sort_ptr->ADC2_IN3_bfr[n]=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m];
+				ADC2_DMA_sort_ptr->ADC2_IN3_bfr[n] = ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
             }
         }
 		else
 		{
 			for(uint32_t p=0; p<ADC_DMA_QUATERBUFFERSIZE-1; p++)
 			{
-				ADC2_DMA_sort_ptr->ADC2_IN4_bfr[p]=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m];
+				ADC2_DMA_sort_ptr->ADC2_IN4_bfr[p] = ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
 			}
 		}
      }
@@ -86,14 +86,14 @@ void ADC2_DMA_sort_lhb (void)
 		{
 			for(uint32_t n=ADC_DMA_QUATERBUFFERSIZE; n<ADC_DMA_HALFBUFFERSIZE-1; n++)
 			{
-				ADC2_DMA_sort_ptr->ADC2_IN3_bfr[n]=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m];
+				ADC2_DMA_sort_ptr->ADC2_IN3_bfr[n] = ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
             }
         }
 		else
 		{
 			for(uint32_t p=ADC_DMA_QUATERBUFFERSIZE; p<ADC_DMA_HALFBUFFERSIZE-1; p++)
 			{
-				ADC2_DMA_sort_ptr->ADC2_IN4_bfr[p]=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m];
+				ADC2_DMA_sort_ptr->ADC2_IN4_bfr[p] = ADC2_DMA_sort_ptr->ADC2_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
 			}
 		}
      }
@@ -109,14 +109,14 @@ void ADC3_DMA_sort_uhb (void)
 		{
 			for(uint32_t n=0; n<ADC_DMA_QUATERBUFFERSIZE-1; n++)
 			{
-				ADC3_DMA_sort_ptr->ADC3_IN1_bfr[n]=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m];
+				ADC3_DMA_sort_ptr->ADC3_IN1_bfr[n] = ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
             }
         }
 		else
 		{
 			for(uint32_t p=0; p<ADC_DMA_QUATERBUFFERSIZE-1; p++)
 			{
-				ADC3_DMA_sort_ptr->ADC3_IN2_bfr[p]=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m];
+				ADC3_DMA_sort_ptr->ADC3_IN2_bfr[p] = ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
 			}
 		}
      }
@@ -132,14 +132,14 @@ void ADC3_DMA_sort_lhb (void)
 		{
 			for(uint32_t n=ADC_DMA_QUATERBUFFERSIZE; n<ADC_DMA_HALFBUFFERSIZE-1; n++)
 			{
-				ADC3_DMA_sort_ptr->ADC3_IN1_bfr[n]=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m];
+				ADC3_DMA_sort_ptr->ADC3_IN1_bfr[n] = ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
             }
         }
 		else
 		{
 			for(uint32_t p=ADC_DMA_QUATERBUFFERSIZE; p<ADC_DMA_HALFBUFFERSIZE-1; p++)
 			{
-				ADC3_DMA_sort_ptr->ADC3_IN2_bfr[p]=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m];
+				ADC3_DMA_sort_ptr->ADC3_IN2_bfr[p] = ADC3_DMA_sort_ptr->ADC3_DMA_bfr[m] * LEVEL_VALUE_SCALAR;
 			}
 		}
      }
