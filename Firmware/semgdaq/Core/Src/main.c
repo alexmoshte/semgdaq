@@ -47,6 +47,10 @@ DMA_HandleTypeDef hdma_adc1;
 DMA_HandleTypeDef hdma_adc2;
 DMA_HandleTypeDef hdma_adc3;
 
+DAC_HandleTypeDef hdac1;
+DMA_HandleTypeDef hdma_dac1_ch1;
+DMA_HandleTypeDef hdma_dac1_ch2;
+
 FMAC_HandleTypeDef hfmac;
 
 TIM_HandleTypeDef htim6;
@@ -184,7 +188,11 @@ static void MX_TIM7_Init(void);
 static void MX_TIM20_Init(void);
 static void MX_DAC1_Init(void);
 /* USER CODE BEGIN PFP */
-
+void EXT12_IRQHandler(void);
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
+void                    HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc);
+void                    HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
+void Error_Handler(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -252,142 +260,11 @@ int main(void)
   MX_TIM20_Init();
   MX_DAC1_Init();
   /* USER CODE BEGIN 2 */
-	
-  /* ADC1 is started using timer 6 triggered conversions */
-  HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim6);
-    ADC_status=HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr, ADC_DMA_BUFFERSIZE);
+  // Enable the EXTI line 2 interrupt
+  HAL_NVIC_SetPriority(EXTI2_IRQn, 2, 0);  // Set priority
+  HAL_NVIC_EnableIRQ(EXTI2_IRQn); // Enable the interrupt in NVIC (Interrupt is triggered by pressing the push button)
 
-  HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim7);
-    ADC_status=HAL_ADC_Start_DMA(&hadc2, ADC2_DMA_sort_ptr->ADC2_DMA_bfr, ADC_DMA_BUFFERSIZE);
-
-  HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim20);
-    ADC_status=HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr, ADC_DMA_BUFFERSIZE);
-
-/* Calculating the offset value and standard deviation for the base line signal for all the channels */
-if(Offset_1_Calculated==0)
-{
-  float32_t OffsetSum_1 = 0.0f;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
-    {
-		/* Collects samples to fill the buffer */
-		update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
-		MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);  // Fill the buffer with ADC data
-
-		/* Calculate the offset from the filled buffer */
-		Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1);
-		OffsetSum_1 += Offset_1;
-    }
-
-  Offset_1 = OffsetSum_1 / NOOFITERATIONS_BL;
-  Offset_1_Calculated = 1; // Set the flag indicating offset has been calculated
-
-  SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1); // Calculated the standard deviation for the last buffer fill
-}
-
-
-if(Offset_2_Calculated==0)
-{
-  float32_t OffsetSum_2;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
-    {
-
-		update_ADC1_IN2_FO_biquad_filter();
-		MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);
-
-
-		Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
-		OffsetSum_2 += Offset_2;
-    }
-
-  Offset_2 = OffsetSum_2 / NOOFITERATIONS_BL;
-  Offset_2_Calculated = 1;
-
-  SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
-}
-
-
-if(Offset_3_Calculated==0)
-{
-  float32_t OffsetSum_3;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
-    {
-
-		update_ADC2_IN3_FO_biquad_filter();
-		MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);
-
-
-		Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
-		OffsetSum_3 += Offset_3;
-    }
-
-  Offset_3 = OffsetSum_3 / NOOFITERATIONS_BL;
-  Offset_3_Calculated = 1;
-
-  SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
-}
-
-
-if(Offset_4_Calculated==0)
-{
-  float32_t OffsetSum_4;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
-    {
-
-		update_ADC2_IN4_FO_biquad_filter();
-		MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);
-
-
-		Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
-		OffsetSum_4 += Offset_4;
-    }
-
-  Offset_4 = OffsetSum_4 / NOOFITERATIONS_BL;
-  Offset_4_Calculated = 1;
-
-  SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
-}
-
-
-if(Offset_5_Calculated==0)
-{
-  float32_t OffsetSum_5;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
-    {
-		/* Collects samples to fill the buffer */
-		update_ADC3_IN1_FO_biquad_filter();  // Notch filters channel 1 data
-		MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);  // Fill the buffer with ADC data
-
-		/* Calculate the offset from the filled buffer */
-		Offset_1 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
-		OffsetSum_5 += Offset_5;
-    }
-
-  Offset_5 = OffsetSum_5 / NOOFITERATIONS_BL;
-  Offset_5_Calculated = 1; // Set the flag indicating offset has been calculated
-
-  SD_BL_5 = ADC3_IN1_SD_BL(&SD_BL_ADC3_IN1, Offset_5);
-}
-
-
-if(Offset_6_Calculated==0)
-{
-  float32_t OffsetSum_6;
-  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
-    {
-
-		update_ADC3_IN2_FO_biquad_filter();
-		MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);
-
-
-		Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
-		OffsetSum_6 += Offset_6;
-    }
-
-  Offset_6 = OffsetSum_6 / NOOFITERATIONS_BL;
-  Offset_6_Calculated = 1;
-
-  SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
-}
+  EXT12_IRQHandler(); // When the push button is pressed - starts all ADCs with DMA, starts the sorting algorithm for each ADC, calculates the offset from the baseline and the standard deviation from the baseline data (for all channels). Finally, it toggles the status LED to indicate that acquisition has started
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -410,12 +287,12 @@ if(Offset_6_Calculated==0)
 
       if(TKEO_1 == 1) // Only runs when there is muscle activation.
       {
-      /*Slope sign change*/
+      /* Slope sign change */
       SSC_1 = ADC1_IN1_SSC(&SSC_ADC1_IN1, 0.5 * Offset_1); // Calculates slope sign changes for active segments
       /*Computes the autocorrelation values and the autoregression coefficients and returns the latter*/
       ADC1_IN1_autocorr_calc();
       AR_1 = ADC1_IN1_autoreg_coeffs();
-      /* Computes the short time Fourier transform from the moving average buffer */
+      /* Computes the Short Time Fourier Transform from the moving average buffer */
       STFT_1 = ADC1_IN1_STFT_Update(&STFT_par_ADC1_IN1, &STFT_ADC1_IN1);
       }
 
@@ -524,12 +401,12 @@ if(Offset_6_Calculated==0)
 
 	  if(TKEO_6 == 1) // Only runs when there is muscle activation.
 	  {
-	  /*Slope sign change*/
+	  /* Slope sign change */
 	  SSC_6 = ADC3_IN2_SSC(&SSC_ADC3_IN2, 0.5 * Offset_6); // Calculates slope sign changes for active segments
-	  /*Computes the autocorrelation values and the autoregression coefficients and returns the latter*/
+	  /* Computes the autocorrelation values and the autoregression coefficients and returns the latter */
 	  ADC3_IN2_autocorr_calc();
 	  AR_6 = ADC3_IN2_autoreg_coeffs();
-	  /* Computes the short time Fourier transform from the moving average buffer */
+	  /* Computes the Short Time Fourier Transform from the moving average buffer */
 	  STFT_6 = ADC3_IN2_STFT_Update(&STFT_par_ADC3_IN2, &STFT_ADC3_IN2);
 	  }
     /* USER CODE END WHILE */
@@ -1039,20 +916,200 @@ static void MX_DMA_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 /* USER CODE BEGIN MX_GPIO_Init_1 */
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOE_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : GPIO_bgn_aqstn_Pin */
+  GPIO_InitStruct.Pin = GPIO_bgn_aqstn_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIO_bgn_aqstn_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PE5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+void EXT12_IRQHandler(void)
+{
+
+	  /* ADC1 is started using timer 6 triggered conversions */
+	  HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim6);
+      ADC_status = HAL_ADC_Start_DMA(&hadc1, ADC1_DMA_sort_ptr->ADC1_DMA_bfr, ADC_DMA_BUFFERSIZE);
+	  HAL_ADC_ConvHalfCpltCallback(&hadc1);
+	  HAL_ADC_ConvCpltCallback(&hadc1);
+
+	  HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim7);
+	  ADC_status = HAL_ADC_Start_DMA(&hadc2, ADC2_DMA_sort_ptr->ADC2_DMA_bfr, ADC_DMA_BUFFERSIZE);
+	  HAL_ADC_ConvHalfCpltCallback(&hadc2);
+	  HAL_ADC_ConvCpltCallback(&hadc2);
+
+	  HAL_StatusTypeDef HAL_TIM_Base_Start(TIM_HandleTypeDef *htim20);
+	  ADC_status = HAL_ADC_Start_DMA(&hadc3, ADC3_DMA_sort_ptr->ADC3_DMA_bfr, ADC_DMA_BUFFERSIZE);
+	  HAL_ADC_ConvHalfCpltCallback(&hadc3);
+	  HAL_ADC_ConvCpltCallback(&hadc3);
+
+	/* Calculating the offset value and standard deviation for the base line signal for all the channels */
+	if(Offset_1_Calculated==0)
+	{
+	  float32_t OffsetSum_1 = 0.0f;
+	  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+		{
+			/* Collects samples to fill the buffer */
+			update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
+			MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1);  // Fill the buffer with ADC data
+
+			/* Calculate the offset from the filled buffer */
+			Offset_1 = ADC1_IN1_OffsetCalc(&OffsetCalc_ADC1_IN1);
+			OffsetSum_1 += Offset_1;
+		}
+
+	  Offset_1 = OffsetSum_1 / NOOFITERATIONS_BL;
+	  Offset_1_Calculated = 1; // Set the flag indicating offset has been calculated
+
+	  SD_BL_1 = ADC1_IN1_SD_BL(&SD_BL_ADC1_IN1, Offset_1); // Calculated the standard deviation for the last buffer fill
+	}
+
+
+	if(Offset_2_Calculated==0)
+	{
+	  float32_t OffsetSum_2;
+	  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
+		{
+
+			update_ADC1_IN2_FO_biquad_filter();
+			MA_ADC1_IN2_Update(&MovingAverage_ADC1_IN2);
+
+
+			Offset_2 = ADC1_IN2_OffsetCalc(&OffsetCalc_ADC1_IN2);
+			OffsetSum_2 += Offset_2;
+		}
+
+	  Offset_2 = OffsetSum_2 / NOOFITERATIONS_BL;
+	  Offset_2_Calculated = 1;
+
+	  SD_BL_2 = ADC1_IN2_SD_BL(&SD_BL_ADC1_IN2, Offset_2);
+	}
+
+
+	if(Offset_3_Calculated==0)
+	{
+	  float32_t OffsetSum_3;
+	  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
+		{
+
+			update_ADC2_IN3_FO_biquad_filter();
+			MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);
+
+
+			Offset_3 = ADC2_IN3_OffsetCalc(&OffsetCalc_ADC2_IN3);
+			OffsetSum_3 += Offset_3;
+		}
+
+	  Offset_3 = OffsetSum_3 / NOOFITERATIONS_BL;
+	  Offset_3_Calculated = 1;
+
+	  SD_BL_3 = ADC2_IN3_SD_BL(&SD_BL_ADC2_IN3, Offset_3);
+	}
+
+
+	if(Offset_4_Calculated==0)
+	{
+	  float32_t OffsetSum_4;
+	  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
+		{
+
+			update_ADC2_IN4_FO_biquad_filter();
+			MA_ADC2_IN4_Update(&MovingAverage_ADC2_IN4);
+
+
+			Offset_4 = ADC2_IN4_OffsetCalc(&OffsetCalc_ADC2_IN4);
+			OffsetSum_4 += Offset_4;
+		}
+
+	  Offset_4 = OffsetSum_4 / NOOFITERATIONS_BL;
+	  Offset_4_Calculated = 1;
+
+	  SD_BL_4 = ADC2_IN4_SD_BL(&SD_BL_ADC2_IN4, Offset_4);
+	}
+
+
+	if(Offset_5_Calculated==0)
+	{
+	  float32_t OffsetSum_5;
+	  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++) // Calculates the mean and standard deviation for the baseline of the signal for the first n buffer fills where n= NOOFITERATIONS_BL
+		{
+			/* Collects samples to fill the buffer */
+			update_ADC3_IN1_FO_biquad_filter();  // Notch filters channel 1 data
+			MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);  // Fill the buffer with ADC data
+
+			/* Calculate the offset from the filled buffer */
+			Offset_1 = ADC3_IN1_OffsetCalc(&OffsetCalc_ADC3_IN1);
+			OffsetSum_5 += Offset_5;
+		}
+
+	  Offset_5 = OffsetSum_5 / NOOFITERATIONS_BL;
+	  Offset_5_Calculated = 1; // Set the flag indicating offset has been calculated
+
+	  SD_BL_5 = ADC3_IN1_SD_BL(&SD_BL_ADC3_IN1, Offset_5);
+	}
+
+
+	if(Offset_6_Calculated==0)
+	{
+	  float32_t OffsetSum_6;
+	  for (uint8_t a=0; a< NOOFITERATIONS_BL; a++)
+		{
+
+			update_ADC3_IN2_FO_biquad_filter();
+			MA_ADC3_IN2_Update(&MovingAverage_ADC3_IN2);
+
+
+			Offset_6 = ADC3_IN2_OffsetCalc(&OffsetCalc_ADC3_IN2);
+			OffsetSum_6 += Offset_6;
+		}
+
+	  Offset_6 = OffsetSum_6 / NOOFITERATIONS_BL;
+	  Offset_6_Calculated = 1;
+
+	  SD_BL_6 = ADC3_IN2_SD_BL(&SD_BL_ADC3_IN2, Offset_6);
+	}
+
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_2);  // Calls the HAL's callback function
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) // Callback function (Called by HAL_GPIO_EXTI_IRQHandler (above))
+{
+	if (GPIO_Pin == GPIO_PIN_2)
+	{
+		// Turn the LED connected to PE5 on
+        HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_SET);
+
+        // Delay for 2 seconds (2000 milliseconds)
+        HAL_Delay(2000);
+
+        // Turn the LED off
+        HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET);
+	}
+}
+
 void                    HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)   // Fires when the upper half of the DMA buffer is filled
 {
 	 if (hadc->Instance == ADC1)

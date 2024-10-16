@@ -13,12 +13,6 @@
 //INCLUDES
 #include "_ADCn_INx_DAC1_Cond.h"
 
-//VARIABLES, STRUCTS & INSTANCES
- DAC_HandleTypeDef hdac1;
- DMA_HandleTypeDef hdma_dac1_ch1;
- DMA_HandleTypeDef hdma_dac1_ch2;
-
-
 //FUNCTION DEFINITIONS
 
 #define MONITOR_CHANNEL_1_LEFT
