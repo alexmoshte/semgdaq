@@ -247,8 +247,16 @@ extern ADC3_DMA_sort*ADC3_DMA_sort_ptr;
 /*Initializing the struct instance*/
 void init_ADC1_IN1_struct(void)
   {
-    //Ensure that ADC1_DMA_sort_ptr is initialized
-	ADC1_IN1_NF_arg.ADC1_IN1_psrc = (float32_t *)(ADC1_DMA_sort_ptr->ADC1_IN1_bfr);   // Typecasting. Converts the data in IN1 data buffer to floating point values. Assigns the source buffer at runtime
+	if(ADC1_Current_buffer == 1)
+	{
+       //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC1_IN1_NF_arg.ADC1_IN1_psrc = (float32_t *)(ADC1_DMA_sort_ptr->ADC1_IN1_bfr_alt);   // Typecasting. Converts the data in IN1 data buffer to floating point values. Assigns the source buffer at runtime
+	}
+	else
+	{
+	   //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC1_IN1_NF_arg.ADC1_IN1_psrc = (float32_t *)(ADC1_DMA_sort_ptr->ADC1_IN1_bfr);   // Typecasting. Converts the data in IN1 data buffer to floating point values. Assigns the source buffer at runtime
+	}
   }
 
 void init_ADC1_IN1_FO_biquad_filter(void)
@@ -272,8 +280,17 @@ void update_ADC1_IN1_FO_biquad_filter(void)
 
 void init_ADC1_IN2_struct(void)
   {
-    //Ensure that ADC1_DMA_sort_ptr is initialized
-	ADC1_IN2_NF_arg.ADC1_IN2_psrc = (float32_t *)(ADC1_DMA_sort_ptr->ADC1_IN2_bfr);
+
+	if(ADC1_Current_buffer == 1)
+	{
+       //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC1_IN2_NF_arg.ADC1_IN2_psrc = (float32_t *)(ADC1_DMA_sort_ptr->ADC1_IN2_bfr_alt);
+	}
+	else
+	{
+	   //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC1_IN2_NF_arg.ADC1_IN2_psrc = (float32_t *)(ADC1_DMA_sort_ptr->ADC1_IN2_bfr);
+	}
   }
 
 void init_ADC1_IN2_FO_biquad_filter(void)
@@ -297,8 +314,17 @@ void update_ADC1_IN2_FO_biquad_filter(void)
 
 void init_ADC2_IN3_struct(void)
   {
-    //Ensure that ADC1_DMA_sort_ptr is initialized
-	ADC2_IN3_NF_arg.ADC2_IN3_psrc = (float32_t *)(ADC2_DMA_sort_ptr->ADC2_IN3_bfr);
+
+	if(ADC2_Current_buffer == 1)
+	{
+       //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC2_IN3_NF_arg.ADC2_IN3_psrc = (float32_t *)(ADC2_DMA_sort_ptr->ADC2_IN3_bfr_alt);   // Typecasting. Converts the data in IN1 data buffer to floating point values. Assigns the source buffer at runtime
+	}
+	else
+	{
+	   //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC2_IN3_NF_arg.ADC2_IN3_psrc = (float32_t *)(ADC2_DMA_sort_ptr->ADC2_IN3_bfr);
+	}
   }
 
 void init_ADC2_IN3_FO_biquad_filter(void)
@@ -322,8 +348,17 @@ void update_ADC2_IN3_FO_biquad_filter(void)
 
 void init_ADC2_IN4_struct(void)
   {
-    //Ensure that ADC1_DMA_sort_ptr is initialized
-	ADC2_IN4_NF_arg.ADC2_IN4_psrc = (float32_t *)(ADC2_DMA_sort_ptr->ADC2_IN4_bfr);
+
+	if(ADC2_Current_buffer == 1)
+	{
+       //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC2_IN4_NF_arg.ADC2_IN4_psrc = (float32_t *)(ADC2_DMA_sort_ptr->ADC2_IN4_bfr_alt);   // Typecasting. Converts the data in IN1 data buffer to floating point values. Assigns the source buffer at runtime
+	}
+	else
+	{
+	   //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC2_IN4_NF_arg.ADC2_IN4_psrc = (float32_t *)(ADC2_DMA_sort_ptr->ADC2_IN4_bfr);
+	}
   }
 
 void init_ADC2_IN4_FO_biquad_filter(void)
@@ -347,8 +382,16 @@ void update_ADC2_IN4_FO_biquad_filter(void)
 
 void init_ADC3_IN1_struct(void)
   {
-    //Ensure that ADC1_DMA_sort_ptr is initialized
-	ADC3_IN1_NF_arg.ADC3_IN1_psrc = (float32_t *)(ADC3_DMA_sort_ptr->ADC3_IN1_bfr);
+    if(ADC3_Current_buffer == 1)
+	{
+       //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC3_IN1_NF_arg.ADC3_IN1_psrc = (float32_t *)(ADC3_DMA_sort_ptr->ADC3_IN1_bfr_alt);
+	}
+	else
+	{
+	   //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC3_IN1_NF_arg.ADC3_IN1_psrc = (float32_t *)(ADC3_DMA_sort_ptr->ADC3_IN1_bfr);
+	}
   }
 
 void init_ADC3_IN1_FO_biquad_filter(void)
@@ -372,8 +415,16 @@ void update_ADC3_IN1_FO_biquad_filter(void)
 
 void init_ADC3_IN2_struct(void)
   {
-    //Ensure that ADC1_DMA_sort_ptr is initialized
-	ADC3_IN2_NF_arg.ADC3_IN2_psrc = (float32_t *)(ADC3_DMA_sort_ptr->ADC3_IN2_bfr);  // Typecasting. Assigned at runtime
+    if(ADC3_Current_buffer == 1)
+	{
+       //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC3_IN2_NF_arg.ADC3_IN2_psrc = (float32_t *)(ADC3_DMA_sort_ptr->ADC3_IN2_bfr_alt);
+	}
+	else
+	{
+	   //Ensure that ADC1_DMA_sort_ptr is initialized
+	   ADC3_IN2_NF_arg.ADC3_IN2_psrc = (float32_t *)(ADC3_DMA_sort_ptr->ADC3_IN2_bfr);
+	}
   }
 
 void init_ADC3_IN2_FO_biquad_filter(void)

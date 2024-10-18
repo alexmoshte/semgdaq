@@ -28,15 +28,21 @@ ADC_DMA_SIXTEENTHBUFFERSIZE = 175
 #include "stm32g4xx_hal.h"
 
 //STRUCTS, VARIABLES AND POINTERS
+extern uint8_t ADC1_Current_buffer;
+extern uint8_t ADC2_Current_buffer;
+extern uint8_t ADC3_Current_buffer;
+
 typedef struct // Struct for ADC1
 {
 	uint32_t ADC1_DMA_bfr[ADC_DMA_BUFFERSIZE]; // Buffer that stores the ADC conversions-source buffer
 	uint32_t ADC1_DMA_mon; // Variable to monitor one value from the DMA buffer
 
 	uint32_t ADC1_IN1_bfr[ADC_DMA_HALFBUFFERSIZE]; // Buffer that stores sorted IN1 data
+	uint32_t ADC1_IN1_bfr_alt[ADC_DMA_HALFBUFFERSIZE]; // Second buffer that stores sorted IN1 data
 	uint32_t ADC1_IN1_mon; // Variable to monitor one value from the IN1 data buffer
 
 	uint32_t ADC1_IN2_bfr[ADC_DMA_HALFBUFFERSIZE];  // Buffer that stores sorted IN2 data
+	uint32_t ADC1_IN2_bfr_alt[ADC_DMA_HALFBUFFERSIZE]; // Second buffer that stores sorted IN2 data
 	uint32_t ADC1_IN2_mon; // Variable to monitor one value from the IN2 data buffer
 
 } ADC1_DMA_sort;
@@ -50,9 +56,11 @@ typedef struct // Struct for ADC2
 	uint32_t ADC2_DMA_mon;
 
 	uint32_t ADC2_IN3_bfr[ADC_DMA_HALFBUFFERSIZE];
+	uint32_t ADC2_IN3_bfr_alt[ADC_DMA_HALFBUFFERSIZE];
 	uint32_t ADC2_IN3_mon;
 
 	uint32_t ADC2_IN4_bfr[ADC_DMA_HALFBUFFERSIZE];
+	uint32_t ADC2_IN4_bfr_alt[ADC_DMA_HALFBUFFERSIZE];
 	uint32_t ADC2_IN4_mon;
 
 } ADC2_DMA_sort;
@@ -66,9 +74,11 @@ typedef struct // Struct for ADC3
 	uint32_t ADC3_DMA_mon;
 
 	uint32_t ADC3_IN1_bfr[ADC_DMA_HALFBUFFERSIZE];
+	uint32_t ADC3_IN1_bfr_alt[ADC_DMA_HALFBUFFERSIZE];
 	uint32_t ADC3_IN1_mon;
 
 	uint32_t ADC3_IN2_bfr[ADC_DMA_HALFBUFFERSIZE];
+	uint32_t ADC3_IN2_bfr_alt[ADC_DMA_HALFBUFFERSIZE];
 	uint32_t ADC3_IN2_mon;
 
 } ADC3_DMA_sort;

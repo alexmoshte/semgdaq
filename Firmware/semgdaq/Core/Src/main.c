@@ -173,6 +173,10 @@ float32_t* STFT_3;
 float32_t* STFT_4;
 float32_t* STFT_5;
 float32_t* STFT_6;
+
+volatile uint8_t Buffer_ADC1_Ready = 0;
+volatile uint8_t Buffer_ADC2_Ready = 0;
+volatile uint8_t Buffer_ADC3_Ready = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -271,6 +275,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	if (Buffer_ADC1_Ready == 1) // Checks if the flag for the channel buffer fills is set for ADC1
+	{
 	  /* DSP SECTION */
 	  update_ADC1_IN1_FO_biquad_filter();  // Filters channel 1 data
 	  MA_ADC1_IN1_Update(&MovingAverage_ADC1_IN1); // Performs the moving average
@@ -318,7 +324,12 @@ int main(void)
 	  STFT_2 = ADC1_IN2_STFT_Update(&STFT_par_ADC1_IN2, &STFT_ADC1_IN2);
 	  }
 
+	  Buffer_ADC1_Ready = 0; // After processing is done the flag is cleared
 
+	}
+
+	if (Buffer_ADC2_Ready == 1)
+	{
 	  update_ADC2_IN3_FO_biquad_filter();
 	  MA_ADC2_IN3_Update(&MovingAverage_ADC2_IN3);
 	  for (uint32_t g = 0; g <ADC_DMA_SIXTEENTHBUFFERSIZE; g++)
@@ -362,7 +373,11 @@ int main(void)
 	  STFT_4 = ADC2_IN4_STFT_Update(&STFT_par_ADC2_IN4, &STFT_ADC2_IN4);
 	  }
 
+	  Buffer_ADC2_Ready = 0;
+	}
 
+	if (Buffer_ADC3_Ready == 1)
+	{
 	  update_ADC3_IN1_FO_biquad_filter();
 	  MA_ADC3_IN1_Update(&MovingAverage_ADC3_IN1);
 	  for (uint32_t b = 0; b < ADC_DMA_SIXTEENTHBUFFERSIZE; b++)
@@ -409,6 +424,9 @@ int main(void)
 	  /* Computes the Short Time Fourier Transform from the moving average buffer */
 	  STFT_6 = ADC3_IN2_STFT_Update(&STFT_par_ADC3_IN2, &STFT_ADC3_IN2);
 	  }
+
+	  Buffer_ADC3_Ready = 0;
+	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -1152,17 +1170,21 @@ void                    HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)  // Fi
 			ADC1_DMA_sort_ptr->ADC1_DMA_mon=ADC1_DMA_sort_ptr->ADC1_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE]; // Monitors one of the DMA buffer registers in the lower half of the buffer
 			ADC1_DMA_sort_ptr->ADC1_IN1_mon=ADC1_DMA_sort_ptr->ADC1_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN1 data buffer registers in the lower half of the buffer
 			ADC1_DMA_sort_ptr->ADC1_IN2_mon=ADC1_DMA_sort_ptr->ADC1_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];  // Monitors one of the IN2 data buffer registers in the lower half of the buffer
+
+			Buffer_ADC1_Ready = 1; // Sets a flag to zero after the channel specific buffers have been filled
 		}
 
 
 	  if (hadc->Instance == ADC2)
 
 		{
-		     ADC2_DMA_sort_lhb();
+			 ADC2_DMA_sort_lhb();
 
-		     ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
-		     ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+			 ADC2_DMA_sort_ptr->ADC2_DMA_mon=ADC2_DMA_sort_ptr->ADC2_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
+			 ADC2_DMA_sort_ptr->ADC2_IN3_mon=ADC2_DMA_sort_ptr->ADC2_IN3_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
 			 ADC2_DMA_sort_ptr->ADC2_IN4_mon=ADC2_DMA_sort_ptr->ADC2_IN4_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+
+			 Buffer_ADC2_Ready = 1;
 		}
 
 	   if (hadc->Instance == ADC3)
@@ -1173,6 +1195,8 @@ void                    HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)  // Fi
 			 ADC3_DMA_sort_ptr->ADC3_DMA_mon=ADC3_DMA_sort_ptr->ADC3_DMA_bfr[ADC_DMA_HALFBUFFERSIZE + ADC_DMA_QUATERBUFFERSIZE];
 			 ADC3_DMA_sort_ptr->ADC3_IN1_mon=ADC3_DMA_sort_ptr->ADC3_IN1_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
 			 ADC3_DMA_sort_ptr->ADC3_IN2_mon=ADC3_DMA_sort_ptr->ADC3_IN2_bfr[ADC_DMA_QUATERBUFFERSIZE + ADC_DMA_EIGHTHBUFFERSIZE];
+
+			 Buffer_ADC3_Ready = 1;
 		}
 
 };

@@ -4020,3 +4020,16 @@ Finished building: default.size.stdout
  
 Finished building: semgdaq.list
  
+18:21:27 **** Incremental Build of configuration Debug for project semgdaq ****
+make -j8 all 
+arm-none-eabi-gcc -o "semgdaq.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\STM32G4A1VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="semgdaq.map" -Wl,--gc-sections -static -L"C:\Users\moshte\Desktop\moshte\Firmware projects\CubeIDE\Workspace\semgdaq_\Firmware\semgdaq\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: semgdaq.elf
+ 
+arm-none-eabi-size  semgdaq.elf 
+arm-none-eabi-objdump -h -S semgdaq.elf  > "semgdaq.list"
+   text	   data	    bss	    dec	    hex	filename
+ 128788	  30944	  83336	 243068	  3b57c	semgdaq.elf
+Finished building: default.size.stdout
+ 
+Finished building: semgdaq.list
+ 
