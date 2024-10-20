@@ -1,0 +1,39 @@
+/*
+ * _ADCn_INx_Trans.c
+ *
+ *  Created on: Oct 20, 2024
+ *  Author: Mwangi Alex. W
+ *
+ */
+//INCLUDES
+#include "_ADCn_INx_Trans.h"
+
+//FUNCTION DEFINITIONS
+void USART1_ADC1_IN1_TXFV_DMA(float32_t tkeo_1, float32_t ssc_1, float32_t* ar_1, uint32_t AR_order_1, float32_t* stft_1, uint32_t stft_order_1)
+{
+	uint32_t FV_Indx = 0;
+
+	/* Copy TKEO_1 as bytes */
+	memcpy(&Feature_Vector_1[FV_Indx], &tkeo_1, sizeof(float32_t));
+	FV_Indx =+ sizeof(float32_t);
+
+	/* Copy TKEO_1 as bytes */
+	memcpy(&Feature_Vector_1[FV_Indx], &ssc_1, sizeof(float32_t));
+	FV_Indx =+ sizeof(float32_t);
+
+	/* Copy AR_1 coefficients as bytes */
+	for(uint32_t n; n < AR_order_1; n++)
+	{
+		memcpy(&Feature_Vector_1[FV_Indx], &ar_1[n], sizeof(float32_t));
+	    FV_Indx =+ sizeof(float32_t);
+	}
+
+	/* Copy STFT values as bytes */
+	for(uint32_t n; n < stft_1; n++)
+	{
+		memcpy(&Feature_Vector_1[FV_Indx], &stft_1[n], sizeof(float32_t));
+		FV_Indx =+ sizeof(float32_t);
+	}
+
+	HAL_UART_Transmit_DMA(&huart1, (uint8_t* )Feature_Vector_1, FV_ORDER);
+}

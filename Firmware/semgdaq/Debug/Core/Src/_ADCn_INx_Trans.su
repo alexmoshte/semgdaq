@@ -1,0 +1,3 @@
+../Core/Src/_ADCn_INx_Trans.c:16:6:USART1_ADC1_IN1_TXFV_DMA	48	static
+../Core/Src/_ADCn_INx_Trans.c:76:6:USART2_ADC2_IN3_TXFV_DMA	48	static
+../Core/Src/_ADCn_INx_Trans.c:136:6:USART3_ADC3_IN1_TXFV_DMA	48	static

@@ -19,7 +19,7 @@ ADC_DMA_BUFFERSIZE = 2500,
 ADC_DMA_HALFBUFFERSIZE = 1250,
 ADC_DMA_QUATERBUFFERSIZE = 625,
 ADC_DMA_EIGHTHBUFFERSIZE = 312,
-ADC_DMA_SIXTEENTHBUFFERSIZE = 175
+ADC_DMA_SIXTEENTHBUFFERSIZE = 170
 };
 
 #define LEVEL_VALUE_SCALAR  (3.3/4096) // Scalar to convert the ADC levels (0-4096) in the DMA buffer to voltage values (0-3.3V) before being sorted in the channel buffers
