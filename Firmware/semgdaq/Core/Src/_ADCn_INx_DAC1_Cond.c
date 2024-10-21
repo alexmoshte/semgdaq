@@ -5,8 +5,8 @@
  *  Author: Mwangi Alex. W
  *
  *  The functions defined here within port data from the moving average output buffer for all channels to DAC1.
- *  The functions run under conditional compilation such that only one channel on the right and on the left of the semgdaq
- *  are ported to channel one and two of DAC1 respectively. That way, we can only monitor two channels at the same time but can
+ *  The functions run under conditional compilation such that only one channel on the right and another on the left of the semgdaq
+ *  are ported to channel one and two of the DAC1 respectively. That way, we can only monitor two channels at the same time using and oscilloscope but can
  *  monitor other channel combinations simply by changing the definitions
  */
 
@@ -14,8 +14,6 @@
 #include "_ADCn_INx_DAC1_Cond.h"
 
 //FUNCTION DEFINITIONS
-
-#define MONITOR_CHANNEL_2_LEFT
 #ifdef MONITOR_CHANNEL_1_LEFT
 void ADC1_IN1_DAC_Update(ADC1_IN1_MA *ADC1_IN1_DAC_ptr)
 {
@@ -24,7 +22,7 @@ void ADC1_IN1_DAC_Update(ADC1_IN1_MA *ADC1_IN1_DAC_ptr)
 	    float Filt_Volt_1 = ADC1_IN1_DAC_ptr->MA_ADC1_IN1_OutBfr[n];
 	    uint32_t DAC_Level_1 = (Filt_Volt_1 / LEVEL_VALUE_SCALAR); // Converting the voltages (0-3.3V) to levels (0-4096) for the DAC
 
-	    // Ensure the DAC level is within bounds
+	    /* Ensure the DAC level is within bounds */
 	    if (DAC_Level_1 > 4095)
 	    {
 	        DAC_Level_1 = 4095;
@@ -90,7 +88,6 @@ void ADC3_IN1_DAC_Update(ADC3_IN1_MA *ADC3_IN1_DAC_ptr)
 #endif
 
 
-#define MONITOR_CHANNEL_4_RIGHT
 #ifdef MONITOR_CHANNEL_4_RIGHT
 void ADC1_IN2_DAC_Update(ADC1_IN2_MA *ADC1_IN2_DAC_ptr)
 {
@@ -147,7 +144,7 @@ void ADC3_IN2_DAC_Update(ADC3_IN2_MA *ADC3_IN2_DAC_ptr)
 		float Filt_Volt_6 = ADC3_IN2_DAC_ptr->MA_ADC3_IN2_OutBfr[n];
 		uint32_t DAC_Level_6 = (Filt_Volt_6 / LEVEL_VALUE_SCALAR); // Converting the voltages (0-3.3V) to levels (0-4096) for the DAC
 
-		// Ensure the DAC level is within bounds
+		/*  Ensure the DAC level is within bounds */
 		if (DAC_Level_6 > 4095)
 		{
 			DAC_Level_6 = 4095;
